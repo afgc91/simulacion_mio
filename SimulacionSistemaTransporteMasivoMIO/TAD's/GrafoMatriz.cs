@@ -90,7 +90,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             int finM = EncontrarVertice(fin);
             if (inicioM != -1 && finM != -1)
             {
-                matriz[inicioM][finM] = 0;
+                matriz[inicioM][finM] = Double.MaxValue;
             }
         }
 
@@ -102,7 +102,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             {
                 for (int i = 0; i < cantidadVertices; i++)
                 {
-                    if (matriz[pos][i] != 0)
+                    if (matriz[pos][i] != Double.MaxValue)
                     {
                         adyacencias.Add(vertices[i].elemento);
                     }
@@ -113,17 +113,46 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 
         public bool HayCamino(E inicio, E fin)
         {
-            throw new NotImplementedException();
+            List<E> e = BFS(inicio);
+            if (e.Contains(fin))
+            {
+                return true;
+            }
+            return false;
         }
 
         public List<E> DarCamino(E inicio, E fin)
         {
             throw new NotImplementedException();
         }
+     
 
         public List<E> BFS(E elemento)
         {
-            throw new NotImplementedException();
+            List<E> elementos = new List<E>();
+            Queue<E> cola = new Queue<E>();
+            List<E> adyacentes = DarAdyacencias(elemento);
+            elementos.Add(elemento);
+            for (int i = 0; i < adyacentes.Count; i++)
+            {
+                cola.Enqueue(adyacentes[i]);
+                elementos.Add(adyacentes[i]);
+            }
+            while (cola.Count > 0)
+            {
+                E elemento1 = cola.Dequeue();
+                List<E> elementos2 = DarAdyacencias(elemento1);
+                for (int i = 0; i < elementos2.Count; i++)
+                {
+                    if (!elementos.Contains(elementos2[i]))
+                    {
+                        cola.Enqueue(elementos2[i]);
+                        elementos.Add(elementos2[i]);
+                    }
+                }
+            }
+
+                return elementos;
         }
 
 
