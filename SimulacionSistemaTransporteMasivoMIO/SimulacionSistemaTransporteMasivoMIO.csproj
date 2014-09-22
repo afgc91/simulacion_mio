@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\Program.cs" />
+    <Compile Include="Modelo\Bus.cs" />
+    <Compile Include="Modelo\BusType.cs" />
+    <Compile Include="Modelo\PlanVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAD%27s\GrafoMatriz.cs" />
     <Compile Include="TAD%27s\IGrafo.cs" />
@@ -51,7 +54,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modelo\" />
     <Folder Include="Vista\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
