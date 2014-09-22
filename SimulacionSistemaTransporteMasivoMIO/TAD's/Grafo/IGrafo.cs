@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 {
-    interface IGrafo<E>
+    public interface IGrafo<E>
     {
         /// <summary>
         /// Este metodo se encarga de agregar un vertice al grafo

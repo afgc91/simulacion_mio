@@ -46,9 +46,11 @@
     <Compile Include="Modelo\BusType.cs" />
     <Compile Include="Modelo\PlanVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TAD%27s\GrafoMatriz.cs" />
-    <Compile Include="TAD%27s\IGrafo.cs" />
-    <Compile Include="TAD%27s\Vertice.cs" />
+    <Compile Include="TAD%27s\ArregloColas\ArregloCola.cs" />
+    <Compile Include="TAD%27s\ArregloColas\IArregloCola.cs" />
+    <Compile Include="TAD%27s\Grafo\GrafoMatriz.cs" />
+    <Compile Include="TAD%27s\Grafo\IGrafo.cs" />
+    <Compile Include="TAD%27s\Grafo\Vertice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
