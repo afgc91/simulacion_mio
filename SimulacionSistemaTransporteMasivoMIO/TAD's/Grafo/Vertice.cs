@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 {
-    class Vertice<E>
+   public class Vertice<E>
     {
         public E elemento;
         

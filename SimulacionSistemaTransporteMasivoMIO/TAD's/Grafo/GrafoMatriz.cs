@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 {
-    class GrafoMatriz<E> : IGrafo<E>
+    public class GrafoMatriz<E> : IGrafo<E>
     {
 
         public static int CANTIDAD_VERTICES = 200;
