@@ -8,6 +8,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas
 {
     public class ArregloCola<E> : IArregloCola<E>
     {
+
         private int tamano;
         private Queue<E>[] colas;
 
