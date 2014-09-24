@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\Program.cs" />
+    <Compile Include="Modelo\Arc.cs" />
     <Compile Include="Modelo\Bus.cs" />
     <Compile Include="Modelo\BusType.cs" />
+    <Compile Include="Modelo\Calendar.cs" />
     <Compile Include="Modelo\Line.cs" />
+    <Compile Include="Modelo\LineStop.cs" />
     <Compile Include="Modelo\PlanVersion.cs" />
     <Compile Include="Modelo\ScheduleProfile.cs" />
     <Compile Include="Modelo\Stop.cs" />
