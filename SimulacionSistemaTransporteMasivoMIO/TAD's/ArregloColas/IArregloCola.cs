@@ -15,40 +15,40 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas
         /// <pre>La posición esta en el arreglo</pre>
         /// <param name="elemento">Elemento a agregar</param>
         /// <param name="pos">Posicion de la cola en el arreglo</param>
-        public void AgregarElemento(E elemento, int pos);
+        void AgregarElemento(E elemento, int pos);
         /// <summary>
         /// Este metodo se encarga de eliminar un elemento
         /// a una cola en el arreglo
         /// </summary>
         /// <pre>La posición esta en el arreglo</pre>
         /// <param name="pos">Posición de la cola en el arreglo</param>
-        public void EliminarElemento(int pos);
+        void EliminarElemento(int pos);
         /// <summary>
         /// Determina si una cola en el arreglo se encuentra vacia
         /// </summary>
         /// <pre>La posición esta en el arreglo</pre>
         /// <param name="pos">Posición de la cola en el arreglo</param>
         /// <returns>True si la cola esta vacia, false si tiene elementos</returns>
-        public bool ColaVacia(int pos);
+        bool ColaVacia(int pos);
         /// <summary>
         /// Retorna el tamaño de la cola especificada
         /// </summary>
         /// <pre>La posición esta en el arreglo</pre>
         /// <param name="pos">Posición de la cola en el arreglo</param>
         /// <returns>Entero con el tamaño de la cola</returns>
-        public int TamanoCola(int pos);
+        int TamanoCola(int pos);
         /// <summary>
         /// Obtiene pero no elimina un elemento de la cola
         /// </summary>
         /// <pre>La posición esta en el arreglo</pre>
         /// <param name="pos">Posición de la cola en el arreglo</param>
         /// <returns>Elemento de la cola</returns>
-        public E ObtenerElemento(int pos);
+        E ObtenerElemento(int pos);
         /// <summary>
         /// Retorna la cantidad de colas de la estructura
         /// </summary>
         /// <returns>Entero con la cantidad de elementos</returns>
-        public int DarTamano();
+        int DarTamano();
 
     }
 }
