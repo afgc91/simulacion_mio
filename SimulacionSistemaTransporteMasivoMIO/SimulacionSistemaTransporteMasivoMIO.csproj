@@ -44,7 +44,10 @@
     <Compile Include="Control\Program.cs" />
     <Compile Include="Modelo\Bus.cs" />
     <Compile Include="Modelo\BusType.cs" />
+    <Compile Include="Modelo\Line.cs" />
     <Compile Include="Modelo\PlanVersion.cs" />
+    <Compile Include="Modelo\ScheduleProfile.cs" />
+    <Compile Include="Modelo\Stop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAD%27s\ArregloColas\ArregloCola.cs" />
     <Compile Include="TAD%27s\ArregloColas\IArregloCola.cs" />
