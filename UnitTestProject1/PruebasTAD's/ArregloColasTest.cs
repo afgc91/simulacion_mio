@@ -80,6 +80,7 @@ namespace UnitTestProject1.PruebasTAD_s
         }
         public void TestDarTamano()
         {
+            Console.WriteLine("Prueba dar tamaño");
             Escenario();
             int esp = 5;
             int act = arreglo.DarTamano();

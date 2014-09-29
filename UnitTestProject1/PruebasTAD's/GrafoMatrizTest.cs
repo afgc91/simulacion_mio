@@ -25,6 +25,7 @@ namespace UnitTestProject1
         }
         private void Escenario2()
         {
+            Console.WriteLine("Prueba escenario 2");
             grafo = new GrafoMatriz<int>();
             grafo.AgregarVertice(1);
             grafo.AgregarVertice(2);
