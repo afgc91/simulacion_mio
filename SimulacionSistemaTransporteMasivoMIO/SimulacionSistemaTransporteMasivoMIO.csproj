@@ -41,22 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacenamiento\CargadoraInformación.cs" />
     <Compile Include="Control\Program.cs" />
-    <Compile Include="Modelo\Arc.cs" />
-    <Compile Include="Modelo\Bus.cs" />
-    <Compile Include="Modelo\BusType.cs" />
-    <Compile Include="Modelo\Calendar.cs" />
-    <Compile Include="Modelo\DataPlan.cs" />
-    <Compile Include="Modelo\Line.cs" />
-    <Compile Include="Modelo\LineArc.cs" />
-    <Compile Include="Modelo\LineStop.cs" />
-    <Compile Include="Modelo\PlanVersion.cs" />
-    <Compile Include="Modelo\ScheduleProfile.cs" />
-    <Compile Include="Modelo\ScheduleType.cs" />
-    <Compile Include="Modelo\Stop.cs" />
-    <Compile Include="Modelo\TaskMIO.cs" />
-    <Compile Include="Modelo\Trip.cs" />
-    <Compile Include="Modelo\TripType.cs" />
+    <Compile Include="Almacenamiento\Arc.cs" />
+    <Compile Include="Almacenamiento\Bus.cs" />
+    <Compile Include="Almacenamiento\BusType.cs" />
+    <Compile Include="Almacenamiento\Calendar.cs" />
+    <Compile Include="Almacenamiento\DataPlan.cs" />
+    <Compile Include="Almacenamiento\Line.cs" />
+    <Compile Include="Almacenamiento\LineArc.cs" />
+    <Compile Include="Almacenamiento\LineStop.cs" />
+    <Compile Include="Almacenamiento\PlanVersion.cs" />
+    <Compile Include="Almacenamiento\ScheduleProfile.cs" />
+    <Compile Include="Almacenamiento\ScheduleType.cs" />
+    <Compile Include="Almacenamiento\Stop.cs" />
+    <Compile Include="Almacenamiento\TaskMIO.cs" />
+    <Compile Include="Almacenamiento\Trip.cs" />
+    <Compile Include="Almacenamiento\TripType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAD%27s\ArregloColas\ArregloCola.cs" />
     <Compile Include="TAD%27s\ArregloColas\IArregloCola.cs" />
@@ -68,6 +69,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Modelo\" />
     <Folder Include="Vista\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

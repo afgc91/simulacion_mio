@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimulacionSistemaTransporteMasivoMIO.Modelo
+namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 {
-    public class ScheduleType
+    public class Line
     {
-        public int ScheduleTypeId;
+        public int LineId;
         public int PlanVersionId;
         public String ShortName;
         public String Description;
 
-        public ScheduleType(int id, int planVersionId, String shortName, String desc) {
-            ScheduleTypeId = id;
+        public Line(int id, int planVersionId, String shortName, String desc) {
+            LineId = id;
             PlanVersionId = planVersionId;
             ShortName = shortName;
             Description = desc;
