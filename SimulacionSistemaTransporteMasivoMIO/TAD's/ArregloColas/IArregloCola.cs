@@ -47,7 +47,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas
         /// <summary>
         /// Retorna la cantidad de colas de la estructura
         /// </summary>
-        /// <returns>Entero con la cantidad de elementos</returns>
+        /// <returns>Entero con la cantidad de elementos.</returns>
         int DarTamano();
 
     }

@@ -43,8 +43,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
         public void AgregarVertice(E elemento)
         {
             Vertice<E> e = new Vertice<E>(elemento);
-            vertices[cantidadVertices] = e;
-            cantidadVertices++;
+            if (EncontrarVertice(elemento) == -1)
+            {
+                vertices[cantidadVertices] = e;
+                cantidadVertices++;
+            }
+            else
+            {
+                throw new Exception("El vertice ya se encuentra en el grafo");
+            }
         }
 
         public void AgregarArista(E inicio, E fin, double ponderacion)
@@ -53,7 +60,14 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             int finM = EncontrarVertice(fin);
             if (inicioM != -1 && finM != -1)
             {
-                matriz[inicioM][finM] = ponderacion;
+                if (matriz[inicioM][finM] == Double.MaxValue)
+                    matriz[inicioM][finM] = ponderacion;
+                else
+                    throw new Exception("Ya existe una arista");
+            }
+            else
+            {
+                throw new Exception("No existe el vertice");
             }
           
         }
@@ -82,6 +96,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             {
                 vertices[pos] = null;
                 cantidadVertices--;
+            }else{
+                throw new Exception("No se encuentra el vertice");
             }
             
         }
@@ -94,6 +110,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             {
                 matriz[inicioM][finM] = Double.MaxValue;
                 cantidadAristas--;
+            }
+            else
+            {
+                throw new Exception("El vertice no existe");
             }
         }
 
@@ -126,8 +146,31 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 
         public List<E> DarCamino(E inicio, E fin)
         {
-            throw new NotImplementedException();
+            List<E> elementos = DarAdyacencias(inicio);
+            List<E> resultado = new List<E>();
+            resultado.Add(inicio);
+            foreach(E e in elementos){
+                if (HayCamino(e, fin))
+                {
+                    auxDarCamino(e, fin, resultado);
+                }
+            }
+            return resultado;
         }
+        private void auxDarCamino(E inicio, E fin, List<E> element){
+            List<E> elementos = DarAdyacencias(inicio);
+            if (!inicio.Equals(fin))
+            {
+                foreach (E e in elementos)
+                {
+                    if (HayCamino(e, fin))
+                    {
+                        element.Add(e);
+                        auxDarCamino(e, fin, element);
+                    }
+                }
+            }
+    }
      
 
         public List<E> BFS(E elemento)

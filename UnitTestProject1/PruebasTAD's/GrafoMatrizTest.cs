@@ -52,7 +52,6 @@ namespace UnitTestProject1
             grafo.AgregarVertice(5);
             int esp = 1;
             int act = grafo.CantidadVertices();
-
             Assert.AreEqual(esp, act);
 
         }
