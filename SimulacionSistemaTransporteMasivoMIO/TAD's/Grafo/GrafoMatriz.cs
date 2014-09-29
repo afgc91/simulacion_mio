@@ -23,7 +23,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             cantidadAristas = 0;
         }
 
-        public void inicializarMatriz()
+        private void inicializarMatriz()
         {
             for (int i = 0; i < CANTIDAD_VERTICES; i++)
             {
@@ -81,7 +81,9 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             if (pos != -1)
             {
                 vertices[pos] = null;
+                cantidadVertices--;
             }
+            
         }
 
         public void ElinimarArista(E inicio, E fin, double ponderacion)
@@ -91,6 +93,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             if (inicioM != -1 && finM != -1)
             {
                 matriz[inicioM][finM] = Double.MaxValue;
+                cantidadAristas--;
             }
         }
 
