@@ -16,7 +16,6 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 
         public CargadoraInformación(String ins) {
             Instance = ins;
-            Console.WriteLine("");
         }
 
         public List<String> CargarArchivo(String fileName) {

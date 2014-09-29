@@ -11,7 +11,7 @@ namespace SimulacionSistemaTransporteMasivoMIO
     {
         static void Main(string[] args)
         {
-            CargadoraInformación c = new CargadoraInformación("");
+            CargadoraInformación c = new CargadoraInformación("");//Dependiendo del parámetro se le da un trato diferente a la lista
             List<String> list1 = c.CargarArchivo("ARCS.txt");
             List<String> list2 = c.CargarArchivo("CALENDAR.txt");
             List<String> list3 = c.CargarArchivo("DATAPLAN.txt");
