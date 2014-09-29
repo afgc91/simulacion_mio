@@ -9,22 +9,68 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 {
     public class CargadoraInformación
     {
+        public List<Arc> ARCS;
+        public List<CalendarMIO> CALENDAR;
+        public List<DataPlan> DATAPLAN;
+        public List<Line> LINES;
+        public List<LineArc> LINESARCS;
+        public List<LineStop> LINESTOPS;
+        public List<PlanVersion> PLANVERSIONS;
+        public List<ScheduleProfile> SCHEDULEPROFILES;
+        public List<ScheduleType> SCHEDULETYPES;
+        public List<Stop> STOPS;
+        public List<TaskMIO> TASKS;
+        public List<Trip> TRIPS;
+        public List<TripType> TRIPTYPES;
+
         /// <summary>
         /// Instancias cuyo archivo será cargado.
+        /// 1. ARCS
+        /// 2. CALENDAR
+        /// 3. DATAPLAN
+        /// 4. LINES
+        /// 5. LINESARCS
+        /// 6. LINESTOPS
+        /// 7. PLANVERSIONS
+        /// 8. SCHEDULEPROFILES
+        /// 9. SCHEDULETYPES
+        /// 10. STOPS
+        /// 11. TASKS
+        /// 12. TRIPS
+        /// 13. TRIPTYPES
         /// </summary>
         public String Instance;
 
-        public CargadoraInformación(String ins) {
-            Instance = ins;
+        public CargadoraInformación() {
+            //Instance = ins;
+            ARCS = new List<Arc>();
+            CALENDAR = new List<CalendarMIO>();
+            DATAPLAN = new List<DataPlan>();
+            LINES = new List<Line>();
+            LINESARCS = new List<LineArc>();
+            LINESTOPS = new List<LineStop>();
+            PLANVERSIONS = new List<PlanVersion>();
+            SCHEDULEPROFILES = new List<ScheduleProfile>();
+            SCHEDULETYPES = new List<ScheduleType>();
+            STOPS = new List<Stop>();
+            TASKS = new List<TaskMIO>();
+            TRIPS = new List<Trip>();
+            TRIPTYPES = new List<TripType>();
+            //AlmacenarInformacion(CargarArchivo());
         }
 
-        public List<String> CargarArchivo(String fileName) {
+        /// <summary>
+        /// Carga la información del archivo ingresado por parámetro que se encuentra en la ruta C:\Users\Public\Base de datos MIO\ y los devuelve en una lista.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        private List<String> CargarArchivo() {
             //FileInfo file = (from f in new DirectoryInfo(@"C:\").GetFiles()
             //           where f.Name.Equals(fileName)
             //           select f).First();
 
             List<String> list = new List<String>();
-            StreamReader reader = new StreamReader(@"C:\Users\Public\Base de datos MIO\"+fileName);
+            StreamReader reader = new StreamReader(@"C:\Users\Public\Base de datos MIO\" + Instance);
             String line = "";
             int cont = 0;
             while (true) {
@@ -41,5 +87,48 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             Console.WriteLine("Cantidad líneas: " + cont);
             return list; 
         }
+
+        /// <summary>
+        /// Guarda la información obtenida de los archivos planos en listas locales.
+        /// </summary>
+        /// <param name="list"></param>
+        private void AlmacenarInformacion(List<String> list) {
+            if (Instance.Equals("SCHEDULETYPES.txt")) {
+                int cont = 1;
+                ScheduleType st = null;
+                String[] atributes = null;
+                for (; cont<(list.Count); cont++) {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int planVersionId = Int32.Parse(atributes[1]);
+                    st = new ScheduleType(id, planVersionId, atributes[2], atributes[3]);
+                    SCHEDULETYPES.Add(st);
+                }
+                Console.WriteLine("Cantidad ScheduleTypes: " + SCHEDULETYPES.Count);
+            }
+            else if (Instance.Equals("TRIPTYPES.txt")) {
+                int cont = 1;
+                TripType tt = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    tt = new TripType(id, atributes[1]);
+                    TRIPTYPES.Add(tt);
+                }
+                Console.WriteLine("Cantidad TripTypes: " + TRIPTYPES.Count);
+            }
+        }
+
+        public void AlmacenarInformacion(String ins) {
+            SetInstance(ins);
+            AlmacenarInformacion(CargarArchivo());
+        }
+
+        private void SetInstance(String ins) {
+            Instance = ins;
+        }
+
     }
 }
