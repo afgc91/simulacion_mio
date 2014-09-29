@@ -14,6 +14,7 @@ namespace SimulacionSistemaTransporteMasivoMIO
             CargadoraInformación c = new CargadoraInformación();
             c.AlmacenarInformacion("TRIPTYPES.txt");
             c.AlmacenarInformacion("SCHEDULETYPES.txt");
+            c.AlmacenarInformacion("DATAPLAN.txt");
             
             Console.Read();
         }

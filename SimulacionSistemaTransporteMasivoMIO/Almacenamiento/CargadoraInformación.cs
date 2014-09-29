@@ -118,6 +118,42 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     TRIPTYPES.Add(tt);
                 }
                 Console.WriteLine("Cantidad TripTypes: " + TRIPTYPES.Count);
+            }else if(Instance.Equals("DATAPLAN.txt")){
+                int cont = 1;
+                DataPlan dp = null;
+                String[] atributes;
+                for (; cont < (list.Count); cont++) {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    //Console.WriteLine(atributes.Length);
+                    int id = Int32.Parse(atributes[0]);
+                    String lineShortName = atributes[1];
+                    int lineId = Int32.Parse(atributes[2]);
+                    int orientation = Int32.Parse(atributes[3]);
+                    int totalStops = Int32.Parse(atributes[4]);
+                    int tripLenght = Int32.Parse(atributes[5]);
+                    int taskId = Int32.Parse(atributes[6]);
+                    int tripId = Int32.Parse(atributes[7]);
+                    int tripStartTime = Int32.Parse(atributes[8]);
+                    int scheduleTypeId = Int32.Parse(atributes[9]);
+                    int tripTypeId = Int32.Parse(atributes[10]);
+                    int planVersionId = Int32.Parse(atributes[11]);
+                    String contratist = atributes[12];
+                    DateTime register = Convert.ToDateTime(atributes[13]);
+                    //Console.WriteLine(atributes[14]);
+                    int tripEndTime = atributes[14].Contains("null")?-1:Int32.Parse(atributes[14]);
+                    int tripTransitTime = atributes[15].Contains("null") ? -1 : Int32.Parse(atributes[15]);
+                    dp = new DataPlan(id, lineShortName, lineId, orientation, totalStops, tripLenght, taskId, tripId, tripStartTime, scheduleTypeId, tripTypeId, planVersionId, contratist, register, tripEndTime, tripTransitTime);
+                    //if (cont == 40) { break; }
+                    DATAPLAN.Add(dp);
+                }
+                Console.WriteLine("Cantidad registros DataPlan: " + DATAPLAN.Count);
+            }else if(Instance.Equals("ARCS.txt")){
+                int cont = 1;
+                Arc a = null;
+                String[] atributes;
+                for (; cont < (list.Count); cont++) { 
+                    
+                }
             }
         }
 
