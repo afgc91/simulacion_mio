@@ -228,11 +228,127 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                 String[] atributes = null;
                 for (; cont < (list.Count); cont++)
                 {
+                    //int id, int stopSeq, Int16 orientation, int lineId, int stopId, int planVersionId, int lineVariant, DateTime register, int lineVariantType
                     atributes = list.ElementAt(cont).Split('\t');
                     int id = Int32.Parse(atributes[0]);
-                    
+                    int stopSeq = Int32.Parse(atributes[1]);
+                    Int16 orientation = Int16.Parse(atributes[2]);
+                    int lineId = Int32.Parse(atributes[3]);
+                    int stopId = Int32.Parse(atributes[4]);
+                    int planVersionId = Int32.Parse(atributes[5]);
+                    int lineVariant = Int32.Parse(atributes[6]);
+                    DateTime register = Convert.ToDateTime(atributes[7]);
+                    int lineVariantType = Int32.Parse(atributes[8]);
+                    ls = new LineStop(id, stopSeq, orientation, lineId, stopId, planVersionId, lineVariant, register, lineVariantType);
+                    LINESTOPS.Add(ls);
                 }
                 Console.WriteLine("Cantidad LineStops: " + LINESTOPS.Count);
+            }
+            else if (Instance.Equals("PLANVERSIONS.txt"))
+            {
+                int cont = 1;
+                PlanVersion pv = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    //int planVersionId, DateTime activationDate, TimeSpan creationDate
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    DateTime activationDate = Convert.ToDateTime(atributes[1]);
+                    DateTime creationDate = Convert.ToDateTime(atributes[2]);
+                    pv = new PlanVersion(id, activationDate, creationDate);
+                    PLANVERSIONS.Add(pv);
+                }
+                Console.WriteLine("Cantidad PlanVersions: " + PLANVERSIONS.Count);
+            }
+            else if (Instance.Equals("SCHEDULEPROFILES.txt"))
+            {
+                int cont = 1;
+                ScheduleProfile sp = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    //int id, String shortName, String desc, int planVersionId, DateTime register
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    String shortName = atributes[1];
+                    String desc = atributes[2];
+                    int planVersionId = Int32.Parse(atributes[3]);
+                    DateTime register = Convert.ToDateTime(atributes[4]);
+                    sp = new ScheduleProfile(id, shortName, desc, planVersionId, register);
+                    SCHEDULEPROFILES.Add(sp);
+                }
+                Console.WriteLine("Cantidad ScheduleProfiles: " + SCHEDULEPROFILES.Count);
+            }
+            else if (Instance.Equals("STOPS.txt"))
+            {
+                int cont = 1;
+                Stop s = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    //int id, int planVersionId, String shortName, String longName, int x, int y, double longitude, double latitude
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int planVersionId = Int32.Parse(atributes[1]);
+                    String shortName = atributes[2];
+                    String longName = atributes[3];
+                    int x = Int32.Parse(atributes[4]);
+                    int y = Int32.Parse(atributes[5]);
+                    double longitude = Double.Parse(atributes[6]);
+                    double latitude = Double.Parse(atributes[7]);
+                    s = new Stop(id, planVersionId, shortName, longName, x, y, longitude, latitude);
+                    STOPS.Add(s);
+                }
+                Console.WriteLine("Cantidad Stops: " + STOPS.Count);
+            }
+            else if (Instance.Equals("TASKS.txt"))
+            {
+                int cont = 1;
+                TaskMIO t = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    //int id, int scheduleTypeId, int lineId, int planVersionId
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int scheduleTypeId = Int32.Parse(atributes[1]);
+                    int lineId = Int32.Parse(atributes[2]);
+                    int planVersionId = Int32.Parse(atributes[3]);
+                    t = new TaskMIO(id, scheduleTypeId, lineId, planVersionId);
+                    TASKS.Add(t);
+                }
+                Console.WriteLine("Cantidad Tasks: " + TASKS.Count);
+            }
+            else if (Instance.Equals("TRIPS.txt"))
+            {
+                int cont = 1;
+                Trip t = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    //int id, int tripId, int planVersionId, int tripTypeId, int scheduleTypeId, int tripSeq, String startTime, int taskId, int lineId, int startStopId, int endStopId, String desc, int orientation, int lineVariant, DateTime register, int scheduleProfileId
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int tripId = Int32.Parse(atributes[1]);
+                    int planVersionId = Int32.Parse(atributes[2]);
+                    int tripTypeId = Int32.Parse(atributes[3]);
+                    int scheduleTypeId = Int32.Parse(atributes[4]);
+                    int tripSeq = Int32.Parse(atributes[5]);
+                    String startTime = atributes[6];
+                    int taskId = Int32.Parse(atributes[7]);
+                    int lineId = Int32.Parse(atributes[8]);
+                    int startStopId = Int32.Parse(atributes[9]);
+                    int endStopId = Int32.Parse(atributes[10]);
+                    String desc = atributes[11];
+                    int orientation = Int32.Parse(atributes[12]);
+                    int lineVariant = Int32.Parse(atributes[13]);
+                    DateTime register = Convert.ToDateTime(atributes[14]);
+                    int scheduleProfileId = Int32.Parse(atributes[15]);
+                    t = new Trip(id, tripId, planVersionId, tripTypeId, scheduleTypeId, tripSeq, startTime, taskId, lineId, startStopId, endStopId, desc, orientation, lineVariant, register, scheduleProfileId);
+                    TRIPS.Add(t);
+                }
+                Console.WriteLine("Cantidad Trips: " + TRIPS.Count);
             }
         }
 

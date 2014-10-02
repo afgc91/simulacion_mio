@@ -19,6 +19,12 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("CALENDAR.txt");
             c.AlmacenarInformacion("LINES.txt");
             c.AlmacenarInformacion("LINESARCS.txt");
+            c.AlmacenarInformacion("LINESTOPS.txt");
+            c.AlmacenarInformacion("PLANVERSIONS.txt");
+            c.AlmacenarInformacion("SCHEDULEPROFILES.txt");
+            c.AlmacenarInformacion("STOPS.txt");
+            c.AlmacenarInformacion("TASKS.txt");
+            c.AlmacenarInformacion("TRIPS.txt");
             Console.Read();
         }
     }

@@ -14,9 +14,9 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
         public int PlanVersionId;
        
         public DateTime ActivationDate;
-        public TimeSpan CreationDate;
+        public DateTime CreationDate;
 
-        public PlanVersion(int planVersionId, DateTime activationDate, TimeSpan creationDate) {
+        public PlanVersion(int planVersionId, DateTime activationDate, DateTime creationDate) {
             PlanVersionId = planVersionId;
             ActivationDate = activationDate;
             CreationDate = creationDate;
