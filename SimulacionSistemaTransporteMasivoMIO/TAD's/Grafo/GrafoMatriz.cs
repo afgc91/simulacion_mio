@@ -11,16 +11,17 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 
         public static int CANTIDAD_VERTICES = 200;
         private Vertice<E>[] vertices;
-        private double[][] matriz;
+        private double[,] matriz;
         private int cantidadVertices;
         private int cantidadAristas;
 
         public GrafoMatriz()
         {
             vertices = new Vertice<E>[CANTIDAD_VERTICES];
-            matriz = new double[CANTIDAD_VERTICES][];
+            matriz = new double[CANTIDAD_VERTICES,CANTIDAD_VERTICES];
             cantidadVertices = 0;
             cantidadAristas = 0;
+            inicializarMatriz();
         }
 
         private void inicializarMatriz()
@@ -31,11 +32,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 {
                     if (i == j)
                     {
-                        matriz[i][j] = 0;
+                        matriz[i,j] = 0;
                     }
                     else
                     {
-                        matriz[i][j] = Double.MaxValue;
+                        matriz[i,j] = Double.MaxValue;
                     }
                 }
             }
@@ -60,8 +61,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             int finM = EncontrarVertice(fin);
             if (inicioM != -1 && finM != -1)
             {
-                if (matriz[inicioM][finM] == Double.MaxValue)
-                    matriz[inicioM][finM] = ponderacion;
+                if (matriz[inicioM,finM] == Double.MaxValue)
+                {
+                    matriz[inicioM,finM] = ponderacion;
+                    cantidadAristas++;
+                }
                 else
                     throw new Exception("Ya existe una arista");
             }
@@ -108,7 +112,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             int finM = EncontrarVertice(fin);
             if (inicioM != -1 && finM != -1)
             {
-                matriz[inicioM][finM] = Double.MaxValue;
+                matriz[inicioM,finM] = Double.MaxValue;
                 cantidadAristas--;
             }
             else
@@ -125,7 +129,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             {
                 for (int i = 0; i < cantidadVertices; i++)
                 {
-                    if (matriz[pos][i] != Double.MaxValue)
+                    if (matriz[pos,i] != Double.MaxValue && matriz[pos,i] != 0)
                     {
                         adyacencias.Add(vertices[i].elemento);
                     }
@@ -146,29 +150,38 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
 
         public List<E> DarCamino(E inicio, E fin)
         {
+            
             List<E> elementos = DarAdyacencias(inicio);
             List<E> resultado = new List<E>();
             resultado.Add(inicio);
+            bool a = true;
             foreach(E e in elementos){
-                if (HayCamino(e, fin))
+                if (HayCamino(e, fin) && a)
                 {
-                    auxDarCamino(e, fin, resultado);
+                    a = auxDarCamino(e, fin, resultado);
                 }
             }
             return resultado;
         }
-        private void auxDarCamino(E inicio, E fin, List<E> element){
+        private bool auxDarCamino(E inicio, E fin, List<E> element){
             List<E> elementos = DarAdyacencias(inicio);
+            bool a = true;
+            element.Add(inicio);
             if (!inicio.Equals(fin))
             {
                 foreach (E e in elementos)
                 {
-                    if (HayCamino(e, fin))
+                    if (HayCamino(e, fin) && a)
                     {
-                        element.Add(e);
-                        auxDarCamino(e, fin, element);
+                        a = auxDarCamino(e, fin, element);   
                     }
                 }
+                return a;
+            }
+            else
+            {
+                element.Add(inicio);
+                return false;
             }
     }
      

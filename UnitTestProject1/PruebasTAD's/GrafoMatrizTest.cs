@@ -9,11 +9,12 @@ namespace UnitTestProject1
     [TestClass]
     public class GrafoMatrizTests
     {
-        private GrafoMatriz<Int32> grafo;
+        private GrafoMatriz<int> grafo;
+
         private void Escenario()
         {
              
-            grafo = new GrafoMatriz<Int32>();
+            grafo = new GrafoMatriz<int>();
 
         }
         private void Escenario1()
@@ -45,6 +46,7 @@ namespace UnitTestProject1
             grafo.AgregarArista(2, 1, 1.0);
 
         }
+
         [TestMethod]
         public void TestAgregarVertice()
         {
@@ -123,6 +125,22 @@ namespace UnitTestProject1
             Assert.AreEqual(esp1, a[0]);
             Assert.AreEqual(esp2, a[1]);
             Assert.AreEqual(esp3, a[2]);
+
+        }
+        [TestMethod]
+        public void TestDarCamino()
+        {
+            Escenario3();
+            List<int> a = grafo.DarCamino(2, 3);
+            int esp1 = 2;
+            int esp2 = 1;
+            int esp3 = 3;
+            int act1 = a[0];
+            int act2 = a[1];
+            int act3 = a[2];
+            Assert.AreEqual(esp1, act1);
+            Assert.AreEqual(esp2, act2);
+            Assert.AreEqual(esp3, act3);
 
         }
 
