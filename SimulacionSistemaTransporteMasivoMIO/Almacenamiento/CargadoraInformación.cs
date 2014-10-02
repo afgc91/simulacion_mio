@@ -84,7 +84,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                 }
                 list.Add(line);
             }
-            Console.WriteLine("Cantidad líneas: " + cont);
+            //Console.WriteLine("Cantidad líneas: " + cont);
             return list; 
         }
 
@@ -151,9 +151,88 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                 int cont = 1;
                 Arc a = null;
                 String[] atributes;
-                for (; cont < (list.Count); cont++) { 
+                for (; cont < (list.Count); cont++) {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int planVersionId = Int32.Parse(atributes[1]);
+                    int start = Int32.Parse(atributes[2]);
+                    int end = Int32.Parse(atributes[3]);
+                    String startPoint = atributes[4];
+                    String endPoint = atributes[5];
+                    String desc = atributes[6];
+                    int lenght = Int32.Parse(atributes[7]);
+                    a = new Arc(id, planVersionId, start, end, startPoint, endPoint, desc, lenght);
+                    ARCS.Add(a);
+                }
+                Console.WriteLine("Cantidad Arcs: " + ARCS.Count);
+            }
+            else if (Instance.Equals("CALENDAR.txt"))
+            {
+                int cont = 1;
+                CalendarMIO c = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    DateTime date = Convert.ToDateTime(atributes[1]);
+                    int scheduleTypeId = Int32.Parse(atributes[2]);
+                    int planVersionId = Int32.Parse(atributes[3]);
+                    c = new CalendarMIO(id, date, scheduleTypeId, planVersionId);
+                    CALENDAR.Add(c);
+                }
+                Console.WriteLine("Cantidad registros Calendar: " + CALENDAR.Count);
+            }
+            else if (Instance.Equals("LINES.txt"))
+            {
+                int cont = 1;
+                Line l = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int planVersionId = Int32.Parse(atributes[1]);
+                    String shortName = atributes[2];
+                    String desc = atributes[3];
+                    l = new Line(id, planVersionId, shortName, desc);
+                    LINES.Add(l);
+                }
+                Console.WriteLine("Cantidad Lines: " + LINES.Count);
+            }
+            else if (Instance.Equals("LINESARCS.txt"))
+            {
+                int cont = 1;
+                LineArc la = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
+                    int lineId = Int32.Parse(atributes[1]);
+                    int arcId = Int32.Parse(atributes[2]);
+                    int arcSequence = Int32.Parse(atributes[3]);
+                    int orientation = Int32.Parse(atributes[4]);
+                    int planVersionId = Int32.Parse(atributes[5]);
+                    Int16 lineVariant = Int16.Parse(atributes[6]);
+                    DateTime register = Convert.ToDateTime(atributes[7]);
+                    la = new LineArc(id, lineId, arcId, arcSequence, orientation, planVersionId, lineVariant, register);
+                    LINESARCS.Add(la);
+                }
+                Console.WriteLine("Cantidad LinesArcs: " + LINESARCS.Count);
+            }
+            else if (Instance.Equals("LINESTOPS.txt"))
+            {
+                int cont = 1;
+                LineStop ls = null;
+                String[] atributes = null;
+                for (; cont < (list.Count); cont++)
+                {
+                    atributes = list.ElementAt(cont).Split('\t');
+                    int id = Int32.Parse(atributes[0]);
                     
                 }
+                Console.WriteLine("Cantidad LineStops: " + LINESTOPS.Count);
             }
         }
 
