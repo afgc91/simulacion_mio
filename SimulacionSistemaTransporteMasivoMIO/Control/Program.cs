@@ -13,7 +13,7 @@ namespace SimulacionSistemaTransporteMasivoMIO
         static void Main(string[] args)
         {
           
-            CargadoraInformación c = new CargadoraInformación();
+            CargadoraInformación c = new CargadoraInformación(@"..\\..\\Almacenamiento\Base de datos\");
             c.AlmacenarInformacion("TRIPTYPES.txt");
             c.AlmacenarInformacion("SCHEDULETYPES.txt");
             c.AlmacenarInformacion("DATAPLAN.txt");

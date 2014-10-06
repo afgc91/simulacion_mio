@@ -13,7 +13,7 @@ namespace UnitTestProject1.PruebasCarga
         private GrafoMatriz<Stop> matriz;
 
         private void Escenario1(){
-            c = new CargadoraInformación();
+            c = new CargadoraInformación(@"..\\..\\..\\SimulacionSistemaTransporteMasivoMio\Almacenamiento\Base de datos\");
             matriz = new GrafoMatriz<Stop>();
             c.AlmacenarInformacion("TRIPTYPES.txt");
             c.AlmacenarInformacion("SCHEDULETYPES.txt");

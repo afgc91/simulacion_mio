@@ -45,7 +45,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
            // markersOverlay.Markers.Add(marker2);
            // gMapMIO.Overlays.Add(markersOverlay);
 
-           // marker.ToolTipText = "Información estación: \n   Cantidad pasajeros";
+         
             cargarInfo();
         }
 
@@ -56,7 +56,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void cargarInfo()
         {
-            CargadoraInformación c = new CargadoraInformación();
+            CargadoraInformación c = new CargadoraInformación(@"..\\..\\Almacenamiento\Base de datos\");
             c.AlmacenarInformacion("STOPS.txt");
             Console.WriteLine(c.STOPS[0].DecimalLongitude);
             for (int i = 0; i < c.STOPS.Count; i++)
@@ -67,6 +67,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
                 GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿c.STOPS[i].DecimalLatitude, c.STOPS[i].DecimalLongitude), new Bitmap(@"C:\Users\1151959323\Estacionkawai.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
+                marker.ToolTipText = "Información estación: \n   Cantidad pasajeros";
             }
            
 

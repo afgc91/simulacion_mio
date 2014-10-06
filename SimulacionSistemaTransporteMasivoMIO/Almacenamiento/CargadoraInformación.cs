@@ -9,6 +9,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 {
     public class CargadoraInformación
     {
+        private string ruta;
         public List<Arc> ARCS;
         public List<CalendarMIO> CALENDAR;
         public List<DataPlan> DATAPLAN;
@@ -41,7 +42,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
         /// </summary>
         public String Instance;
 
-        public CargadoraInformación() {
+        public CargadoraInformación(String ruta) {
             //Instance = ins;
             ARCS = new List<Arc>();
             CALENDAR = new List<CalendarMIO>();
@@ -56,6 +57,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             TASKS = new List<TaskMIO>();
             TRIPS = new List<Trip>();
             TRIPTYPES = new List<TripType>();
+            this.ruta = ruta;
             //AlmacenarInformacion(CargarArchivo());
         }
 
@@ -70,7 +72,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             //           select f).First();
 
             List<String> list = new List<String>();
-            StreamReader reader = new StreamReader(@"..\\..\\Almacenamiento\Base de datos\" + Instance);
+            StreamReader reader = new StreamReader(@ruta + Instance);
             String line = "";
             int cont = 0;
             while (true) {
