@@ -59,13 +59,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="PruebasCarga\PruebaCargaDatos.cs" />
     <Compile Include="PruebasTAD%27s\ArregloColasTest.cs" />
     <Compile Include="PruebasTAD%27s\GrafoMatrizTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PruebasCarga\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SimulacionSistemaTransporteMasivoMIO\SimulacionSistemaTransporteMasivoMIO.csproj">
       <Project>{89731c23-e93a-4e92-b5f8-843ec25b14fb}</Project>

@@ -36,5 +36,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
             marker.ToolTipText = "Información estación: \n   Cantidad pasajeros";
         }
+
+        private void gMapMIO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

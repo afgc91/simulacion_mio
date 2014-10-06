@@ -68,6 +68,7 @@
             this.gMapMIO.Size = new System.Drawing.Size(775, 606);
             this.gMapMIO.TabIndex = 0;
             this.gMapMIO.Zoom = 12D;
+            this.gMapMIO.Load += new System.EventHandler(this.gMapMIO_Load);
             // 
             // VentanaMIO
             // 

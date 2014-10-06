@@ -9,7 +9,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
     public class GrafoMatriz<E> : IGrafo<E>
     {
 
-        public static int CANTIDAD_VERTICES = 200;
+        public static int CANTIDAD_VERTICES = 1001;
         private Vertice<E>[] vertices;
         private double[,] matriz;
         private int cantidadVertices;

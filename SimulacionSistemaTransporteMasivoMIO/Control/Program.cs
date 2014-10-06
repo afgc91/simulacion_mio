@@ -12,22 +12,22 @@ namespace SimulacionSistemaTransporteMasivoMIO
     {
         static void Main(string[] args)
         {
-            CargadoraInformación c = new CargadoraInformación();
-            c.AlmacenarInformacion("TRIPTYPES.txt");
-            c.AlmacenarInformacion("SCHEDULETYPES.txt");
-            c.AlmacenarInformacion("DATAPLAN.txt");
-            c.AlmacenarInformacion("ARCS.txt");
-            c.AlmacenarInformacion("CALENDAR.txt");
-            c.AlmacenarInformacion("LINES.txt");
-            c.AlmacenarInformacion("LINESARCS.txt");
-            c.AlmacenarInformacion("LINESTOPS.txt");
-            c.AlmacenarInformacion("PLANVERSIONS.txt");
-            c.AlmacenarInformacion("SCHEDULEPROFILES.txt");
-            c.AlmacenarInformacion("STOPS.txt");
-            c.AlmacenarInformacion("TASKS.txt");
-            c.AlmacenarInformacion("TRIPS.txt");
+        //    CargadoraInformación c = new CargadoraInformación();
+        //    c.AlmacenarInformacion("TRIPTYPES.txt");
+        //    c.AlmacenarInformacion("SCHEDULETYPES.txt");
+        //    c.AlmacenarInformacion("DATAPLAN.txt");
+        //    c.AlmacenarInformacion("ARCS.txt");
+        //    c.AlmacenarInformacion("CALENDAR.txt");
+        //    c.AlmacenarInformacion("LINES.txt");
+        //    c.AlmacenarInformacion("LINESARCS.txt");
+        //    c.AlmacenarInformacion("LINESTOPS.txt");
+        //    c.AlmacenarInformacion("PLANVERSIONS.txt");
+        //    c.AlmacenarInformacion("SCHEDULEPROFILES.txt");
+        //    c.AlmacenarInformacion("STOPS.txt");
+        //    c.AlmacenarInformacion("TASKS.txt");
+        //    c.AlmacenarInformacion("TRIPS.txt");
             VentanaMIO ventanaMIO = new VentanaMIO();
-            ventanaMIO.ShowDialog();
+            ventanaMIO.Show();
         }
     }
 }

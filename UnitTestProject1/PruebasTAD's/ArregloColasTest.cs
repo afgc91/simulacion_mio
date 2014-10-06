@@ -11,6 +11,7 @@ namespace UnitTestProject1.PruebasTAD_s
     {
 
         ArregloCola<int> arreglo;
+        ArregloCola<int>[] colas;
 
         private void Escenario()
         {
@@ -23,6 +24,14 @@ namespace UnitTestProject1.PruebasTAD_s
             arreglo.AgregarElemento(2, 1);
             arreglo.AgregarElemento(2, 3);
 
+        }
+        private void EscenarioTamano()
+        {
+            colas = new ArregloCola<int>[1000];
+            for (int i = 0; i < colas.Length; i++)
+            {
+                colas[i] = new ArregloCola<int>(5);
+            }
         }
         [TestMethod]
         public void TestAgregarElemento()
@@ -85,6 +94,16 @@ namespace UnitTestProject1.PruebasTAD_s
             int esp = 5;
             int act = arreglo.DarTamano();
             Assert.AreEqual(esp, act);
+        }
+        [TestMethod]
+        public void TestAgregarTamano()
+        {
+            EscenarioTamano();
+            for (int i = 0; i < colas.Length; i++)
+            {
+                colas[i].AgregarElemento(i, i % 5);
+            }
+
         }
     }
 }

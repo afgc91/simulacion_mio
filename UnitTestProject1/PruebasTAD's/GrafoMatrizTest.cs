@@ -88,6 +88,18 @@ namespace UnitTestProject1
             grafo.AgregarArista(13, 12, 1.0);
 
         }
+        private void EscenarioMuchosVertices()
+        {
+            grafo = new GrafoMatriz<int>();
+            for (int i = 0; i < 1001; i++)
+            {
+                grafo.AgregarVertice(i);
+            }
+            for (int i = 0; i < 1000; i++)
+            {
+                grafo.AgregarArista(i, i + 1, 5);
+            }
+        }
 
         [TestMethod]
         public void TestAgregarVertice()
@@ -97,6 +109,7 @@ namespace UnitTestProject1
             int esp = 1;
             int act = grafo.CantidadVertices();
             Assert.AreEqual(esp, act);
+            
 
         }
        [TestMethod]
@@ -236,7 +249,12 @@ namespace UnitTestProject1
 
 
         }
+        [TestMethod]
+        public void TestMuchosVertices()
+        {
+            EscenarioMuchosVertices();
+            grafo.BFS(1);
 
-
+        }
     }
 }
