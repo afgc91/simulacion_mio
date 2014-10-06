@@ -70,7 +70,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             //           select f).First();
 
             List<String> list = new List<String>();
-            StreamReader reader = new StreamReader(@"C:\Users\Public\Base de datos MIO\" + Instance);
+            StreamReader reader = new StreamReader(@"C:\Users\1151959323\Base de datos MIO\" + Instance);
             String line = "";
             int cont = 0;
             while (true) {
@@ -295,8 +295,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     String longName = atributes[3];
                     int x = Int32.Parse(atributes[4]);
                     int y = Int32.Parse(atributes[5]);
-                    double longitude = Double.Parse(atributes[6]);
-                    double latitude = Double.Parse(atributes[7]);
+             
+                    double longitude = Convert.ToDouble(atributes[6], new System.Globalization.CultureInfo("en-US"));
+
+                    double latitude = Convert.ToDouble(atributes[7], new System.Globalization.CultureInfo("en-US"));
                     s = new Stop(id, planVersionId, shortName, longName, x, y, longitude, latitude);
                     STOPS.Add(s);
                 }

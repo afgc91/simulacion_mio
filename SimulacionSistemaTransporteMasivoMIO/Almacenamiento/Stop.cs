@@ -12,8 +12,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
         public int PlanVersionId;
         public String ShortName;
         public String LongName;
-        public int GpsX;
-        public int GpsY;
+        public double GpsX;
+        public double GpsY;
         public double DecimalLongitude;
         public double DecimalLatitude;
 

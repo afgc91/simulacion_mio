@@ -9,34 +9,50 @@ namespace UnitTestProject1.PruebasCarga
     [TestClass]
     public class PruebaCargaDatos
     {
-        private CargadoraInformación carga;
+        private CargadoraInformación c;
         private GrafoMatriz<Stop> matriz;
 
         private void Escenario1(){
-            carga = new CargadoraInformación();
+            c = new CargadoraInformación();
             matriz = new GrafoMatriz<Stop>();
-            for (int i = 0; i < carga.STOPS.Count; i++)
+            c.AlmacenarInformacion("TRIPTYPES.txt");
+            c.AlmacenarInformacion("SCHEDULETYPES.txt");
+            c.AlmacenarInformacion("DATAPLAN.txt");
+            c.AlmacenarInformacion("ARCS.txt");
+            c.AlmacenarInformacion("CALENDAR.txt");
+            c.AlmacenarInformacion("LINES.txt");
+            c.AlmacenarInformacion("LINESARCS.txt");
+            c.AlmacenarInformacion("LINESTOPS.txt");
+            c.AlmacenarInformacion("PLANVERSIONS.txt");
+            c.AlmacenarInformacion("SCHEDULEPROFILES.txt");
+            c.AlmacenarInformacion("STOPS.txt");
+            c.AlmacenarInformacion("TASKS.txt");
+            c.AlmacenarInformacion("TRIPS.txt");
+
+            for (int i = 0; i < c.STOPS.Count; i++)
             {
-                matriz.AgregarVertice(carga.STOPS[i]);
+                matriz.AgregarVertice(c.STOPS[i]);
             }
-            for (int i = 0; i < carga.ARCS.Count; i++)
+            for (int i = 0; i < c.ARCS.Count; i++)
             {
                 Stop inicio = null;
                 Stop fin = null;
-                for (int j = 0; j < carga.STOPS.Count; j++)
+                for (int j = 0; j < c.STOPS.Count; j++)
                 {
-                    if (carga.ARCS[i].StopIdStart.Equals(carga.STOPS[i].StopId))
+                    if (c.ARCS[i].StopIdStart == c.STOPS[j].StopId)
                     {
-                        inicio = carga.STOPS[i];
+                        inicio = c.STOPS[j];
                     }
-                    if (carga.STOPS[i].StopId.Equals(carga.ARCS[i].StopIdEnd))
+                    if (c.STOPS[j].StopId == c.ARCS[i].StopIdEnd)
                     {
-                        fin = carga.STOPS[i];
+                        fin = c.STOPS[j];
                     }
                 }
                 if (inicio != null && fin != null)
                 {
-                    matriz.AgregarArista(inicio, fin, carga.ARCS[i].ArcLenght);
+                    
+                        matriz.AgregarArista(inicio, fin, c.ARCS[i].ArcLenght);
+                    
                 }
             }
 
@@ -62,7 +78,7 @@ namespace UnitTestProject1.PruebasCarga
         public void TestConexión()
         {
             Escenario1();
-            List<Stop> cant = matriz.BFS(carga.STOPS[1]);
+            List<Stop> cant = matriz.BFS(c.STOPS[500]);
             int esp = 1000;
             int act = cant.Count;
             Assert.AreEqual(esp, act);
