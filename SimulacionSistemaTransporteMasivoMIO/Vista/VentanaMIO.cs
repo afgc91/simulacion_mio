@@ -63,8 +63,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
             {
 
                 GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
-                
-                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿c.STOPS[i].DecimalLatitude, c.STOPS[i].DecimalLongitude), new Bitmap(""));
+
+                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿c.STOPS[i].DecimalLatitude, c.STOPS[i].DecimalLongitude), new Bitmap(@"C:\Users\1151959323\Estacionkawai.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
             }
