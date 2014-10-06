@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
+using SimulacionSistemaTransporteMasivoMIO.Vista;
 
 namespace SimulacionSistemaTransporteMasivoMIO
 {
@@ -25,7 +26,8 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("STOPS.txt");
             c.AlmacenarInformacion("TASKS.txt");
             c.AlmacenarInformacion("TRIPS.txt");
-            Console.Read();
+            VentanaMIO ventanaMIO = new VentanaMIO();
+            ventanaMIO.ShowDialog();
         }
     }
 }

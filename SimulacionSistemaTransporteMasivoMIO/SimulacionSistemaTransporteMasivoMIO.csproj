@@ -32,8 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.5.5.5, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GMaps.NET Library\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.5.5.5, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GMaps.NET Library\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.5.5.5, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GMaps.NET Library\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,13 +78,28 @@
     <Compile Include="TAD%27s\Grafo\GrafoMatriz.cs" />
     <Compile Include="TAD%27s\Grafo\IGrafo.cs" />
     <Compile Include="TAD%27s\Grafo\Vertice.cs" />
+    <Compile Include="Vista\VentanaMIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VentanaMIO.Designer.cs">
+      <DependentUpon>VentanaMIO.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modelo\" />
-    <Folder Include="Vista\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista\VentanaMIO.resx">
+      <DependentUpon>VentanaMIO.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GMaps.NET Library\GMap.NET.Core.dll" />
+    <Content Include="GMaps.NET Library\GMap.NET.WindowsForms.dll" />
+    <Content Include="GMaps.NET Library\GMap.NET.WindowsPresentation.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
