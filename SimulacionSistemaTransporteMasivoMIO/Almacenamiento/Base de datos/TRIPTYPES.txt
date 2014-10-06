@@ -1,0 +1,5 @@
+TRIPTYPEID	TRIPDESCRIPTION
+1	Comercial
+2	Salida a Patio
+3	Punto Operacional
+4	Entrada a Patio

@@ -70,7 +70,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             //           select f).First();
 
             List<String> list = new List<String>();
-            StreamReader reader = new StreamReader(@"C:\Users\1151959323\Base de datos MIO\" + Instance);
+            StreamReader reader = new StreamReader(@"..\\..\\Almacenamiento\Base de datos\" + Instance);
             String line = "";
             int cont = 0;
             while (true) {

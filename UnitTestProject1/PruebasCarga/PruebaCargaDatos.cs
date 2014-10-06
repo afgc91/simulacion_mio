@@ -52,8 +52,13 @@ namespace UnitTestProject1.PruebasCarga
                 {
                     
                         matriz.AgregarArista(inicio, fin, c.ARCS[i].ArcLenght);
-                    
+
                 }
+                else
+                {
+                   
+                }
+              
             }
 
         }

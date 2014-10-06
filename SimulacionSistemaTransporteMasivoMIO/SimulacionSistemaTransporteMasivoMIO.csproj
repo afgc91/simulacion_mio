@@ -98,6 +98,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Almacenamiento\Base de datos\ARCS.txt" />
+    <Content Include="Almacenamiento\Base de datos\CALENDAR.txt" />
+    <Content Include="Almacenamiento\Base de datos\DATAPLAN.txt" />
+    <Content Include="Almacenamiento\Base de datos\LINES.txt" />
+    <Content Include="Almacenamiento\Base de datos\LINESARCS.txt" />
+    <Content Include="Almacenamiento\Base de datos\LINESTOPS.txt" />
+    <Content Include="Almacenamiento\Base de datos\PLANVERSIONS.txt" />
+    <Content Include="Almacenamiento\Base de datos\SCHEDULEPROFILES.txt" />
+    <Content Include="Almacenamiento\Base de datos\SCHEDULETYPES.txt" />
+    <Content Include="Almacenamiento\Base de datos\STOPS.txt" />
+    <Content Include="Almacenamiento\Base de datos\TASKS.txt" />
+    <Content Include="Almacenamiento\Base de datos\TRIPS.txt" />
+    <Content Include="Almacenamiento\Base de datos\TRIPTYPES.txt" />
     <Content Include="GMaps.NET Library\GMap.NET.Core.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsForms.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsPresentation.dll" />
