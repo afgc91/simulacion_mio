@@ -61,6 +61,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
         /// <returns>Lista con el recorrido</returns>
         List<E> BFS(E elemento);
         /// <summary>
+        /// Retorna la distancia minima entre un vertices de inicio y el resto de vertices
+        /// </summary>
+        /// <param name="inicio">Vertice de inicio</param>
+        /// <returns>Arreglo de objetos con la información relevante</returns>
+        object[] Dijkstra(E inicio);
+        /// <summary>
         /// Retorna la cantidad de vertices en el grafo
         /// </summary>
         /// <returns>Cantidad de vertices</returns>

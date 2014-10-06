@@ -214,6 +214,75 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 return elementos;
         }
 
+        public object[] Dijkstra(E inicio)
+        {
+            
+            int vertice = EncontrarVertice(inicio);
+            double[] pesos = InicializarDijkstra(EncontrarVertice(inicio));
+            Vertice<E>[] padres = new Vertice<E>[cantidadVertices];
+            int[] bloqueados = new int[cantidadVertices];
+            List<int> vertices = new List<int>();
+            List<int>[] camino = InicializarListas();
+            while (vertice != -1)
+            {
+                int p1 = vertice;
+                bloqueados[p1] = 1;
+                vertices.Add(vertice);
+                List<E> adyacencias = DarAdyacencias(this.vertices[vertice].elemento);
+                for (int i = 0; i < adyacencias.Count; i++)
+                {
+                    E elemento = adyacencias[i];
+                    int p2 = EncontrarVertice(elemento);
+                    double piz = pesos[p2];
+                    double pder = pesos[p1] + matriz[p1,p2];
+                    if (piz > pder)
+                    {
+                        pesos[p2] = pesos[p1] + matriz[p1, p2];
+                        padres[p2] = this.vertices[p1];
+                        camino[p2].Add(p2);
+                    }
+                }
+                vertice = DarMin(pesos, bloqueados);
+            }
+
+            return new object[] {pesos,vertices,padres};
+        }
+        private List<int>[] InicializarListas()
+        {
+            List<int>[] camino = new List<int>[cantidadVertices];
+            for (int i = 0; i < camino.Length; i++)
+            {
+                camino[i] = new List<int>();
+            }
+            return camino;
+        }
+        private double[] InicializarDijkstra(int pos)
+        {
+            double[] pesos = new double[cantidadVertices];
+            for (int i = 0; i < pesos.Length; i++)
+            {
+                pesos[i] = double.MaxValue;
+                if (i == pos)
+                {
+                    pesos[i] = 0.0;
+                }
+            }
+            return pesos;
+        }
+        private int DarMin(double[] pesos, int[] bloqueados)
+        {
+            double menor = double.MaxValue;
+            int vertice = -1;
+            for (int i = 0; i < pesos.Length; i++)
+            {
+                if (menor > pesos[i] && bloqueados[i] != 1)
+                {
+                    menor = pesos[i];
+                    vertice = EncontrarVertice(this.vertices[i].elemento);
+                } 
+            }
+            return vertice;
+        }
 
         public int CantidadVertices()
         {
