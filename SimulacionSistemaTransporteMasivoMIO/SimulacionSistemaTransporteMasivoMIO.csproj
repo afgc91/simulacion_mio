@@ -111,6 +111,9 @@
     <Content Include="Almacenamiento\Base de datos\TASKS.txt" />
     <Content Include="Almacenamiento\Base de datos\TRIPS.txt" />
     <Content Include="Almacenamiento\Base de datos\TRIPTYPES.txt" />
+    <Content Include="Almacenamiento\Imagenes\estacion.png" />
+    <Content Include="Almacenamiento\Imagenes\MIOalim.png" />
+    <Content Include="Almacenamiento\Imagenes\MIOtroncal.png" />
     <Content Include="GMaps.NET Library\GMap.NET.Core.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsForms.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsPresentation.dll" />
