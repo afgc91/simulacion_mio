@@ -73,6 +73,7 @@
     <Compile Include="Almacenamiento\Trip.cs" />
     <Compile Include="Almacenamiento\TripType.cs" />
     <Compile Include="GMaps.NET Library\GMapMarkerEstacion.cs" />
+    <Compile Include="Modelo\Parada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAD%27s\ArregloColas\ArregloCola.cs" />
     <Compile Include="TAD%27s\ArregloColas\IArregloCola.cs" />
@@ -89,9 +90,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Vista\VentanaMIO.resx">
       <DependentUpon>VentanaMIO.cs</DependentUpon>
