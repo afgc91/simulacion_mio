@@ -80,6 +80,12 @@
     <Compile Include="TAD%27s\Grafo\GrafoMatriz.cs" />
     <Compile Include="TAD%27s\Grafo\IGrafo.cs" />
     <Compile Include="TAD%27s\Grafo\Vertice.cs" />
+    <Compile Include="Vista\FormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\VentanaMIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Vista\FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\VentanaMIO.resx">
       <DependentUpon>VentanaMIO.cs</DependentUpon>
     </EmbeddedResource>
