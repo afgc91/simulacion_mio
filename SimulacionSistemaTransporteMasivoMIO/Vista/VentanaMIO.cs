@@ -14,6 +14,7 @@ using GMap.NET.WindowsForms.Markers;
 using GMap.NET;
 using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
 using SimulacionSistemaTransporteMasivoMIO.GMaps.NET_Library;
+using SimulacionSistemaTransporteMasivoMIO.Modelo;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Vista
 {
@@ -58,16 +59,16 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
         {
             CargadoraInformación c = new CargadoraInformación(@"..\\..\\Almacenamiento\Base de datos\");
             c.AlmacenarInformacion("STOPS.txt");
-            Console.WriteLine(c.STOPS[0].DecimalLongitude);
-            for (int i = 0; i < c.STOPS.Count; i++)
+            List<Estacion> a = Utilidades.Agrupar(c.STOPS);
+            for (int i = 0; i < a.Count; i++)
             {
 
                 GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
 
-                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿c.STOPS[i].DecimalLatitude, c.STOPS[i].DecimalLongitude), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
+                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿a[i].Latitud, a[i].Longitud), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
-                marker.ToolTipText = "Información estación: \n   Cantidad pasajeros";
+                marker.ToolTipText = "Información estación: " + a[i].Nombre +" \n   Cantidad pasajeros";
             }
            
 

@@ -26,12 +26,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <summary>
         /// Latitud para definir la ubicación geográfica.
         /// </summary>
-        public long Latitud;
+        public double Latitud;
         
         /// <summary>
         /// Longitud para definir la ubicación geográfica.
         /// </summary>
-        public long Longitud;
+        public double Longitud;
         
         /// <summary>
         /// Estado en el que se encuentra la parada. Los estados pueden ser:
@@ -46,12 +46,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         public int IdUltimoBus;
 
-        public Parada() {
-            Id = 0;
-            EstacionId = 0;
-            Nombre = "";
-            Latitud = 0;
-            Longitud = 0;
+        public Parada(int id, String nombre, double latitud, double longitud) {
+            Id = id;
+            Nombre = nombre;
+            Latitud = latitud;
+            Longitud = longitud;
             Estado = 0;
             IdUltimoBus = 0;
         }
