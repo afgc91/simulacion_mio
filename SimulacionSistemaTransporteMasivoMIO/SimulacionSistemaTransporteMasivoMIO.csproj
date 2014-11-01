@@ -73,8 +73,12 @@
     <Compile Include="Almacenamiento\Trip.cs" />
     <Compile Include="Almacenamiento\TripType.cs" />
     <Compile Include="GMaps.NET Library\GMapMarkerEstacion.cs" />
+    <Compile Include="Modelo\Bus.cs" />
     <Compile Include="Modelo\Estacion.cs" />
     <Compile Include="Modelo\Parada.cs" />
+    <Compile Include="Modelo\Pasajero.cs" />
+    <Compile Include="Modelo\Ruta.cs" />
+    <Compile Include="Modelo\Simulacion.cs" />
     <Compile Include="Modelo\Utilidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAD%27s\ArregloColas\ArregloCola.cs" />

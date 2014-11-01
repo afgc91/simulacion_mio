@@ -26,6 +26,16 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Capacidad = capacidad;
             Paradas = new List<Parada>();
         }
+
+        public bool AgregarParada(Parada p) {
+            for (int a = 0; a < Paradas.Count; a++ ) {
+                if(p.CompareTo(Paradas[a]) == 0){
+                    return false;
+                }
+            }
+            Paradas.Add(p);
+            return true;
+        }
        
     }
 }

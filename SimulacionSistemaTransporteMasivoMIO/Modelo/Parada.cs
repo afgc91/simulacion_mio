@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
-    public class Parada
+    public class Parada : IComparable
     {
         /// <summary>
         /// Id de la parada.
@@ -87,6 +87,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         public void SetIdUltimoBus(int busId)
         {
             IdUltimoBus = busId;
+        }
+
+        public int CompareTo(object obj)
+        {
+           Parada a = (Parada)obj;
+           return a.Nombre.CompareTo(this.Nombre);
         }
     }
 }

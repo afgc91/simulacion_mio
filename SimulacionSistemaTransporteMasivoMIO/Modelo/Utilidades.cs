@@ -24,8 +24,34 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 {
                     Stop s = paradas[i];
                     String[] name = s.LongName.Trim().Split(' ');
-                    Estacion est = new Estacion(contador, s.LongName, s.DecimalLatitude, s.DecimalLongitude, 5);
-                    est.Paradas.Add(new Parada(s.StopId, s.LongName, s.DecimalLatitude, s.DecimalLongitude));
+                    String nombre = "";
+                    if (name[0].Length > 2)
+                    {
+                        if (name.Count() == 1)
+                        {
+                            nombre = name[0];
+                        }
+                        else if (name.Count() == 2)
+                        {
+                            nombre = name[0];
+                        }
+                        else if (name.Count() == 3)
+                        {
+                            nombre = name[0] + " " + name[1];
+                        }
+                        else if (name.Count() == 4)
+                        {
+                            nombre = name[0] + " " + name[1] + " " + name[2];
+                        }
+
+                    }
+                    else
+                    {
+                        nombre = s.LongName;
+                    }
+                    
+                    Estacion est = new Estacion(contador, nombre, s.DecimalLatitude, s.DecimalLongitude, 5);
+                    est.AgregarParada(new Parada(s.StopId, s.LongName, s.DecimalLatitude, s.DecimalLongitude));
                     bloqueados.Add(i);
                     if (name[0].Length > 2)
                     {
@@ -58,8 +84,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                                 if (s.LongName.Contains(b) && i != j)
                                 {
 
-                                    est.Paradas.Add(new Parada(s1.StopId, s1.LongName, s1.DecimalLatitude, s1.DecimalLongitude));
-                                    Console.WriteLine(s.LongName + " "+ b);
+                                    est.AgregarParada(new Parada(s1.StopId, name1[name1.Count()-1], s1.DecimalLatitude, s1.DecimalLongitude));
+                                  
                                     bloqueados.Add(j);
                                 }
 
