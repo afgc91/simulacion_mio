@@ -11,7 +11,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <summary>
         /// Identificador del bus.
         /// </summary>
-        public int Id;
+        private int Id;
         
         /// <summary>
         /// Tipo del bus:
@@ -19,27 +19,27 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// 2. Pre troncal
         /// 3. Alimentador
         /// </summary>
-        public int TipoBus;
+        private int TipoBus;
 
         /// <summary>
         /// Capacidad de un bus articulado.
         /// </summary>
-        public static int CAPACIDAD_ARTICULADO=160;
+        private static int CAPACIDAD_ARTICULADO=160;
 
         /// <summary>
         /// Capacidad de un bus pre troncal.
         /// </summary>
-        public static int CAPACIDAD_PRE_TRONCAL = 80;
+        private static int CAPACIDAD_PRE_TRONCAL = 80;
 
         /// <summary>
         /// Capacidad de un bus alimentador.
         /// </summary>
-        public static int CAPACIDAD_ALIMENTADOR = 40;
+        private static int CAPACIDAD_ALIMENTADOR = 40;
 
         /// <summary>
         /// Capacidad del bus.
         /// </summary>
-        public int Capacidad;
+        private int Capacidad;
 
         public Bus(int id, int tipoBus) {
             Id = id;
@@ -55,6 +55,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                     Capacidad = CAPACIDAD_ALIMENTADOR;
                     break;
             }
+        }
+
+        public int GetId() {
+            return Id;
+        }
+
+        public int GetTipoBus() {
+            return TipoBus;
+        }
+
+        public int GetCapacidad() {
+            return Capacidad;
         }
     }
 }

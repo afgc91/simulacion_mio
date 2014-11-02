@@ -11,29 +11,48 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <summary>
         /// Identificador de la ruta.
         /// </summary>
-        public int Id;
+        private int Id;
 
         /// <summary>
         /// Sentido de la ruta:
         /// 1: Ida
         /// 2: Vuelta
         /// </summary>
-        public int Sentido;
+        private int Sentido;
 
         /// <summary>
         /// Nombre de la ruta.
         /// </summary>
-        public String Nombre;
+        private String Nombre;
 
         /// <summary>
         /// Descripción de la ruta.
         /// </summary>
-        public String Descripcion;
+        private String Descripcion;
 
         public Ruta(int id, int sentido, String nombre, String desc) {
             Id = id;
             Nombre = nombre;
             Descripcion = desc;
+        }
+
+        public int GetId() {
+            return Id;
+        }
+
+        public int GetSentido()
+        {
+            return Sentido;
+        }
+
+        public String GetNombre()
+        {
+            return Nombre;
+        }
+
+        public String GetDescripcion()
+        {
+            return Descripcion;
         }
     }
 }

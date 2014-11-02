@@ -9,13 +9,13 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
     public class Estacion
     {
-        public int Id;
-        public String Nombre;
-        public double Latitud;
-        public double Longitud;
-        public int Capacidad;
-        public int DemandaActual;
-        public List<Parada> Paradas;
+        private int Id;
+        private String Nombre;
+        private double Latitud;
+        private double Longitud;
+        private int Capacidad;
+        private int DemandaActual;
+        private List<Parada> Paradas;
 
         public Estacion(int id, String nombre, double latitud, double longitud, int capacidad)
         {
@@ -35,6 +35,30 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             }
             Paradas.Add(p);
             return true;
+        }
+
+        public int GetId() {
+            return Id;
+        }
+
+        public String GetNombre() {
+            return Nombre;
+        }
+
+        public double GetLatitud() {
+            return Latitud;
+        }
+
+        public double GetLongitud() {
+            return Longitud;
+        }
+
+        public int GetCapacidad() {
+            return Capacidad;
+        }
+
+        public List<Parada> GetParadas() {
+            return Paradas;
         }
        
     }
