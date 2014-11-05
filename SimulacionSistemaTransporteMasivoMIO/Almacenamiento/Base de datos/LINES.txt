@@ -1,49 +1,58 @@
 LINEID	PLANVERSIONID	SHORTNAME	DESCRIPTION
+1	40	CMNTA	Caminata
 131	40	T31	Chiminangos - Universidades
 140	40	T40	T. Andrés Sanín - Centro
-2101	40	P10A	Universidades -Centro (Av pasoancho)
-2102	40	P10B	Universidades - Centro
-2301	40	P30A	Chiminangos-Centro
-2471	40	P47A	Unidad Deportiva - T. Andrés Sanín
-2472	40	P47B	T. Andrés Sanín - Unidad Deportiva
+142	40	T42	T. Andrés Sanín - Terminal
+150	40	T50	Nuevo Latir - Centro
+217	40	P17	Universidades -Capri
+220	40	P20	Centro Empresa - Centro
+232	40	P32	Sena - Popular - Terminal
+243	40	P43	T. Andrés Sanín - Popular
+260	40	P60	Ciudad 2000 - San Pascual
+275	40	P75	Amanecer - Capri
 301	40	A01	Centro
+302	40	A02	Zoologico - San Bosco
+303	40	A03	Nacional-Sta librada
+304	40	A04	Bellavista - Manzana del Saber
+305	40	A05	Torre de Cali - Centro
+306	40	A06	Aguacatal - San Bosco
+311	40	A11	Universidades
+318	40	A18	Comfandi Pance - Universidades
+321	40	A21	Ciudadela Floralia - Terminal Menga
 322	40	A22	Brisas de los Alamos
+323	40	A23	Cuidadela Los Alamos
 331	40	A31	Floralia - Chiminangos
 332	40	A32	Alcazares-Chiminangos
 333	40	A33	Ciudadela Floralia
 334	40	A34	Alcazares
+335	40	A35	Calimio Norte - Chiminangos
 345	40	A45	Alfonso López
+346	40	A46	Villa del Lago - Terminal Andres Sanín
+347	40	A47	Pizamos - 7 de Agosto
+351	40	A51	Pizamos - Nuevo Latir
+353	40	A53	Amanecer - Los Lagos Terminal Andrés Sanín
+370	40	A70	Terminal Cañaveralejo - San Bosco
+371	40	A71	Los Chorros - Cañaveralejo
 372	40	A72	Siloe
 373	40	A73	Nápoles - Cañaveralejo
 374	40	A74	Refugio - Cañaveralejo
+375	40	A75	Carabineros - Cañaveralejos
 376	40	A76	Cañaveralejo - HUV
+381	40	A81	Mariano Ramos - Comfandi El Prado
+382	40	A82	Santa Monica - Nueva Floresta
 421	40	E21	Terminal Menga - Universidades
+427	40	E27	Terminal Menga - Unidad Deportiva
 431	40	E31	Expreso Chiminagos -Universidades
-220	40	P20	Centro Empresa - Centro
+437	40	E37	Salomia - Unidad Deportiva
 552	40	R52	MENGA RESERVA
-303	40	A03	Nacional-Sta librada
-304	40	A04	Bellavista - Manzana del Saber
+554	40	R54	SANIN RESERVA
+557	40	R57	CAÑAVERALEJO RESERVA
 1471	40	T47A	T. Andrés Sanín - Capri
 1472	40	T47B	T. Andrés Sanín - Unidad Deportiva
-554	40	R54	SANIN RESERVA
-2702	40	P70B	Refugio-Centro (Av. Pasoancho)
-557	40	R57	CAÑAVERALEJO RESERVA
-437	40	E37	Salomia - Unidad Deportiva
-311	40	A11	Universidades
-3171	40	A17A	Univ -U.San Martín
-3411	40	A41A	Decepaz
-3412	40	A41B	Vallegrande - Terminal Andrés Sanín
-3421	40	A42A	Alfonso Bonilla Aragòn
-3422	40	A42B	La Casona - Terminal Andrés Sanín
-3771	40	A77A	La Hacienda - Capri
-243	40	P43	T. Andrés Sanín - Popular
-302	40	A02	Zoologico - San Bosco
-3172	40	A17B	Universidades - Hormiguero
-318	40	A18	Comfandi Pance - Universidades
-323	40	A23	Cuidadela Los Alamos
-347	40	A47	Pizamos - 7 de Agosto
-375	40	A75	Carabineros - Cañaveralejos
 1571	40	T57A	Nuevo Latir - Unidad Deportiva
+2101	40	P10A	Universidades -Centro (Av pasoancho)
+2102	40	P10B	Universidades - Centro
+2141	40	P14A	Universidades - Terminal Andrés Sanín
 2211	40	P21A	Las Américas - Universidades
 2212	40	P21B	Terminal Menga - Universidades
 2241	40	P24A	Terminal Menga- Terminal Andrés Sanín
@@ -51,42 +60,34 @@ LINEID	PLANVERSIONID	SHORTNAME	DESCRIPTION
 2271	40	P27A	Terminal Menga - Terminal Cañaveralejo
 2273	40	P27C	Terminal Menga - Terminal Cañaveralejo
 2274	40	P27D	Terminal Menga - Capri
+2301	40	P30A	Chiminangos-Centro
+2401	40	P40A	Terminal Andrés Sanín - Centro
+2402	40	P40B	Terminal Andrés Sanín - Centro
+2471	40	P47A	Unidad Deportiva - T. Andrés Sanín
+2472	40	P47B	T. Andrés Sanín - Unidad Deportiva
 2501	40	P50A	Ciudad Cordoba - Centro
 2523	40	P52C	El Vallado - CAM
+2702	40	P70B	Refugio-Centro (Av. Pasoancho)
 2703	40	P70C	Terminal - Cañaveralejo - San Pascual
-306	40	A06	Aguacatal - San Bosco
-321	40	A21	Ciudadela Floralia - Terminal Menga
-335	40	A35	Calimio Norte - Chiminangos
-3441	40	A44A	Manuela Beltrán - Terminal Andrés Sanín
-3442	40	A44B	Puertas Del sol - Terminal Andrés Sanín
-370	40	A70	Terminal Cañaveralejo - San Bosco
-382	40	A82	Santa Monica - Nueva Floresta
-232	40	P32	Sena - Popular - Terminal
-260	40	P60	Ciudad 2000 - San Pascual
-275	40	P75	Amanecer - Capri
-305	40	A05	Torre de Cali - Centro
+2741	40	P74A	Capri - Villanueva - Terminal A.Sanin
+2742	40	P74B	Terminal A. Sanin-Villanueva-Capri
+3121	40	A12A	Meléndez - Estación Meléndez
+3122	40	A12B	Polvorines - Estación Meléndez
 3131	40	A13A	Caney - Universidades
 3132	40	A13B	Caney - Universidades
 3133	40	A13C	Lili - Universidades
-346	40	A46	Villa del Lago - Terminal Andres Sanín
-353	40	A53	Amanecer - Los Lagos Terminal Andrés Sanín
-381	40	A81	Mariano Ramos - Comfandi El Prado
-2401	40	P40A	Terminal Andrés Sanín - Centro
-371	40	A71	Los Chorros - Cañaveralejo
-2402	40	P40B	Terminal Andrés Sanín - Centro
-217	40	P17	Universidades -Capri
-2741	40	P74A	Capri - Villanueva - Terminal A.Sanin
-2742	40	P74B	Terminal A. Sanin-Villanueva-Capri
-150	40	T50	Nuevo Latir - Centro
-3121	40	A12A	Meléndez - Estación Meléndez
-3122	40	A12B	Polvorines - Estación Meléndez
-3191	40	A19A	Comfandi Pance - Universidades
-3192	40	A19B	La Buitrera - Estacion Buitrera
-351	40	A51	Pizamos - Nuevo Latir
-142	40	T42	T. Andrés Sanín - Terminal
-2141	40	P14A	Universidades - Terminal Andrés Sanín
 3141	40	A14A	Universidad Sanbuenaventura.
 3142	40	A14B	La Voragine - Universidades
+3171	40	A17A	Univ -U.San Martín
+3172	40	A17B	Universidades - Hormiguero
 3173	40	A17C	Universidades - Comfenalco
+3191	40	A19A	Comfandi Pance - Universidades
+3192	40	A19B	La Buitrera - Estacion Buitrera
 3371	40	A37A	Sena - Salomia
-427	40	E27	Terminal Menga - Unidad Deportiva
+3411	40	A41A	Decepaz
+3412	40	A41B	Vallegrande - Terminal Andrés Sanín
+3421	40	A42A	Alfonso Bonilla Aragòn
+3422	40	A42B	La Casona - Terminal Andrés Sanín
+3441	40	A44A	Manuela Beltrán - Terminal Andrés Sanín
+3442	40	A44B	Puertas Del sol - Terminal Andrés Sanín
+3771	40	A77A	La Hacienda - Capri
