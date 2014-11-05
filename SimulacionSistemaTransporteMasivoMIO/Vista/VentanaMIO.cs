@@ -65,10 +65,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
                 GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
 
-                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿a[i].Latitud, a[i].Longitud), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
+                GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿a[i].GetLatitud(), a[i].GetLongitud()), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
-                marker.ToolTipText = "Información estación: " + a[i].Nombre +" \n   Cantidad pasajeros";
+                marker.ToolTipText = "Información estación: " + a[i].GetNombre() +" \n   Cantidad pasajeros";
             }
            
 
