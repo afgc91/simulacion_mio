@@ -142,8 +142,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     String contratist = atributes[12];
                     DateTime register = Convert.ToDateTime(atributes[13]);
                     //Console.WriteLine(atributes[14]);
-                    int tripEndTime = atributes[14].Contains("null")?-1:Int32.Parse(atributes[14]);
-                    int tripTransitTime = atributes[15].Contains("null") ? -1 : Int32.Parse(atributes[15]);
+                    int tripEndTime = atributes[14].Contains("null") || atributes[14].Contains("") || atributes[14].Contains(" ") ? -1 : Int32.Parse(atributes[14]);
+                    int tripTransitTime = atributes[15].Contains("null") || atributes[15].Contains("") || atributes[15].Contains(" ") ? -1 : Int32.Parse(atributes[15]);
                     dp = new DataPlan(id, lineShortName, lineId, orientation, totalStops, tripLenght, taskId, tripId, tripStartTime, scheduleTypeId, tripTypeId, planVersionId, contratist, register, tripEndTime, tripTransitTime);
                     //if (cont == 40) { break; }
                     DATAPLAN.Add(dp);
