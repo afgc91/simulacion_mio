@@ -20,7 +20,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 if (!bloqueados.Contains(i))
                 {
                     Stop s = paradas[i];
-                    String[] name = s.LongName.Trim().Split(' ');
+                    String[] name = s.LongName.Trim().Split(' '); 
                     String nombre = "";
                     if (name[0].Length > 2)
                     {
