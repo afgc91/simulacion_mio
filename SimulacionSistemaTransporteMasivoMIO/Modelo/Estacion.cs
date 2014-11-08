@@ -60,6 +60,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         public List<Parada> GetParadas() {
             return Paradas;
         }
+
+        public int GetDemandaActual()
+        {
+            return DemandaActual;
+        }
        
     }
 }

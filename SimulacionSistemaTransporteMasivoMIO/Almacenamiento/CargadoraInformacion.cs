@@ -7,7 +7,7 @@ using System.IO;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 {
-    public class CargadoraInformación
+    public class CargadoraInformacion
     {
         private string ruta;
         public List<Arc> ARCS;
@@ -42,7 +42,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
         /// </summary>
         public String Instance;
 
-        public CargadoraInformación(String ruta) {
+        public CargadoraInformacion(String ruta) {
             //Instance = ins;
             ARCS = new List<Arc>();
             CALENDAR = new List<CalendarMIO>();

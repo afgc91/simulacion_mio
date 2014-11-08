@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Almacenamiento\CargadoraInformación.cs" />
+    <Compile Include="Almacenamiento\CargadoraInformacion.cs" />
     <Compile Include="Control\Program.cs" />
     <Compile Include="Almacenamiento\Arc.cs" />
     <Compile Include="Almacenamiento\Bus.cs" />

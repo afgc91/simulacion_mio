@@ -21,10 +21,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
     public partial class VentanaMIO : Form
     {
 
-    
+        public CargadoraInformacion c;
        
-        public VentanaMIO()
+        public VentanaMIO(CargadoraInformacion ci)
         {
+            c = ci;
             InitializeComponent();
         }
 
@@ -57,8 +58,6 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void cargarInfo()
         {
-            CargadoraInformación c = new CargadoraInformación(@"..\\..\\Almacenamiento\Base de datos\");
-            c.AlmacenarInformacion("STOPS.txt");
             List<Estacion> a = Utilidades.Agrupar(c.STOPS);
             for (int i = 0; i < a.Count; i++)
             {

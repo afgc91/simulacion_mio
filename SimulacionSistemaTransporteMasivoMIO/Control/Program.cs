@@ -13,7 +13,7 @@ namespace SimulacionSistemaTransporteMasivoMIO
         static void Main(string[] args)
         {
           
-            CargadoraInformación c = new CargadoraInformación(@"..\\..\\Almacenamiento\Base de datos\");
+            CargadoraInformacion c = new CargadoraInformacion(@"..\\..\\Almacenamiento\Base de datos\");
             c.AlmacenarInformacion("TRIPTYPES.txt");
             c.AlmacenarInformacion("SCHEDULETYPES.txt");
             c.AlmacenarInformacion("DATAPLAN.txt");
@@ -27,7 +27,8 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("STOPS.txt");
             c.AlmacenarInformacion("TASKS.txt");
             c.AlmacenarInformacion("TRIPS.txt");
-            FormInicio ventanaMIO = new FormInicio();
+            VentanaMIO ventanaMIO = new VentanaMIO(c);
+            //FormInicio ventanaMIO = new FormInicio();
             ventanaMIO.ShowDialog();
         }
     }

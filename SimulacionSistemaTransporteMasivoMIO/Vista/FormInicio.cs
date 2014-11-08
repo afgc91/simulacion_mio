@@ -24,8 +24,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VentanaMIO ventanaMIO = new VentanaMIO();
-            ventanaMIO.ShowDialog();
+            //VentanaMIO ventanaMIO = new VentanaMIO();
+            //ventanaMIO.ShowDialog();
         }
     }
 }
