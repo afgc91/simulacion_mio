@@ -65,6 +65,19 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         {
             return DemandaActual;
         }
+
+        public void SetLatitud(double lat) {
+            Latitud = lat;
+        }
+
+        public void SetLongitud(double lng)
+        {
+            Longitud = lng;
+        }
+
+        public void SetCapacidad(int cap) {
+            Capacidad = cap;
+        }
        
     }
 }
