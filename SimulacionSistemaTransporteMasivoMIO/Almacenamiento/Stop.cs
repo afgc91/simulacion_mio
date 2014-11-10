@@ -27,5 +27,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             DecimalLongitude = longitude;
             DecimalLatitude = latitude;
         }
+
+        public override string ToString()
+        {
+            return StopId + LongName + "";
+        }
+
     }
 }

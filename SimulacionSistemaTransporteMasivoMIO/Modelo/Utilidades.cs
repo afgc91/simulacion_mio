@@ -141,15 +141,17 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 cont += 1;
             }
 
-            for (int i = 0; i < paradas.Count; i++ ) {
-                if(!IsInList(paradas[i].ShortName, troncales)){
-                    temp = new Estacion(cont, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude, 0);
-                    Parada p = new Parada(paradas[i].StopId, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude);
-                    temp.AgregarParada(p);
-                    estaciones.Add(temp);
-                    cont += 1;
-                }
-            }
+            //for (int i = 0; i < paradas.Count; i++)
+            //{
+            //    if (!IsInList(paradas[i].ShortName, troncales))
+            //    {
+            //        temp = new Estacion(cont, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude, 0);
+            //        Parada p = new Parada(paradas[i].StopId, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude);
+            //        temp.AgregarParada(p);
+            //        estaciones.Add(temp);
+            //        cont += 1;
+            //    }
+            //}
             Console.WriteLine("Cantidad de estaciones: " + estaciones.Count);
             return estaciones;
         }

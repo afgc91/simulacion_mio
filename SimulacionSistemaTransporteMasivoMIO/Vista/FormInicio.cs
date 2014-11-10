@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
+using SimulacionSistemaTransporteMasivoMIO.Modelo;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Vista
 {
@@ -15,10 +16,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
     {
 
         public CargadoraInformacion c;
+        public Simulacion sim;
 
-        public FormInicio(CargadoraInformacion ci)
+        public FormInicio(CargadoraInformacion ci, Simulacion simu)
         {
             c = ci;
+            sim = simu;
             InitializeComponent();
 
         }
@@ -30,7 +33,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void butIniSimul_Click(object sender, EventArgs e)
         {
-            VentanaMIO ventanaMIO = new VentanaMIO(c);
+            VentanaMIO ventanaMIO = new VentanaMIO(c,sim);
             ventanaMIO.ShowDialog();
         }
     }

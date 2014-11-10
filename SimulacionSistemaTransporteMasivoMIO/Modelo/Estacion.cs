@@ -36,6 +36,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Paradas.Add(p);
             return true;
         }
+        public bool ContieneParada(int paradaID)
+        {
+            bool a = false;
+            for (int i = 0; i < Paradas.Count && !a; i++)
+            {
+                if (Paradas[i].Id == paradaID)
+                {
+                    a = true;
+                }
+            }
+                return a;
+        }
 
         public int GetId() {
             return Id;

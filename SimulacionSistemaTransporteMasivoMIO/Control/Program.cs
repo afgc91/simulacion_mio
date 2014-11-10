@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
 using SimulacionSistemaTransporteMasivoMIO.Vista;
-
+using SimulacionSistemaTransporteMasivoMIO.Modelo;
 namespace SimulacionSistemaTransporteMasivoMIO
 {
     class Program
@@ -28,7 +28,11 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("TASKS.txt");
             c.AlmacenarInformacion("TRIPS.txt");
             //VentanaMIO ventanaMIO = new VentanaMIO(c);
-            FormInicio ventanaMIO = new FormInicio(c);
+            Simulacion sim = new Simulacion();
+            sim.cargarEstaciones(Utilidades.AgruparParadas(c.STOPS));
+            sim.cargarArcos(c.ARCS);
+            
+            FormInicio ventanaMIO = new FormInicio(c,sim);
             ventanaMIO.ShowDialog();
         }
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s;
+using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
@@ -36,13 +38,58 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <summary>
         /// Estaciones en el sistema.
         /// </summary>
-        public List<Estacion> Estaciones;
+        public GrafoMatriz<Estacion> Estaciones;
 
         /// <summary>
         /// Total de buses en operación de Metrocali.
         /// </summary>
         public List<Bus> Buses;
+        public Simulacion()
+        {
+            Estaciones = new GrafoMatriz<Estacion>();
+            Pasajeros = new List<Pasajero>();
+            Buses = new List<Bus>();
+        }
+        public void cargarEstaciones(List<Estacion> est)
+        {
+            for (int i = 0; i < est.Count; i++)
+            {
+                Estaciones.AgregarVertice(est[i]);
+            }
+        }
+        public void cargarArcos(List<Arc> arcos)
+        {
+            Estacion[] a = Estaciones.DarVertices();
+            for (int i = 0; i < arcos.Count; i++)
+            {
+                Estacion inicio = null;
+                Estacion fin = null;
+                for (int j = 0; j < a.Length && inicio == null; j++)
+                {
+                    if (a[j].ContieneParada(arcos[i].StopIdStart))
+                    {
+                        inicio = a[j];
+                    }
+                }
+                for (int j = 0; j < a.Length && fin == null; j++)
+                {
+                    if (a[j].ContieneParada(arcos[i].StopIdEnd))
+                    {
+                        fin = a[j];
+                    }
+                }
 
+                try
+                {
+                    Estaciones.AgregarArista(inicio, fin, arcos[i].ArcLenght);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+           Console.WriteLine( Estaciones.BFS(a[5]).Count);
+        }
 
     }
 }

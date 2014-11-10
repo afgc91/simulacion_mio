@@ -9,7 +9,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
     public class GrafoMatriz<E> : IGrafo<E>
     {
 
-        public static int CANTIDAD_VERTICES = 1001;
+        public static int CANTIDAD_VERTICES = 2000;
         private Vertice<E>[] vertices;
         private double[,] matriz;
         private int cantidadVertices;
@@ -51,7 +51,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             }
             else
             {
-                throw new Exception("El vertice ya se encuentra en el grafo");
+                throw new Exception("El vertice ya se encuentra en el grafo"+ elemento);
             }
         }
 
@@ -67,7 +67,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                     cantidadAristas++;
                 }
                 else
-                    throw new Exception("Ya existe una arista");
+                    throw new Exception("Ya existe una arista" + inicio);
             }
             else
             {
@@ -282,6 +282,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 } 
             }
             return vertice;
+        }
+        public E[] DarVertices()
+        {
+           E[] vertices1 = new E[cantidadVertices];
+           for (int i = 0; i < cantidadVertices; i++)
+           {
+               vertices1[i] = vertices[i].elemento;
+           }
+               return vertices1;
         }
 
         public int CantidadVertices()

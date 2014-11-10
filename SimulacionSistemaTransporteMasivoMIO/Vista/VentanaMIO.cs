@@ -22,11 +22,14 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
     {
 
         public CargadoraInformacion c;
+        public Simulacion sim;
        
-        public VentanaMIO(CargadoraInformacion ci)
+        public VentanaMIO(CargadoraInformacion ci, Simulacion simu)
         {
             c = ci;
+            sim = simu;
             InitializeComponent();
+            
         }
 
         private void VentanaMIO_Load(object sender, EventArgs e)
@@ -58,9 +61,9 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void cargarInfo()
         {
-            List<Estacion> a = Utilidades.AgruparParadas(c.STOPS);
-
-            for (int i = 0; i < a.Count; i++)
+            //List<Estacion> a = Utilidades.AgruparParadas(c.STOPS);
+            Estacion[] a = sim.Estaciones.DarVertices();
+            for (int i = 0; i < a.Length; i++)
             {
 
                 GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
