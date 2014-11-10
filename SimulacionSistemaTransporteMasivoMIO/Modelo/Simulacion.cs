@@ -88,7 +88,13 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
                 }
             }
-           Console.WriteLine( Estaciones.BFS(a[5]).Count);
+            List<Estacion> c = Estaciones.BFS(a[44]);
+            Console.WriteLine(Estaciones.CantidadVertices());
+           Console.WriteLine( c.Count);
+           for (int i = 0; i < c.Count; i++)
+           {
+               Console.WriteLine(c[i].GetNombre() +" " +Estaciones.DarVertices()[i].GetNombre());
+           }
         }
 
     }
