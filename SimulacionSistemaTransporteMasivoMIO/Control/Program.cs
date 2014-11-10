@@ -27,8 +27,8 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("STOPS.txt");
             c.AlmacenarInformacion("TASKS.txt");
             c.AlmacenarInformacion("TRIPS.txt");
-            VentanaMIO ventanaMIO = new VentanaMIO(c);
-            //FormInicio ventanaMIO = new FormInicio();
+            //VentanaMIO ventanaMIO = new VentanaMIO(c);
+            FormInicio ventanaMIO = new FormInicio(c);
             ventanaMIO.ShowDialog();
         }
     }

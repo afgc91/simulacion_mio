@@ -59,6 +59,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
         private void cargarInfo()
         {
             List<Estacion> a = Utilidades.AgruparParadas(c.STOPS);
+
             for (int i = 0; i < a.Count; i++)
             {
 

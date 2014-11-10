@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.butIniSimul = new System.Windows.Forms.Button();
             this.labTiemSimul = new System.Windows.Forms.Label();
             this.textCapacidadBus = new System.Windows.Forms.TextBox();
@@ -48,41 +47,33 @@
             this.labMomSemana = new System.Windows.Forms.Label();
             this.comboMomSemana = new System.Windows.Forms.ComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupRestricciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(153, 628);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // butIniSimul
             // 
-            this.butIniSimul.Location = new System.Drawing.Point(261, 542);
+            this.butIniSimul.Location = new System.Drawing.Point(117, 635);
             this.butIniSimul.Name = "butIniSimul";
             this.butIniSimul.Size = new System.Drawing.Size(127, 23);
             this.butIniSimul.TabIndex = 22;
             this.butIniSimul.Text = "iniciar simulacion";
             this.butIniSimul.UseVisualStyleBackColor = true;
+            this.butIniSimul.Click += new System.EventHandler(this.butIniSimul_Click);
             // 
             // labTiemSimul
             // 
             this.labTiemSimul.AutoSize = true;
-            this.labTiemSimul.Location = new System.Drawing.Point(65, 465);
+            this.labTiemSimul.Location = new System.Drawing.Point(19, 499);
             this.labTiemSimul.Name = "labTiemSimul";
-            this.labTiemSimul.Size = new System.Drawing.Size(90, 13);
+            this.labTiemSimul.Size = new System.Drawing.Size(82, 13);
             this.labTiemSimul.TabIndex = 20;
-            this.labTiemSimul.Text = "tiempo simulacion";
+            this.labTiemSimul.Text = "tiempo a simular";
             // 
             // textCapacidadBus
             // 
-            this.textCapacidadBus.Location = new System.Drawing.Point(287, 394);
+            this.textCapacidadBus.Location = new System.Drawing.Point(241, 428);
             this.textCapacidadBus.Name = "textCapacidadBus";
             this.textCapacidadBus.Size = new System.Drawing.Size(100, 20);
             this.textCapacidadBus.TabIndex = 19;
@@ -99,7 +90,7 @@
             // labCapacidadBus
             // 
             this.labCapacidadBus.AutoSize = true;
-            this.labCapacidadBus.Location = new System.Drawing.Point(65, 397);
+            this.labCapacidadBus.Location = new System.Drawing.Point(19, 431);
             this.labCapacidadBus.Name = "labCapacidadBus";
             this.labCapacidadBus.Size = new System.Drawing.Size(88, 13);
             this.labCapacidadBus.TabIndex = 21;
@@ -189,16 +180,16 @@
             this.groupRestricciones.Controls.Add(this.labHoraValle);
             this.groupRestricciones.Controls.Add(this.comboRuta);
             this.groupRestricciones.Controls.Add(this.labHoraPico);
-            this.groupRestricciones.Location = new System.Drawing.Point(68, 73);
+            this.groupRestricciones.Location = new System.Drawing.Point(22, 73);
             this.groupRestricciones.Name = "groupRestricciones";
-            this.groupRestricciones.Size = new System.Drawing.Size(319, 292);
+            this.groupRestricciones.Size = new System.Drawing.Size(319, 333);
             this.groupRestricciones.TabIndex = 23;
             this.groupRestricciones.TabStop = false;
             this.groupRestricciones.Text = "cambiar restricciones";
             // 
             // textTiemSimul
             // 
-            this.textTiemSimul.Location = new System.Drawing.Point(287, 462);
+            this.textTiemSimul.Location = new System.Drawing.Point(241, 496);
             this.textTiemSimul.Name = "textTiemSimul";
             this.textTiemSimul.Size = new System.Drawing.Size(100, 20);
             this.textTiemSimul.TabIndex = 18;
@@ -206,7 +197,7 @@
             // labMomSemana
             // 
             this.labMomSemana.AutoSize = true;
-            this.labMomSemana.Location = new System.Drawing.Point(65, 25);
+            this.labMomSemana.Location = new System.Drawing.Point(19, 25);
             this.labMomSemana.Name = "labMomSemana";
             this.labMomSemana.Size = new System.Drawing.Size(116, 13);
             this.labMomSemana.TabIndex = 17;
@@ -215,14 +206,14 @@
             // comboMomSemana
             // 
             this.comboMomSemana.FormattingEnabled = true;
-            this.comboMomSemana.Location = new System.Drawing.Point(266, 19);
+            this.comboMomSemana.Location = new System.Drawing.Point(220, 19);
             this.comboMomSemana.Name = "comboMomSemana";
             this.comboMomSemana.Size = new System.Drawing.Size(121, 21);
             this.comboMomSemana.TabIndex = 16;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(48, 491);
+            this.trackBar1.Location = new System.Drawing.Point(12, 575);
             this.trackBar1.Maximum = 60;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
@@ -230,11 +221,21 @@
             this.trackBar1.TabIndex = 24;
             this.trackBar1.Value = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(115, 546);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "tiempo real simulacion(min)";
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 708);
+            this.ClientSize = new System.Drawing.Size(366, 708);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.butIniSimul);
             this.Controls.Add(this.labTiemSimul);
@@ -244,7 +245,6 @@
             this.Controls.Add(this.textTiemSimul);
             this.Controls.Add(this.labMomSemana);
             this.Controls.Add(this.comboMomSemana);
-            this.Controls.Add(this.button1);
             this.Name = "FormInicio";
             this.Text = "FormInicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
@@ -258,7 +258,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button butIniSimul;
         private System.Windows.Forms.Label labTiemSimul;
         private System.Windows.Forms.TextBox textCapacidadBus;
@@ -278,5 +277,6 @@
         private System.Windows.Forms.Label labMomSemana;
         private System.Windows.Forms.ComboBox comboMomSemana;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label1;
     }
 }

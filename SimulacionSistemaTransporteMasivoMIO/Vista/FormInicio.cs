@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Vista
 {
     public partial class FormInicio : Form
     {
-        public FormInicio()
+
+        public CargadoraInformacion c;
+
+        public FormInicio(CargadoraInformacion ci)
         {
+            c = ci;
             InitializeComponent();
+
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
@@ -22,10 +28,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void butIniSimul_Click(object sender, EventArgs e)
         {
-            //VentanaMIO ventanaMIO = new VentanaMIO();
-            //ventanaMIO.ShowDialog();
+            VentanaMIO ventanaMIO = new VentanaMIO(c);
+            ventanaMIO.ShowDialog();
         }
     }
 }
