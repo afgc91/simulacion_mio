@@ -47,16 +47,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private int Estado;
 
-        public Pasajero(int id, int stationSrcId, int stationDstId, int incomeTime, int idLstStation, int idLastBus, int state) {
+        public Pasajero(int id, int stationSrcId, int stationDstId, int incomeTime) {
             EstOrigenId = stationSrcId;
             EstDestinoId = stationDstId;
             TiempoIngreso = incomeTime;
-            IdUltimaEstacion = idLstStation;
-            IdUltimoBus = idLastBus;
-            Estado = state;
             Id = id;
         }
 
+        public override string ToString()
+        {
+            
+            return Id + " " + EstOrigenId + " " + EstDestinoId + " " + TiempoIngreso;
+        }
         public int GetId() {
             return Id;
         }

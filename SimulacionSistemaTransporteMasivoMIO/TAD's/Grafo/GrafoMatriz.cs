@@ -55,15 +55,14 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
             }
         }
 
-        public void AgregarArista(E inicio, E fin, double ponderacion)
+        public void AgregarArista(int inicio, int fin, double ponderacion)
         {
-            int inicioM = EncontrarVertice(inicio);
-            int finM = EncontrarVertice(fin);
-            if (inicioM != -1 && finM != -1)
+           
+            if (inicio >= 0 && fin >= 0)
             {
-                if (matriz[inicioM,finM] == Double.MaxValue)
+                if (matriz[inicio,fin] == Double.MaxValue)
                 {
-                    matriz[inicioM,finM] = ponderacion;
+                    matriz[inicio,fin] = ponderacion;
                     cantidadAristas++;
                 }
                 else
@@ -197,7 +196,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 cola.Enqueue(adyacentes[i]);
                 elementos.Add(adyacentes[i]);
             }
-            while (cola.Count > 0)
+            while (cola.Count >0)
             {
                 E elemento1 = cola.Dequeue();
                 List<E> elementos2 = DarAdyacencias(elemento1);

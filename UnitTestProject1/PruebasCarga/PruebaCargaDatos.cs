@@ -42,21 +42,20 @@ namespace UnitTestProject1.PruebasCarga
             }
             for (int i = 0; i < c.ARCS.Count; i++)
             {
-                Stop inicio = null;
-                Stop fin = null;
+                int inicio = -1;
+                int fin = -1;
                 for (int j = 0; j < c.STOPS.Count; j++)
                 {
                     if (c.ARCS[i].StopIdStart == c.STOPS[j].StopId)
                     {
-                        inicio = c.STOPS[j];
+                        inicio = j;
                     }
                     if (c.STOPS[j].StopId == c.ARCS[i].StopIdEnd)
                     {
-                        fin = c.STOPS[j];
+                        fin = j;
                     }
                 }
-                if (inicio != null && fin != null)
-                {
+                
                     //try
                     //{
                         matriz.AgregarArista(inicio, fin, c.ARCS[i].ArcLenght);
@@ -65,11 +64,7 @@ namespace UnitTestProject1.PruebasCarga
                     //{
 
                     //}
-                }
-                else
-                {
-                   
-                }
+               
               
             }
 

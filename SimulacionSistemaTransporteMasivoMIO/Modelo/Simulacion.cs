@@ -57,25 +57,29 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 Estaciones.AgregarVertice(est[i]);
             }
         }
+
         public void cargarArcos(List<Arc> arcos)
         {
+
             Estacion[] a = Estaciones.DarVertices();
             for (int i = 0; i < arcos.Count; i++)
             {
-                Estacion inicio = null;
-                Estacion fin = null;
-                for (int j = 0; j < a.Length && inicio == null; j++)
+                int inicio = -1;
+                int fin = -1;
+                for (int j = 0; j < a.Length && inicio == -1; j++)
                 {
+
                     if (a[j].ContieneParada(arcos[i].StopIdStart))
                     {
-                        inicio = a[j];
+                        inicio = j;
                     }
+
                 }
-                for (int j = 0; j < a.Length && fin == null; j++)
+                for (int k = 0; k < a.Length && fin == -1; k++)
                 {
-                    if (a[j].ContieneParada(arcos[i].StopIdEnd))
+                    if (a[k].ContieneParada(arcos[i].StopIdEnd))
                     {
-                        fin = a[j];
+                        fin = k;
                     }
                 }
 
@@ -88,13 +92,19 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
                 }
             }
-            List<Estacion> c = Estaciones.BFS(a[44]);
-            Console.WriteLine(Estaciones.CantidadVertices());
-           Console.WriteLine( c.Count);
-           for (int i = 0; i < c.Count; i++)
-           {
-               Console.WriteLine(c[i].GetNombre() +" " +Estaciones.DarVertices()[i].GetNombre());
-           }
+        }
+
+        public void GenerarPasajeros()
+        {
+            Estacion[] a = Estaciones.DarVertices();
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                int cantidad = a[i].GetParadas().Count*307;
+
+                Utilidades.GenerarPasajeros(cantidad, a.Length, 1080, a[i].GetId());
+            }
+
         }
 
     }

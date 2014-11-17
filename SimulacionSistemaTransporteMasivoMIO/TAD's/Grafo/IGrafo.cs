@@ -19,7 +19,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
         /// <param name="inicio">Vertice de inicio</param>
         /// <param name="fin">Vertice de fin</param>
         /// <param name="ponderacion">Peso de la arista</param>
-        void AgregarArista(E inicio, E fin, double ponderacion);
+        void AgregarArista(int inicio, int fin, double ponderacion);
         /// <summary>
         /// Este metodo se encarga de eliminar un vertice
         /// </summary>
