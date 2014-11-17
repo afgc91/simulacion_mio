@@ -29,8 +29,8 @@ namespace SimulacionSistemaTransporteMasivoMIO
             c.AlmacenarInformacion("TRIPS.txt");
             //VentanaMIO ventanaMIO = new VentanaMIO(c);
             Simulacion sim = new Simulacion();
-            sim.cargarEstaciones(Utilidades.AgruparParadas(c.STOPS));
-            sim.cargarArcos(c.ARCS);
+            sim.CargarEstaciones(Utilidades.AgruparParadas(c.STOPS));
+            sim.CargarArcos(c.ARCS);
             
             FormInicio ventanaMIO = new FormInicio(c,sim);
             ventanaMIO.ShowDialog();

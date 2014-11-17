@@ -54,7 +54,7 @@
             // 
             // butIniSimul
             // 
-            this.butIniSimul.Location = new System.Drawing.Point(117, 635);
+            this.butIniSimul.Location = new System.Drawing.Point(109, 625);
             this.butIniSimul.Name = "butIniSimul";
             this.butIniSimul.Size = new System.Drawing.Size(127, 23);
             this.butIniSimul.TabIndex = 22;
@@ -182,7 +182,7 @@
             this.groupRestricciones.Controls.Add(this.labHoraPico);
             this.groupRestricciones.Location = new System.Drawing.Point(22, 73);
             this.groupRestricciones.Name = "groupRestricciones";
-            this.groupRestricciones.Size = new System.Drawing.Size(319, 333);
+            this.groupRestricciones.Size = new System.Drawing.Size(319, 330);
             this.groupRestricciones.TabIndex = 23;
             this.groupRestricciones.TabStop = false;
             this.groupRestricciones.Text = "cambiar restricciones";
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 708);
+            this.ClientSize = new System.Drawing.Size(366, 669);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.butIniSimul);

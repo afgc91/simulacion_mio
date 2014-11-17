@@ -62,7 +62,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
         private void cargarInfo()
         {
             //List<Estacion> a = Utilidades.AgruparParadas(c.STOPS);
-            Estacion[] a = sim.Estaciones.DarVertices();
+            Estacion[] a = sim.GrafoMIO.DarVertices();
             for (int i = 0; i < a.Length; i++)
             {
 

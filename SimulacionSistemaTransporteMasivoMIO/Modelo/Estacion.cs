@@ -38,15 +38,14 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         }
         public bool ContieneParada(int paradaID)
         {
-            bool a = false;
-            for (int i = 0; i < Paradas.Count && !a; i++)
+            for (int i = 0; i < Paradas.Count ; i++)
             {
                 if (Paradas[i].Id == paradaID)
                 {
-                    a = true;
+                    return true;
                 }
             }
-                return a;
+            return false;
         }
 
         public int GetId() {

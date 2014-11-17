@@ -151,6 +151,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                 Console.WriteLine("Cantidad registros DataPlan: " + DATAPLAN.Count);
             }else if(Instance.Equals("ARCS.txt")){
                 int cont = 1;
+                //String[] est = DarCodEstTroncales();
                 Arc a = null;
                 String[] atributes;
                 for (; cont < (list.Count); cont++) {
@@ -164,7 +165,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     String desc = atributes[6];
                     int lenght = Int32.Parse(atributes[7]);
                     a = new Arc(id, planVersionId, start, end, startPoint, endPoint, desc, lenght);
-                    ARCS.Add(a);
+                    if(ArcoContieneEstTroncales(a)){
+                        ARCS.Add(a);
+                    }
+                    //ARCS.Add(a);
                 }
                 Console.WriteLine("Cantidad Arcs: " + ARCS.Count);
             }
@@ -363,6 +367,69 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
 
         private void SetInstance(String ins) {
             Instance = ins;
+        }
+
+        private static String[] DarCodEstTroncales()
+        {
+            String[] estTroncales = { "TMENGA", "A.SANI", "CHIMI", "UDP", "CAPRI", "UNIV", "T.C",
+                                    "FLORAI", "SALOM", "POPU", "MZAN", "FATI", "RIOC", "TORRE", "PILOT", "SANIC",
+                                    "ERMI", "CAICED", "CENTRO", "STROSA", "FRAY", "SANBO", "7AGO", "TREB", "VICOL",
+                                    "CHAPI", "ATGI", "FLORE", "BELAL", "SANPAS", "SUCRE", "PTCUY", "SANPED", "SNTLIB",
+                                    "MANZA", "ESTAD", "TEQUE", "LIDO", "PLATOR", "PAMPA", "REFUG", "CALDAS", "MELEN", "BUITRE",
+                                    "UNIVAL", "VERSALL", "L.AMERI", "PRADNOR", "VIPASA", "ALAMOS", "N.LATIR", "AMANECE", "CONQUIS", "TRONCAL",
+                                    "VLNUEVA", "ST.MONI", "PRIMITI", "C.PALOS"};
+
+            return estTroncales;
+        }
+
+        private bool ArcoContieneEstTroncales(Arc a) {
+            String[] estTroncales = DarCodEstTroncales();
+            String start = a.StartPoint;
+            String end = a.EndPoint;
+            bool startFlag = false;
+            bool endFlag = false;
+            for (int i = 0; i < estTroncales.Length; i++ ) {
+                if (start.Contains(estTroncales[i])&&StartEquals(estTroncales[i], start)) {
+                    startFlag = true;
+                    break;
+                }
+            }
+            if (!startFlag) {
+                return false;
+            }
+            for (int i = 0; i < estTroncales.Length; i++)
+            {
+                if (end.Contains(estTroncales[i]) && StartEquals(estTroncales[i], end))
+                {
+                    endFlag = true;
+                    break;
+                }
+            }
+            //if (startFlag && endFlag) {
+                //if (start.Contains("UNIVAL") || end.Contains("UNIVAL")) {
+                    //Console.WriteLine("Est. inicio: " + start + " - Est. fin: " + end);
+                //}
+            //}
+            return startFlag && endFlag;
+        }
+
+        /// <summary>
+        /// Permite verificar si la cadena 'cadena' empieza con la subcadena 'original'.
+        /// Precondición: cadena contiene a original.
+        /// </summary>
+        /// <param name="original"></param>
+        /// <param name="cadena"></param>
+        /// <returns></returns>
+        private bool StartEquals(String original, String cadena)
+        {
+            for (int a = 0; a < original.Length; a++)
+            {
+                if (!original.ElementAt(a).Equals(cadena.ElementAt(a))) 
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }

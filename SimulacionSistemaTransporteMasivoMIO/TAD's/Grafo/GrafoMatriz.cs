@@ -10,7 +10,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
     {
 
         public static int CANTIDAD_VERTICES = 2000;
-        private Vertice<E>[] vertices;
+        private Vertice<E>[] vertices;//Estaciones del sistema.
         private double[,] matriz;
         private int cantidadVertices;
         private int cantidadAristas;
