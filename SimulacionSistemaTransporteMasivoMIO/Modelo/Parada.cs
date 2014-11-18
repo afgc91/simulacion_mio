@@ -46,7 +46,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         public int IdUltimoBus;
 
-        public ArregloCola<Pasajero> Pasajeros;
+        public ArregloCola<Pasajero> ColasPasajeros;
 
         public Parada(int id, String nombre, double latitud, double longitud) {
             Id = id;
@@ -55,7 +55,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Longitud = longitud;
             Estado = false;
             IdUltimoBus = 0;
-            Pasajeros = new ArregloCola<Pasajero>(6);
+            ColasPasajeros = new ArregloCola<Pasajero>(6);
         }
 
         public bool Ocupada()

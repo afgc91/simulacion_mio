@@ -99,11 +99,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
             Estacion estacion = estaciones[EstacionActualRuta];
             Parada parada = estacion.DarParadas()[NumParada];
-               ArregloCola<Pasajero> pasajeros = parada.Pasajeros;
-               while (!pasajeros.ColaVacia(NumCola) && CapacidadActual< Pasajeros.Length)
+               ArregloCola<Pasajero> pasajeros = parada.ColasPasajeros;
+               while (!pasajeros.ColaVacia(NumCola) && CapacidadActual < Capacidad)
                {
                    agregarPasajero(pasajeros.ObtenerElemento(NumCola));
                    pasajeros.EliminarElemento(NumCola);
+                   CapacidadActual++;
                }
 
          
