@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
-    public class Pasajero
+    public class Pasajero : IComparable
     {
         /// <summary>
         /// Identificación del pasajero.
@@ -44,6 +45,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// 1: Esperando Bus
         /// 2: A bordo de un bus
         /// 3: Esperando turno para entrar a una estación
+        /// 4: Llego a su destino
         /// </summary>
         private int Estado;
 
@@ -56,9 +58,30 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
         public override string ToString()
         {
-            
-            return Id + " " + EstOrigenId + " " + EstDestinoId + " " + TiempoIngreso;
+            return  TiempoIngreso + " "  + Id + " " + EstOrigenId + " " + EstDestinoId;
         }
+
+        public int EsMiEstacion(int idEst, Bus actual, GrafoMatriz<Estacion> grafo)
+        {
+            int parada = actual.EstacionAct();
+            int proximaEstacion = actual.DarRuta().DarParadas()[parada+1][0];
+            int paradaActual = actual.DarRuta().DarParadas()[parada][0];
+            double[,] matrizGrafo = grafo.DarMatriz();
+            if (matrizGrafo[paradaActual, EstDestinoId] == 0)
+            {
+                Estado = 4;
+            }
+            if (matrizGrafo[paradaActual, EstDestinoId] >= matrizGrafo[proximaEstacion, EstDestinoId])
+            {
+                Estado = 2;
+            }
+            else
+            {
+                Estado = 1;
+            }
+            return Estado;
+        }
+
         public int GetId() {
             return Id;
         }
@@ -104,5 +127,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Estado = estado;
         }
 
+
+        public int CompareTo(object obj)
+        {
+            Pasajero a = (Pasajero)obj;
+            return TiempoIngreso.CompareTo(a.TiempoIngreso);
+        }
     }
 }

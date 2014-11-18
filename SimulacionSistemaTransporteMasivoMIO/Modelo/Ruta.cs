@@ -30,10 +30,21 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private String Descripcion;
 
+        private List<int[]> ParadasRut;
+
+        
+
         public Ruta(int id, int sentido, String nombre, String desc) {
             Id = id;
             Nombre = nombre;
             Descripcion = desc;
+            Sentido = sentido;
+            ParadasRut = new List<int[]>();
+        }
+
+        public void agregarParada(int[] parada)
+        {
+            ParadasRut.Add(parada);
         }
 
         public int GetId() {
@@ -54,5 +65,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         {
             return Descripcion;
         }
+
+        public List<int[]> DarParadas()
+        {
+            return ParadasRut;
+        }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
@@ -35,24 +36,31 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         
         /// <summary>
         /// Estado en el que se encuentra la parada. Los estados pueden ser:
-        /// 1. No hay buses.
-        /// 2. Hay un bus y hay pasajeros abordando.
-        /// 3. Hay un bus y hay pasajeros desembarcando.
+        /// false No hay buses.
+        /// true Hay un bus y hay pasajeros abordando.
         /// </summary>
-        public Int16 Estado;
+        public bool Estado;
 
         /// <summary>
         /// Id del bus actual o del último bus que visitó la parada.
         /// </summary>
         public int IdUltimoBus;
 
+        public ArregloCola<Pasajero> Pasajeros;
+
         public Parada(int id, String nombre, double latitud, double longitud) {
             Id = id;
             Nombre = nombre;
             Latitud = latitud;
             Longitud = longitud;
-            Estado = 0;
+            Estado = false;
             IdUltimoBus = 0;
+            Pasajeros = new ArregloCola<Pasajero>(6);
+        }
+
+        public bool Ocupada()
+        {
+            return Estado;
         }
 
         public void SetId(int id) {
@@ -79,7 +87,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Longitud = longitud;
         }
 
-        public void SetEstado(Int16 estado)
+        public void SetEstado(bool estado)
         {
             Estado = estado;
         }

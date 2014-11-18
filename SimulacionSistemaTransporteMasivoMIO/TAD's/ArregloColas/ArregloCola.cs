@@ -17,13 +17,16 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas
             this.tamano = tamano;
             colas = new Queue<E>[this.tamano];
 
-            for (int i = 0; i < tamano; i++)
-            {
-                colas[i] = new Queue<E>();
-            }
+           
 
         }
-
+        public void inicializarCola(int id){
+            colas[id] = new Queue<E>();
+        }
+        public bool colaEnUso(int id)
+        {
+          return (colas[id] == null) ? false:true;
+        }
         public void AgregarElemento(E elemento, int pos)
         {
             colas[pos].Enqueue(elemento);

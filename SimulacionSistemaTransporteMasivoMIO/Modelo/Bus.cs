@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
@@ -41,9 +43,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private int Capacidad;
 
-        public Bus(int id, int tipoBus) {
+        private int CapacidadActual;
+
+        private int EstacionActual;
+
+        private Pasajero[] Pasajeros;
+
+        private Ruta ruta;
+
+        public Bus(int id, int tipoBus, Ruta ruta) {
             Id = id;
             TipoBus = tipoBus;
+            this.ruta = ruta;
             switch (tipoBus) { 
                 case 1:
                     Capacidad = CAPACIDAD_ARTICULADO;
@@ -54,6 +65,62 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 case 3:
                     Capacidad = CAPACIDAD_ALIMENTADOR;
                     break;
+            }
+            Pasajeros = new Pasajero[Capacidad];
+            CapacidadActual = 0;
+        }
+
+        public void Run(int tiempo, GrafoMatriz<Estacion> grafo)
+        {
+
+            Estacion[] estaciones = grafo.DarVertices();
+            int EstacionActualRuta = ruta.DarParadas()[EstacionActual][0];
+            int NumParada = ruta.DarParadas()[EstacionActual][1];
+            int NumCola = ruta.DarParadas()[EstacionActual][2];
+            for (int i = 0; i < Pasajeros.Length; i++)
+            {
+                if (Pasajeros[i] != null)
+                {
+                    if (Pasajeros[i].EsMiEstacion(EstacionActual,this,grafo) == 4)
+                    {
+                        Pasajeros[i] = null;
+                        CapacidadActual--;
+                    }
+                    else if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 1)
+                    {
+
+                        estaciones[EstacionActual].agregarPasajeros(Pasajeros[i]);
+                        Pasajeros[i] = null;
+                        CapacidadActual--;
+
+                    }
+                }
+            }
+
+            Estacion estacion = estaciones[EstacionActualRuta];
+            Parada parada = estacion.DarParadas()[NumParada];
+               ArregloCola<Pasajero> pasajeros = parada.Pasajeros;
+               while (!pasajeros.ColaVacia(NumCola) && CapacidadActual< Pasajeros.Length)
+               {
+                   agregarPasajero(pasajeros.ObtenerElemento(NumCola));
+                   pasajeros.EliminarElemento(NumCola);
+               }
+
+         
+            EstacionActual++;
+
+
+        }
+        public void agregarPasajero(Pasajero p)
+        {
+            bool agrego = false;
+            for (int i = 0; i < Pasajeros.Length && !agrego; i++)
+            {
+                if (Pasajeros[i] == null)
+                {
+                    Pasajeros[i] = p;
+                    agrego = true;
+                }
             }
         }
 
@@ -67,6 +134,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
         public int GetCapacidad() {
             return Capacidad;
+        }
+
+        public Ruta DarRuta()
+        {
+            return ruta;
+        }
+        public int EstacionAct()
+        {
+            return EstacionActual;
         }
     }
 }
