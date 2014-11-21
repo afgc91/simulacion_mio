@@ -10,10 +10,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
     {
 
         public static int CANTIDAD_VERTICES = 2000;
-        private Vertice<E>[] vertices;
+        private Vertice<E>[] vertices;//Estaciones del sistema.
         private double[,] matriz;
         private int cantidadVertices;
         private int cantidadAristas;
+        private double[,] matrizFloy;
 
         public GrafoMatriz()
         {
@@ -243,7 +244,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 }
                 vertice = DarMin(pesos, bloqueados);
             }
-
+            
             return new object[] {pesos,vertices,padres};
         }
         private List<int>[] InicializarListas()
@@ -290,6 +291,53 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                vertices1[i] = vertices[i].elemento;
            }
                return vertices1;
+        }
+
+        private void floydWarshall()
+        {
+            ClonarMatriz();
+
+            for (int i = 1; i < CANTIDAD_VERTICES; i++)
+            {
+                for (int j = 1; j < CANTIDAD_VERTICES; j++)
+                {
+                    if (matrizFloy[j,i] != double.MaxValue && j != i)
+                    {
+                        for (int k = 1; k < CANTIDAD_VERTICES; k++)
+                        {
+                            if (j != k && k != i
+                                    && matrizFloy[i, k] != double.MaxValue)
+                            {
+                                double pos1 = matrizFloy[j,i];
+                                double pos2 = matrizFloy[i,k];
+                                if (pos1 != double.MaxValue
+                                        && pos2 != double.MaxValue)
+                                {
+                                    if (pos1 + pos2 < matrizFloy[j, k])
+                                        matrizFloy[j, k] = pos1 + pos2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        private void ClonarMatriz()
+        {
+            matrizFloy = new double[CANTIDAD_VERTICES, CANTIDAD_VERTICES];
+            for (int i = 0; i < CANTIDAD_VERTICES; i++)
+            {
+                for (int j = 0; j < CANTIDAD_VERTICES; j++)
+                {
+                    matrizFloy[i, j] = matriz[i, j];
+                }
+            }
+        }
+
+        public double[,] DarMatriz()
+        {
+            return matrizFloy;
         }
 
         public int CantidadVertices()

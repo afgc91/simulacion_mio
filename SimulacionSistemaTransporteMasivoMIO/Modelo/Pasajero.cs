@@ -61,10 +61,22 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             return  TiempoIngreso + " "  + Id + " " + EstOrigenId + " " + EstDestinoId;
         }
 
+        /// <summary>
+        /// Permite verificar si un pasajero se ha de bajar en la estación actual o continuar en su bus.
+        /// Precondición: El bus del pasajero se encuentra en una estación.
+        /// </summary>
+        /// <param name="idEst"></param>
+        /// <param name="actual"></param>
+        /// <param name="grafo"></param>
+        /// <returns int name = "Estado"></returns>
         public int EsMiEstacion(int idEst, Bus actual, GrafoMatriz<Estacion> grafo)
         {
             int parada = actual.EstacionAct();
-            int proximaEstacion = actual.DarRuta().DarParadas()[parada+1][0];
+            int proximaEstacion = actual.EstacionAct();
+            if (parada + 1 < actual.DarRuta().DarParadas().Count)
+            {
+                 proximaEstacion = actual.DarRuta().DarParadas()[parada + 1][0];
+           
             int paradaActual = actual.DarRuta().DarParadas()[parada][0];
             double[,] matrizGrafo = grafo.DarMatriz();
             if (matrizGrafo[paradaActual, EstDestinoId] == 0)
@@ -78,6 +90,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             else
             {
                 Estado = 1;
+            }
+            }
+            else
+            {
+                Estado = 4;
             }
             return Estado;
         }

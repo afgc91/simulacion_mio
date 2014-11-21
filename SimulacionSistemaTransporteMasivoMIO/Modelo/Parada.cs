@@ -46,6 +46,9 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         public int IdUltimoBus;
 
+        /// <summary>
+        /// Colas que atienden a las diferentes rutas que se detienen en la parada.
+        /// </summary>
         public ArregloCola<Pasajero> ColasPasajeros;
 
         public Parada(int id, String nombre, double latitud, double longitud) {

@@ -8,7 +8,7 @@ using SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 {
-    public class Bus
+    public class Bus : IComparable
     {
         /// <summary>
         /// Identificador del bus.
@@ -22,6 +22,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// 3. Alimentador
         /// </summary>
         private int TipoBus;
+
+        private  int VELOCIDAD_VALLE = 40;
+
+        private  int VELOCIDAD_PICO = 20;
 
         /// <summary>
         /// Capacidad de un bus articulado.
@@ -43,15 +47,38 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private int Capacidad;
 
+        /// <summary>
+        /// Capacidad en un momento dado del bus.
+        /// </summary>
         private int CapacidadActual;
 
+        /// <summary>
+        /// Estacion en que se encuentra un bus en un momento determinado.
+        /// </summary>
         private int EstacionActual;
 
+        /// <summary>
+        /// Momento en el que se realizara el siguiente evento en la simulacion.
+        /// </summary>
+        private int siguienteInteraccion;
+
+        /// <summary>
+        /// Arreglo de pasajeros que viajan en el bus.
+        /// </summary>
         private Pasajero[] Pasajeros;
 
+        /// <summary>
+        /// Ruta de paradas que sigue el bus.
+        /// </summary>
         private Ruta ruta;
 
-        public Bus(int id, int tipoBus, Ruta ruta) {
+        /// <summary>
+        ///Simulacion a la que pertenece el bus.
+        /// </summary>
+        private Simulacion sim;
+
+        public Bus(int id, int tipoBus, Ruta ruta, double siguienteInteraccion, Simulacion sim) {
+            this.sim = sim;
             Id = id;
             TipoBus = tipoBus;
             this.ruta = ruta;
@@ -68,48 +95,138 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             }
             Pasajeros = new Pasajero[Capacidad];
             CapacidadActual = 0;
+            this.siguienteInteraccion = normalizarATiempoSimulacion(siguienteInteraccion);
+        }
+         
+        public void setVelocidadValleYPico(int valle, int pico){
+
+            VELOCIDAD_PICO = pico;
+            VELOCIDAD_VALLE = valle;
+
         }
 
-        public void Run(int tiempo, GrafoMatriz<Estacion> grafo)
+        public override string ToString()
         {
+            return siguienteInteraccion + " " + Id + " " + TipoBus;
+        }
 
-            Estacion[] estaciones = grafo.DarVertices();
-            int EstacionActualRuta = ruta.DarParadas()[EstacionActual][0];
-            int NumParada = ruta.DarParadas()[EstacionActual][1];
-            int NumCola = ruta.DarParadas()[EstacionActual][2];
-            for (int i = 0; i < Pasajeros.Length; i++)
+        /// <summary>
+        /// Permite realizar las operaciones del bus, que consiten en desenso de pasajeros, subir pasajeros y avanzar a otra estación.
+        /// </summary>
+        /// <param name="tiempo"></param>
+        /// <param name="grafo"></param>
+        /// <returns></returns>
+        public void AtiendeBus(int tiempo, GrafoMatriz<Estacion> grafo)
+        {
+            if (tiempo == siguienteInteraccion)
             {
-                if (Pasajeros[i] != null)
+                Estacion[] estaciones = grafo.DarVertices();
+                int EstacionActualRuta = ruta.DarParadas()[EstacionActual][0];
+                int NumParada = ruta.DarParadas()[EstacionActual][1];
+                int NumCola = ruta.DarParadas()[EstacionActual][2];
+                for (int i = 0; i < Pasajeros.Length; i++)
                 {
-                    if (Pasajeros[i].EsMiEstacion(EstacionActual,this,grafo) == 4)
+                    if (Pasajeros[i] != null)
                     {
-                        Pasajeros[i] = null;
-                        CapacidadActual--;
+                        if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 4)
+                        {
+                            Pasajeros[i] = null;
+                            CapacidadActual--;
+                        }
+                        else if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 1)
+                        {
+
+                            estaciones[EstacionActual].agregarPasajeros(Pasajeros[i]);
+                            Pasajeros[i] = null;
+                            CapacidadActual--;
+
+                        }
                     }
-                    else if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 1)
+                }
+
+                Estacion estacion = estaciones[EstacionActualRuta];
+                Parada parada = estacion.DarParadas()[NumParada];
+                if (!parada.Estado)
+                {
+                    parada.Estado = true;
+                    ArregloCola<Pasajero> pasajeros = parada.ColasPasajeros;
+                    while (!pasajeros.ColaVacia(NumCola) && CapacidadActual < Capacidad)
                     {
-
-                        estaciones[EstacionActual].agregarPasajeros(Pasajeros[i]);
-                        Pasajeros[i] = null;
-                        CapacidadActual--;
+                        agregarPasajero(pasajeros.ObtenerElemento(NumCola));
+                        pasajeros.EliminarElemento(NumCola);
+                        CapacidadActual++;
+                    }
+                    EstacionActual++;
+                    if ((tiempo > 120 && tiempo < 240) || (tiempo > 780 && tiempo < 900))
+                    {
+                        siguienteInteraccion = (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_PICO);
 
                     }
+                    else
+                    {
+                        siguienteInteraccion = (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_VALLE);
+                    }
+                    parada.Estado = false;
+                }
+                else
+                {
+                    siguienteInteraccion++;
                 }
             }
 
-            Estacion estacion = estaciones[EstacionActualRuta];
-            Parada parada = estacion.DarParadas()[NumParada];
-               ArregloCola<Pasajero> pasajeros = parada.ColasPasajeros;
-               while (!pasajeros.ColaVacia(NumCola) && CapacidadActual < Capacidad)
-               {
-                   agregarPasajero(pasajeros.ObtenerElemento(NumCola));
-                   pasajeros.EliminarElemento(NumCola);
-                   CapacidadActual++;
-               }
 
-         
-            EstacionActual++;
+        }
 
+        /// <summary>
+        /// Permite transformar los valores de hora en que parten los buses a tiempo de simulación.
+        /// Precondición: existe una hora  de partida del bus.
+        /// </summary>
+        /// <param name="tOrigen"></param>
+        /// <returns>int tNor</returns>
+        public int normalizarATiempoSimulacion(double tOrigen)
+        {
+            int tNor = 0;
+
+            if (tOrigen < 5)
+            {
+                tOrigen = 5;
+            }
+            if (tOrigen > 22)
+            {
+                tOrigen = 22;
+            }
+            int ent = (int)tOrigen;
+            int dec= (int)((tOrigen - ent)*60);
+
+            if (ent == 5)
+            {
+                tNor = 0;
+            }
+            if (ent > 5)
+            {
+                int dif = ent - 5;
+                tNor += dif*(60);
+            }
+
+            tNor = tNor + dec;
+            return tNor;
+        }
+
+        //public void Run(int duracion,int tiempo, GrafoMatriz<Estacion> estaciones)
+        //{
+        //    while (tiempo != duracion)
+        //    {
+        //        AtiendeBus(tiempo, estaciones);
+        //    }
+        //}
+        public void Run()
+        {
+             int tiempo = sim.Timer;
+             int duracion = Simulacion.SIM_TIME_WEEK;
+            while (tiempo < duracion)
+            {
+                AtiendeBus(tiempo, sim.Estaciones);
+            }
 
         }
         public void agregarPasajero(Pasajero p)
@@ -144,6 +261,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         public int EstacionAct()
         {
             return EstacionActual;
+        }
+
+        public int CompareTo(object obj)
+        {
+            Bus a = (Bus)obj;
+            return siguienteInteraccion.CompareTo(a.siguienteInteraccion);
         }
     }
 }

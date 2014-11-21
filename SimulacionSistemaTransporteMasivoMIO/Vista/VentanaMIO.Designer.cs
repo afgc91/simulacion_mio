@@ -30,30 +30,20 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.gMapMIO = new GMap.NET.WindowsForms.GMapControl();
-            this.comboMomSemana = new System.Windows.Forms.ComboBox();
-            this.labMomSemana = new System.Windows.Forms.Label();
-            this.textTiemSimul = new System.Windows.Forms.TextBox();
-            this.textCapacidadBus = new System.Windows.Forms.TextBox();
-            this.labTiemSimul = new System.Windows.Forms.Label();
-            this.labCapacidadBus = new System.Windows.Forms.Label();
             this.butReporte = new System.Windows.Forms.Button();
-            this.butIniSimul = new System.Windows.Forms.Button();
-            this.groupRestricciones = new System.Windows.Forms.GroupBox();
-            this.labRuta = new System.Windows.Forms.Label();
-            this.labCantBuses = new System.Windows.Forms.Label();
-            this.labFrecuencia = new System.Windows.Forms.Label();
-            this.labHoraValle = new System.Windows.Forms.Label();
-            this.labHoraPico = new System.Windows.Forms.Label();
-            this.comboRuta = new System.Windows.Forms.ComboBox();
-            this.textCantBus = new System.Windows.Forms.TextBox();
-            this.textFrecuencia = new System.Windows.Forms.TextBox();
-            this.textHoraValle = new System.Windows.Forms.TextBox();
-            this.textHoraPico = new System.Windows.Forms.TextBox();
+            this.labPasMovil = new System.Windows.Forms.Label();
+            this.labNumPasMov = new System.Windows.Forms.Label();
+            this.labTTrans = new System.Windows.Forms.Label();
+            this.labTiempTransInfo = new System.Windows.Forms.Label();
+            this.labCantColaps = new System.Windows.Forms.Label();
+            this.labNoCantColaps = new System.Windows.Forms.Label();
+            this.labOcProm = new System.Windows.Forms.Label();
+            this.labNomOcProm = new System.Windows.Forms.Label();
+            this.butSim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupRestricciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -68,15 +58,16 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupRestricciones);
-            this.splitContainer1.Panel2.Controls.Add(this.butIniSimul);
+            this.splitContainer1.Panel2.Controls.Add(this.butSim);
+            this.splitContainer1.Panel2.Controls.Add(this.labOcProm);
+            this.splitContainer1.Panel2.Controls.Add(this.labNomOcProm);
+            this.splitContainer1.Panel2.Controls.Add(this.labCantColaps);
+            this.splitContainer1.Panel2.Controls.Add(this.labNoCantColaps);
+            this.splitContainer1.Panel2.Controls.Add(this.labTTrans);
+            this.splitContainer1.Panel2.Controls.Add(this.labTiempTransInfo);
+            this.splitContainer1.Panel2.Controls.Add(this.labNumPasMov);
+            this.splitContainer1.Panel2.Controls.Add(this.labPasMovil);
             this.splitContainer1.Panel2.Controls.Add(this.butReporte);
-            this.splitContainer1.Panel2.Controls.Add(this.labCapacidadBus);
-            this.splitContainer1.Panel2.Controls.Add(this.labTiemSimul);
-            this.splitContainer1.Panel2.Controls.Add(this.textCapacidadBus);
-            this.splitContainer1.Panel2.Controls.Add(this.textTiemSimul);
-            this.splitContainer1.Panel2.Controls.Add(this.labMomSemana);
-            this.splitContainer1.Panel2.Controls.Add(this.comboMomSemana);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1200, 630);
             this.splitContainer1.SplitterDistance = 798;
@@ -104,172 +95,95 @@
             this.gMapMIO.Zoom = 12D;
             this.gMapMIO.Load += new System.EventHandler(this.gMapMIO_Load);
             // 
-            // comboMomSemana
-            // 
-            this.comboMomSemana.FormattingEnabled = true;
-            this.comboMomSemana.Location = new System.Drawing.Point(238, 46);
-            this.comboMomSemana.Name = "comboMomSemana";
-            this.comboMomSemana.Size = new System.Drawing.Size(121, 21);
-            this.comboMomSemana.TabIndex = 0;
-            // 
-            // labMomSemana
-            // 
-            this.labMomSemana.AutoSize = true;
-            this.labMomSemana.Location = new System.Drawing.Point(37, 52);
-            this.labMomSemana.Name = "labMomSemana";
-            this.labMomSemana.Size = new System.Drawing.Size(116, 13);
-            this.labMomSemana.TabIndex = 1;
-            this.labMomSemana.Text = "momento de la semana";
-            // 
-            // textTiemSimul
-            // 
-            this.textTiemSimul.Location = new System.Drawing.Point(259, 489);
-            this.textTiemSimul.Name = "textTiemSimul";
-            this.textTiemSimul.Size = new System.Drawing.Size(100, 20);
-            this.textTiemSimul.TabIndex = 9;
-            // 
-            // textCapacidadBus
-            // 
-            this.textCapacidadBus.Location = new System.Drawing.Point(259, 421);
-            this.textCapacidadBus.Name = "textCapacidadBus";
-            this.textCapacidadBus.Size = new System.Drawing.Size(100, 20);
-            this.textCapacidadBus.TabIndex = 10;
-            // 
-            // labTiemSimul
-            // 
-            this.labTiemSimul.AutoSize = true;
-            this.labTiemSimul.Location = new System.Drawing.Point(37, 492);
-            this.labTiemSimul.Name = "labTiemSimul";
-            this.labTiemSimul.Size = new System.Drawing.Size(90, 13);
-            this.labTiemSimul.TabIndex = 11;
-            this.labTiemSimul.Text = "tiempo simulacion";
-            // 
-            // labCapacidadBus
-            // 
-            this.labCapacidadBus.AutoSize = true;
-            this.labCapacidadBus.Location = new System.Drawing.Point(37, 424);
-            this.labCapacidadBus.Name = "labCapacidadBus";
-            this.labCapacidadBus.Size = new System.Drawing.Size(88, 13);
-            this.labCapacidadBus.TabIndex = 12;
-            this.labCapacidadBus.Text = "capacidad buses";
-            // 
             // butReporte
             // 
-            this.butReporte.Location = new System.Drawing.Point(40, 569);
+            this.butReporte.Location = new System.Drawing.Point(133, 569);
             this.butReporte.Name = "butReporte";
             this.butReporte.Size = new System.Drawing.Size(137, 23);
             this.butReporte.TabIndex = 13;
             this.butReporte.Text = "mostrar reporte";
             this.butReporte.UseVisualStyleBackColor = true;
+            this.butReporte.Click += new System.EventHandler(this.butReporte_Click);
             // 
-            // butIniSimul
+            // labPasMovil
             // 
-            this.butIniSimul.Location = new System.Drawing.Point(233, 569);
-            this.butIniSimul.Name = "butIniSimul";
-            this.butIniSimul.Size = new System.Drawing.Size(127, 23);
-            this.butIniSimul.TabIndex = 14;
-            this.butIniSimul.Text = "iniciar simulacion";
-            this.butIniSimul.UseVisualStyleBackColor = true;
+            this.labPasMovil.AutoSize = true;
+            this.labPasMovil.Location = new System.Drawing.Point(64, 39);
+            this.labPasMovil.Name = "labPasMovil";
+            this.labPasMovil.Size = new System.Drawing.Size(110, 13);
+            this.labPasMovil.TabIndex = 15;
+            this.labPasMovil.Text = "Pasajeros movilizados";
             // 
-            // groupRestricciones
+            // labNumPasMov
             // 
-            this.groupRestricciones.Controls.Add(this.textHoraPico);
-            this.groupRestricciones.Controls.Add(this.labRuta);
-            this.groupRestricciones.Controls.Add(this.textHoraValle);
-            this.groupRestricciones.Controls.Add(this.labCantBuses);
-            this.groupRestricciones.Controls.Add(this.textFrecuencia);
-            this.groupRestricciones.Controls.Add(this.labFrecuencia);
-            this.groupRestricciones.Controls.Add(this.textCantBus);
-            this.groupRestricciones.Controls.Add(this.labHoraValle);
-            this.groupRestricciones.Controls.Add(this.comboRuta);
-            this.groupRestricciones.Controls.Add(this.labHoraPico);
-            this.groupRestricciones.Location = new System.Drawing.Point(40, 100);
-            this.groupRestricciones.Name = "groupRestricciones";
-            this.groupRestricciones.Size = new System.Drawing.Size(319, 292);
-            this.groupRestricciones.TabIndex = 15;
-            this.groupRestricciones.TabStop = false;
-            this.groupRestricciones.Text = "cambiar restricciones";
+            this.labNumPasMov.AutoSize = true;
+            this.labNumPasMov.Location = new System.Drawing.Point(291, 39);
+            this.labNumPasMov.Name = "labNumPasMov";
+            this.labNumPasMov.Size = new System.Drawing.Size(0, 13);
+            this.labNumPasMov.TabIndex = 16;
+            this.labNumPasMov.Click += new System.EventHandler(this.labNumPasMov_Click);
             // 
-            // labRuta
+            // labTTrans
             // 
-            this.labRuta.AutoSize = true;
-            this.labRuta.Location = new System.Drawing.Point(24, 34);
-            this.labRuta.Name = "labRuta";
-            this.labRuta.Size = new System.Drawing.Size(25, 13);
-            this.labRuta.TabIndex = 2;
-            this.labRuta.Text = "ruta";
+            this.labTTrans.AutoSize = true;
+            this.labTTrans.Location = new System.Drawing.Point(291, 95);
+            this.labTTrans.Name = "labTTrans";
+            this.labTTrans.Size = new System.Drawing.Size(0, 13);
+            this.labTTrans.TabIndex = 18;
             // 
-            // labCantBuses
+            // labTiempTransInfo
             // 
-            this.labCantBuses.AutoSize = true;
-            this.labCantBuses.Location = new System.Drawing.Point(58, 87);
-            this.labCantBuses.Name = "labCantBuses";
-            this.labCantBuses.Size = new System.Drawing.Size(79, 13);
-            this.labCantBuses.TabIndex = 3;
-            this.labCantBuses.Text = "cantidad buses";
+            this.labTiempTransInfo.AutoSize = true;
+            this.labTiempTransInfo.Location = new System.Drawing.Point(64, 95);
+            this.labTiempTransInfo.Name = "labTiempTransInfo";
+            this.labTiempTransInfo.Size = new System.Drawing.Size(100, 13);
+            this.labTiempTransInfo.TabIndex = 17;
+            this.labTiempTransInfo.Text = "Tiempo transcurrido";
+            this.labTiempTransInfo.Click += new System.EventHandler(this.label2_Click);
             // 
-            // labFrecuencia
+            // labCantColaps
             // 
-            this.labFrecuencia.AutoSize = true;
-            this.labFrecuencia.Location = new System.Drawing.Point(58, 138);
-            this.labFrecuencia.Name = "labFrecuencia";
-            this.labFrecuencia.Size = new System.Drawing.Size(57, 13);
-            this.labFrecuencia.TabIndex = 4;
-            this.labFrecuencia.Text = "frecuencia";
+            this.labCantColaps.AutoSize = true;
+            this.labCantColaps.Location = new System.Drawing.Point(291, 151);
+            this.labCantColaps.Name = "labCantColaps";
+            this.labCantColaps.Size = new System.Drawing.Size(0, 13);
+            this.labCantColaps.TabIndex = 20;
             // 
-            // labHoraValle
+            // labNoCantColaps
             // 
-            this.labHoraValle.AutoSize = true;
-            this.labHoraValle.Location = new System.Drawing.Point(58, 184);
-            this.labHoraValle.Name = "labHoraValle";
-            this.labHoraValle.Size = new System.Drawing.Size(73, 13);
-            this.labHoraValle.TabIndex = 5;
-            this.labHoraValle.Text = "vel. hora valle";
+            this.labNoCantColaps.AutoSize = true;
+            this.labNoCantColaps.Location = new System.Drawing.Point(64, 151);
+            this.labNoCantColaps.Name = "labNoCantColaps";
+            this.labNoCantColaps.Size = new System.Drawing.Size(89, 13);
+            this.labNoCantColaps.TabIndex = 19;
+            this.labNoCantColaps.Text = "Numero colapsos";
             // 
-            // labHoraPico
+            // labOcProm
             // 
-            this.labHoraPico.AutoSize = true;
-            this.labHoraPico.Location = new System.Drawing.Point(58, 235);
-            this.labHoraPico.Name = "labHoraPico";
-            this.labHoraPico.Size = new System.Drawing.Size(71, 13);
-            this.labHoraPico.TabIndex = 6;
-            this.labHoraPico.Text = "vel. hora pico";
+            this.labOcProm.AutoSize = true;
+            this.labOcProm.Location = new System.Drawing.Point(291, 201);
+            this.labOcProm.Name = "labOcProm";
+            this.labOcProm.Size = new System.Drawing.Size(0, 13);
+            this.labOcProm.TabIndex = 22;
             // 
-            // comboRuta
+            // labNomOcProm
             // 
-            this.comboRuta.FormattingEnabled = true;
-            this.comboRuta.Location = new System.Drawing.Point(155, 29);
-            this.comboRuta.Name = "comboRuta";
-            this.comboRuta.Size = new System.Drawing.Size(136, 21);
-            this.comboRuta.TabIndex = 7;
+            this.labNomOcProm.AutoSize = true;
+            this.labNomOcProm.Location = new System.Drawing.Point(64, 201);
+            this.labNomOcProm.Name = "labNomOcProm";
+            this.labNomOcProm.Size = new System.Drawing.Size(167, 13);
+            this.labNomOcProm.TabIndex = 21;
+            this.labNomOcProm.Text = "%Ocupacion promedio estaciones";
             // 
-            // textCantBus
+            // butSim
             // 
-            this.textCantBus.Location = new System.Drawing.Point(155, 81);
-            this.textCantBus.Name = "textCantBus";
-            this.textCantBus.Size = new System.Drawing.Size(136, 20);
-            this.textCantBus.TabIndex = 8;
-            // 
-            // textFrecuencia
-            // 
-            this.textFrecuencia.Location = new System.Drawing.Point(155, 131);
-            this.textFrecuencia.Name = "textFrecuencia";
-            this.textFrecuencia.Size = new System.Drawing.Size(136, 20);
-            this.textFrecuencia.TabIndex = 9;
-            // 
-            // textHoraValle
-            // 
-            this.textHoraValle.Location = new System.Drawing.Point(155, 177);
-            this.textHoraValle.Name = "textHoraValle";
-            this.textHoraValle.Size = new System.Drawing.Size(136, 20);
-            this.textHoraValle.TabIndex = 10;
-            // 
-            // textHoraPico
-            // 
-            this.textHoraPico.Location = new System.Drawing.Point(155, 228);
-            this.textHoraPico.Name = "textHoraPico";
-            this.textHoraPico.Size = new System.Drawing.Size(136, 20);
-            this.textHoraPico.TabIndex = 11;
+            this.butSim.Location = new System.Drawing.Point(131, 514);
+            this.butSim.Name = "butSim";
+            this.butSim.Size = new System.Drawing.Size(137, 23);
+            this.butSim.TabIndex = 23;
+            this.butSim.Text = "Iniciar simulacion";
+            this.butSim.UseVisualStyleBackColor = true;
+            this.butSim.Click += new System.EventHandler(this.butSim_Click);
             // 
             // VentanaMIO
             // 
@@ -285,8 +199,6 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupRestricciones.ResumeLayout(false);
-            this.groupRestricciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,24 +207,15 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private GMap.NET.WindowsForms.GMapControl gMapMIO;
-        private System.Windows.Forms.Button butIniSimul;
         private System.Windows.Forms.Button butReporte;
-        private System.Windows.Forms.Label labCapacidadBus;
-        private System.Windows.Forms.Label labTiemSimul;
-        private System.Windows.Forms.TextBox textCapacidadBus;
-        private System.Windows.Forms.TextBox textTiemSimul;
-        private System.Windows.Forms.Label labMomSemana;
-        private System.Windows.Forms.ComboBox comboMomSemana;
-        private System.Windows.Forms.GroupBox groupRestricciones;
-        private System.Windows.Forms.TextBox textHoraPico;
-        private System.Windows.Forms.Label labRuta;
-        private System.Windows.Forms.TextBox textHoraValle;
-        private System.Windows.Forms.Label labCantBuses;
-        private System.Windows.Forms.TextBox textFrecuencia;
-        private System.Windows.Forms.Label labFrecuencia;
-        private System.Windows.Forms.TextBox textCantBus;
-        private System.Windows.Forms.Label labHoraValle;
-        private System.Windows.Forms.ComboBox comboRuta;
-        private System.Windows.Forms.Label labHoraPico;
+        private System.Windows.Forms.Label labTTrans;
+        private System.Windows.Forms.Label labTiempTransInfo;
+        private System.Windows.Forms.Label labNumPasMov;
+        private System.Windows.Forms.Label labPasMovil;
+        private System.Windows.Forms.Label labOcProm;
+        private System.Windows.Forms.Label labNomOcProm;
+        private System.Windows.Forms.Label labCantColaps;
+        private System.Windows.Forms.Label labNoCantColaps;
+        private System.Windows.Forms.Button butSim;
     }
 }

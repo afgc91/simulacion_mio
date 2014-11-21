@@ -52,6 +52,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
          
             cargarInfo();
+
+            Console.WriteLine("estoy en ventana");
         }
 
         private void gMapMIO_Load(object sender, EventArgs e)
@@ -71,15 +73,56 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
                 GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿a[i].GetLatitud(), a[i].GetLongitud()), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
-                marker.ToolTipText = "Nombre Estación: " + a[i].GetNombre() +" \n   Cantidad pasajeros: "+a[i].GetDemandaActual();
+                marker.ToolTipText = "Nombre Estación: " + a[i].GetNombre() +" \n   Cantidad pasajeros: ";
             }
            
 
+        }
+        private void refrescar()
+        {
+            labCantColaps.Text = 0+"";
+            labNumPasMov.Text = sim.totalPasajeros()+"";
+            labTiempTransInfo.Text = sim.UnidadReloj+"";
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void butReporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labNumPasMov_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butSim_Click(object sender, EventArgs e)
+        {
+            
+            //System.Threading.Thread hilo1 = new System.Threading.Thread(new System.Threading.ThreadStart(sim.StartSim));
+            //hilo1.Start();
+
+            //System.Threading.Thread hilo2 = new System.Threading.Thread(new System.Threading.ThreadStart(Run));
+            //hilo2.Start();
+
+            sim.StartSim();
+        }
+
+        private void Run()
+        {
+            while (true)
+            {
+                refrescar();
+            }
         }
     }
 }

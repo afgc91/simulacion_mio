@@ -30,9 +30,10 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private String Descripcion;
 
+        /// <summary>
+        /// Lista que representa las paradas de la ruta.
+        /// </summary>
         private List<int[]> ParadasRut;
-
-        
 
         public Ruta(int id, int sentido, String nombre, String desc) {
             Id = id;

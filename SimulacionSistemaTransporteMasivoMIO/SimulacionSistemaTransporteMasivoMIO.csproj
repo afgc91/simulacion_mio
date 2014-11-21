@@ -53,6 +53,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Troschuetz.Random, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Random Library\Troschuetz.Random.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Almacenamiento\CargadoraInformacion.cs" />
@@ -102,7 +106,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Almacenamiento\Buses\" />
+    <Folder Include="Almacenamiento\Pasajeros\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Vista\FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
@@ -131,6 +138,11 @@
     <Content Include="GMaps.NET Library\GMap.NET.Core.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsForms.dll" />
     <Content Include="GMaps.NET Library\GMap.NET.WindowsPresentation.dll" />
+    <Content Include="Random Library\Troschuetz.Random.dll" />
+    <Content Include="Random Library\Troschuetz.Random.resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
