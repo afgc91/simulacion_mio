@@ -520,9 +520,9 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 108868	40	513105	513107	C70K4	C70K2-1	Cl 70 entre Kr 4 y 3D-Cl 70 entre Kr 2 y 1J	458
 108869	40	513122	513120	K5C38	K5C35	Kr 5 entre Cl 38 y 36A-Kr 5 entre Cl 35 y 34	326
 108870	40	513119	513121	K5C32	K5C34	Kr 5 entre Cl 32 y 33-Kr 5 entre Cl 34 y 35	222
-108871	40	511083	511054	VBUIFATI	VBUIPIE2	VÃ­a a la Buitrera Fatima-Via a la Buitrera Las Piedras	208
+108871	40	511083	511054	VBUIFATI	VBUIPIE2	Vía a la Buitrera Fatima-Via a la Buitrera Las Piedras	208
 108872	40	511068	511071	VBUIY2	VBUILOSP	Via a la Buitrera Y-Via a la Buitrera Los Pinos	329
-108873	40	511067	511074	VBUICOLE	VBUISEN2	Via a la Buitrera Colegio-VÃ­a a la  Buitrera SENA	362
+108873	40	511067	511074	VBUICOLE	VBUISEN2	Via a la Buitrera Colegio-Vía a la  Buitrera SENA	362
 108874	40	514314	514126	K8C44B	K8C492	Kr 8 entre 44B y 47-Kr 8 entre Cl 49 y 50	333
 108875	40	514131	514129	K8C59	K8C561	Kr 8 con Cl 59-Kr 8 con Cl 56	342
 108876	40	514030	514146	C123K23	K25C123	Cl 123 entre Kr 23 y 23A-Kr 25 entre Cl 122 y 121	195
@@ -538,7 +538,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 108886	40	511141	511142	ECOPAR21	ECOPAR31	Via La Voragine Ecoparque 2 entrada-Via La Voragine Ecoparque 3 entrada	526
 108887	40	511142	511143	ECOPAR31	ECOPAR41	Via La Voragine Ecoparque 3 entrada-Via La Voragine Ecoparque 4 entrada	275
 108888	40	511145	511146	VORAGI2	ECOPAR42	La Voragine Ini-Via La Voragine Ecoparque 4 entrada	2127
-108889	40	511157	511158	K118JAG1	K118JUV2	Kr 118 Callejon Jagua Club CaÃ±asgordas-Kr 118 Callejon Jagua Colegio Juvenilia	836
+108889	40	511157	511158	K118JAG1	K118JUV2	Kr 118 Callejon Jagua Club Cañasgordas-Kr 118 Callejon Jagua Colegio Juvenilia	836
 108890	40	511169	511170	C4OK94B	C4OK94A	Cl 4 Oe entre Kr 94B y 94A-Cl 4 Oe entre Kr 94A y 94	294
 108891	40	511175	511176	K94BC2	C2BK95A	Kr 94B entre Cl 2 y 2B-Cl 2B entre Kr 95A y 94D	233
 108892	40	511199	511180	C18K127	C18K1301	Cl 18 entre Kr 127 y 129-Cl 18 entre Kr 130 y 137	476
@@ -754,7 +754,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109106	40	516198	516200	K66C16	K66C14C	Kr 66 entre Cl 16 y 14C-Kr 66 entre Cl 14C y 14	248
 109107	40	516204	516206	C14K56	C14K53	Cl 14 entre Kr 56 y 54-Cl 14 entre Kr 53 y 50	273
 109108	40	514405	22	RPETM	PCS-ENT	Retorno Patio ETM-Patio Calima-Sameco Entrada	14165
-109109	40	511157	22	K118JAG1	PCS-ENT	Kr 118 Callejon Jagua Club CaÃ±asgordas-Patio Calima-Sameco Entrada	26566
+109109	40	511157	22	K118JAG1	PCS-ENT	Kr 118 Callejon Jagua Club Cañasgordas-Patio Calima-Sameco Entrada	26566
 109110	40	500161	22	A.SANI13	PCS-ENT	Terminal Andres Sanin C5-Patio Calima-Sameco Entrada	8996
 109111	40	500157	22	A.SANIN8	PCS-ENT	Terminal Andres Sanin D2-Patio Calima-Sameco Entrada	8996
 109112	40	513039	22	K1C621	PCS-ENT	Kr 1 entre Cl 62A y 62-Patio Calima-Sameco Entrada	5974
@@ -857,10 +857,10 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109209	40	513130	513092	K2C571	K2C53	Kr 2 entre Cl 57 y 56-Kr 2 entre Cl 53 y 52B	256
 109210	40	513114	513112	C70K11	C70K1A6	Cl 70 con Kr 1 1-Cl 70 entre Kr 1 y 1A6	559
 109211	40	513203	513113	C70K1CAI	C70K1	Cl 70 entre Kr 1 y 1A5 CAI-Cl 70 con Kr 1	812
-109212	40	511051	511052	VBUIFERR	VBUIGIRA	Via a la Buitrera FerreterÃ­a el Portento-Via a la Buitrera Girasoles Web CafÃ©	456
-109213	40	511052	511053	VBUIGIRA	VBUIPIED	Via a la Buitrera Girasoles Web CafÃ©-Via a la Buitrera Sector Las Piedras Km 	538
+109212	40	511051	511052	VBUIFERR	VBUIGIRA	Via a la Buitrera Ferretería el Portento-Via a la Buitrera Girasoles Web Café	456
+109213	40	511052	511053	VBUIGIRA	VBUIPIED	Via a la Buitrera Girasoles Web Café-Via a la Buitrera Sector Las Piedras Km 	538
 109214	40	511066	511067	VBUIFER	VBUICOLE	Via a la Buitrera Ferreteria La Buitrera-Via a la Buitrera Colegio	324
-109215	40	511078	511079	VBUIPANA	VBUILAJA	VÃ­a a la Buitrera Panaderia Nueva Vida-VÃ­a a la Buitrera Colegio Las Lajas	249
+109215	40	511078	511079	VBUIPANA	VBUILAJA	Vía a la Buitrera Panaderia Nueva Vida-Vía a la Buitrera Colegio Las Lajas	249
 109216	40	511093	511094	C48K82	C48K83C	Cl 48 entre Kr 82 y 83Bis-Cl 48 entre Kr 83C y 83E	324
 109217	40	511239	511102	K86C14A	C14K85B	Kr 86 entre Cl 14A y 14-Cl 14 entre Kr 85B y 85A	257
 109218	40	511102	511103	C14K85B	C14K84	Cl 14 entre Kr 85B y 85A-Cl 14 entre Kr 84 y 83C	261
@@ -875,7 +875,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109227	40	511343	511136	L ESTELA	C36K134	Lab Estelar - Jamun Cali-Cl 36 entre Kr 134 y 128	783
 109228	40	511140	511141	ECOPAR11	ECOPAR21	Via La Voragine Ecoparque 1 entrada-Via La Voragine Ecoparque 2 entrada	326
 109229	40	511147	511148	ECOPAR32	ECOPAR22	Via La Voragine Ecoparque 3 entrada-Via La Voragine Ecoparque 2 entrada	539
-109230	40	21	511157	PCS-SAL	K118JAG1	Patio Calima-Sameco Salida-Kr 118 Callejon Jagua Club CaÃ±asgordas	28523
+109230	40	21	511157	PCS-SAL	K118JAG1	Patio Calima-Sameco Salida-Kr 118 Callejon Jagua Club Cañasgordas	28523
 109231	40	511160	511161	K109C52	K109C501	Kr 109 con Cl 52 PVL-Kr 109 con Cl 50 Reformatorio Valle del 	325
 109232	40	511164	511165	K95C3	K94BC2B	Kr 95 entre Cl 3 y Kr 95A-Kr 94B entre Cl 2B y 2	286
 109305	40	501750	501852	TEQUE1	UDP3	Tequendama A1-Unidad Deportiva A2	977
@@ -1182,7 +1182,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109532	40	511034	511330	K99C25	C45K99	Kr 99 entre Cl 25 y 30 La 14 del Lili-Cl 45 entre Kr 99 y 100	530
 109533	40	9	511332	PVL-SAL	K104C45	Patio Valle Lili-Kr 104 entre Cl 45 y 42	3475
 109534	40	511338	511339	K168CREC	K180 HCA	Kr 168 Centro Recreativo Comfandi Pance-K180 Hacienda Castillo	2800
-109535	40	511135	511341	C36K170	UANARIÃ‘O	Cl 36 entre Kr 170 y 168-Univ Antonio NariÃ±o	2082
+109535	40	511135	511341	C36K170	UANARIÑO	Cl 36 entre Kr 170 y 168-Univ Antonio Nariño	2082
 109536	40	511130	511343	V_CASCA9	L ESTELA	Via_cascajal9 Presentacion-Lab Estelar - Jamun Cali	854
 109537	40	500601	512001	TORRE2	A1NC10	Torre de Cali B1-Av 1N entre Cl 12 y 10	1030
 109538	40	502350	512001	VERSALL1	A1NC10	Versalles A1-Av 1N entre Cl 12 y 10	1346
@@ -1233,9 +1233,9 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109583	40	513128	513100	C52K5	C52K3	Cl 52 entre Kr 5 y 4C-Cl 52 entre Kr 3 y 2	308
 109584	40	513290	513104	C70K4C	C70K5	Cl 70 entre Kr 3 y 4C-Cl 70 entre Kr 5 y 7	346
 109585	40	511054	511064	VBUIPIE2	VBUISECT	Via a la Buitrera Las Piedras-Via a la Buitrera Sector Girasoles	472
-109586	40	511074	511068	VBUISEN2	VBUIY2	VÃ­a a la  Buitrera SENA-Via a la Buitrera Y	243
-109587	40	511080	511081	VBUICAPR	VBUIK7	VÃ­a a la Buitrera Capricho Km 6-VÃ­a a la Buitrera Km 7	373
-109588	40	511128	511085	V_CASCA7	V_CASC10	Via_cascajal7 col-santa maria pance-VÃ­a Principal Cascajal	291
+109586	40	511074	511068	VBUISEN2	VBUIY2	Vía a la  Buitrera SENA-Via a la Buitrera Y	243
+109587	40	511080	511081	VBUICAPR	VBUIK7	Vía a la Buitrera Capricho Km 6-Vía a la Buitrera Km 7	373
+109588	40	511128	511085	V_CASCA7	V_CASC10	Via_cascajal7 col-santa maria pance-Vía Principal Cascajal	291
 109589	40	9	511118	PVL-SAL	V_HORMI6	Patio Valle Lili-V_hormi C216	15237
 109590	40	514125	514121	K8C51	K8C44	Kr 8 con Cl 51-Kr 8 con Cl 44	416
 109591	40	514132	514134	K8C582	K8C592	Kr 8 entre Cl 58 y 59-Kr 8 entre Cl 59 y 70	322
@@ -1482,7 +1482,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109835	40	500052	10	T.C-A3	PVL-ENT	T.Canaveralejo A3-Patio Valle Lili	12283
 109836	40	502103	10	CAPRI4	PVL-ENT	Capri B2-Patio Valle Lili	9090
 109837	40	501854	10	UDP5	PVL-ENT	Unidad Deportiva A3-Patio Valle Lili	11990
-109838	40	511157	10	K118JAG1	PVL-ENT	Kr 118 Callejon Jagua Club CaÃ±asgordas-Patio Valle Lili	5695
+109838	40	511157	10	K118JAG1	PVL-ENT	Kr 118 Callejon Jagua Club Cañasgordas-Patio Valle Lili	5695
 109839	40	500163	10	A.SANI15	PVL-ENT	Terminal Andres Sanin E1-Patio Valle Lili	19236
 109840	40	500156	10	A.SANIN7	PVL-ENT	Terminal Andres Sanin D3-Patio Valle Lili	19236
 109841	40	500053	10	T.C-A4	PVL-ENT	T.Canaveralejo A4-Patio Valle Lili	12283
@@ -1554,7 +1554,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109907	40	511321	511323	C42K952	C42K92	Cl 42 entre Kr 95 y 94A 2-Cl 42 entre Kr 92 y 91	287
 109908	40	511132	511335	C36K128	LAB ESTE	Cl 36 entre Kr 128 y 129-Aut Cali Jamun-Lab estelar	797
 109909	40	511134	511337	C36K146	C METROP	Cl 36 entre Kr 146 y 148-Cementerio Metropolitano	273
-109910	40	511341	511343	UANARIÃ‘O	L ESTELA	Univ Antonio NariÃ±o-Lab Estelar - Jamun Cali	1087
+109910	40	511341	511343	UANARIÑO	L ESTELA	Univ Antonio Nariño-Lab Estelar - Jamun Cali	1087
 109911	40	513260	512004	C70A4N2	C70A3CN1	Cl 70 entre Av 4N y 3CN-Cl 70 entre Av 3CN y 3BN	226
 109912	40	513281	512006	A6NC292	A6NC34	Av 6N entre Cl 29 y 30N-Av 6N entre Cl 34 y 35	251
 109913	40	513271	512007	A6ANC29	A6ANC27	Av 6AN entre Cl 35 y 29-Av 6AN entre Cl 27 y 26	296
@@ -1610,11 +1610,11 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 109963	40	513101	513102	C52K2	C52K1E	Cl 52 entre Kr 3 y 2-Cl 52 entre Kr 1E y 1D2	314
 109964	40	513140	513106	C70K2-2	C70K3	Cl 70 entre Kr 2 y 2A-Cl 70 entre Kr 3 y 4C	372
 109965	40	513300	513107	C70K3D	C70K2-1	Cl 70 entre Kr 3D y 3C-Cl 70 entre Kr 2 y 1J	450
-109966	40	511073	511049	VBUISENA	VBUIRAPI	VÃ­a a la  Buitrera SENA-1-Via a la Buitrera Rapitienda La Buitrera	364
-109967	40	511082	511062	VBUIBAJA	VBUIGOLD	VÃ­a a la Buitrera Colegio Las Lajas Baja-Via a la Buitrera Golden Net	323
+109966	40	511073	511049	VBUISENA	VBUIRAPI	Vía a la  Buitrera SENA-1-Via a la Buitrera Rapitienda La Buitrera	364
+109967	40	511082	511062	VBUIBAJA	VBUIGOLD	Vía a la Buitrera Colegio Las Lajas Baja-Via a la Buitrera Golden Net	323
 109968	40	511183	511070	K102C12	VBUIPINO	Kr 102 entre Cl 12 y 11B-Via a la Buitrera Los Pinos	2121
-109969	40	511048	511073	VBUITREY	VBUISENA	Via a la Buitrera La Y-VÃ­a a la  Buitrera SENA-1	239
-109970	40	511077	511078	VBUIDUQU	VBUIPANA	VÃ­a a la Buitrera Duquelandia-VÃ­a a la Buitrera Panaderia Nueva Vida	406
+109969	40	511048	511073	VBUITREY	VBUISENA	Via a la Buitrera La Y-Vía a la  Buitrera SENA-1	239
+109970	40	511077	511078	VBUIDUQU	VBUIPANA	Vía a la Buitrera Duquelandia-Vía a la Buitrera Panaderia Nueva Vida	406
 109971	40	502301	511100	UNIV2	K99C45	Universidades B1-Kr 99 entre Cl 45 y 42	1868
 109972	40	9	511106	PVL-SAL	K80C48	Patio Valle Lili-Kr 80 entre Cl 45 y 48	4610
 109973	40	511243	511107	K80C13A1	K80C13C	Kr 80 entre Cl 13A1 y 13B-Kr 80 entre Cl 13C y 14	263
@@ -1749,7 +1749,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 110104	40	513205	513206	C34K2AN	K5C38A	Cl 34 entre Kr 2AN y 5N-Kr 5 entre Cl 38A y 39	299
 110105	40	513207	513208	K5C42A	K5C45A	Kr 5 entre Cl 42 y 42A-Kr 5 entre Cl 45 y 45A	317
 110106	40	513224	513218	C44K1E	C44K1D	Cl 44 entre Kr 2 y 1E-Cl 44 entre Kr 1D1 y 1D	337
-110107	40	517180	517216	K56BC1	C13OECJR	Kr 56 Barrio CaÃ±averal 1-Cl 13 Oe Cementerio Jardines del Recuerd	498
+110107	40	517180	517216	K56BC1	C13OECJR	Kr 56 Barrio Cañaveral 1-Cl 13 Oe Cementerio Jardines del Recuerd	498
 110108	40	517218	517219	SIRENA1	SIRENA2	Via a la Sirena Pte Rojo1-La Sirena 2	393
 110109	40	513220	513234	C44K2	C44K4A1	Cl 44 entre Kr 2 y 2B-Cl 44 entre Kr 4 y 4A	320
 110110	40	513237	513238	C73AK1A	C76K1A4A	Cl 73A entre Kr 1A y 1A1-Cl 76 entre Kr 1A4A Y 1A4A BIS	302
@@ -1969,10 +1969,10 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 110324	40	513099	513100	K3C54	C52K3	Kr 3 entre Cl 54 y 53-Cl 52 entre Kr 3 y 2	269
 110325	40	513064	513111	C70K1A9	C70K1A51	Cl 70 entre Kr 1A9 y 1A8-Cl 70 entre Kr 1A6 y A5	291
 110326	40	513049	513114	C70K4N2	C70K11	Cl 70 entre Kr 4N y 1-Cl 70 con Kr 1 1	183
-110327	40	511079	511056	VBUILAJA	VBUIMACO	VÃ­a a la Buitrera Colegio Las Lajas-Via a la Buitrera Callejon Macondo	315
+110327	40	511079	511056	VBUILAJA	VBUIMACO	Vía a la Buitrera Colegio Las Lajas-Via a la Buitrera Callejon Macondo	315
 110328	40	9	511059	PVL-SAL	VBUITIEN	Patio Valle Lili-Via a la Buitrera Tienda Inicio de ruta	10940
-110329	40	511084	511075	VBUISPOR	VBUICO	VÃ­a a la Buitrera Sector El Portento-VÃ­a a la Buitrera Colacteos	374
-110330	40	511056	511080	VBUIMACO	VBUICAPR	Via a la Buitrera Callejon Macondo-VÃ­a a la Buitrera Capricho Km 6	444
+110329	40	511084	511075	VBUISPOR	VBUICO	Vía a la Buitrera Sector El Portento-Vía a la Buitrera Colacteos	374
+110330	40	511056	511080	VBUIMACO	VBUICAPR	Via a la Buitrera Callejon Macondo-Vía a la Buitrera Capricho Km 6	444
 110331	40	516224	511104	C14K72	C14K832	Cl 14 entre Kr 72 y 75-Cl 14 entre Kr 83 y 84	720
 110332	40	511107	511108	K80C13C	K80C14C	Kr 80 entre Cl 13C y 14-Kr 80 entre Cl 14C y 15	407
 110333	40	511108	511109	K80C14C	C16K75A	Kr 80 entre Cl 14C y 15-Cl 16 entre Kr 75A y 73	361
@@ -2278,7 +2278,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 110632	40	517142	517018	C1K522	C1K55B1	Cl 1 entre Kr 52 y 54-Cl 1 entre Kr 55B y 56	209
 110633	40	517026	517023	C1K64A2	C1K622	Cl 1 entre Kr 64A y 65A-Cl 1 entre Kr 61 y 62	580
 110634	40	511127	511128	V_CASCA6	V_CASCA7	Via_cascajal6 equilar C099-Via_cascajal7 col-santa maria pance	437
-110635	40	511085	511129	V_CASC10	V_CASCA8	VÃ­a Principal Cascajal-Via_cascajal8 Conchita	235
+110635	40	511085	511129	V_CASC10	V_CASCA8	Vía Principal Cascajal-Via_cascajal8 Conchita	235
 110636	40	511071	511187	VBUILOSP	K100C11	Via a la Buitrera Los Pinos-Kr 100 entre Cl 11 y 12	2545
 110637	40	511180	511201	C18K1301	C18K137	Cl 18 entre Kr 130 y 137-Cl 18 entre Kr 137 y 141	297
 110638	40	517166	517052	K55BC3	C2K532	Kr 55B entre Cl 3 y 1A-Cl 2 entre Kr 53 y 52	515
@@ -2376,10 +2376,10 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 110730	40	513203	513112	C70K1CAI	C70K1A6	Cl 70 entre Kr 1 y 1A5 CAI-Cl 70 entre Kr 1 y 1A6	321
 110731	40	519035	513118	K5C24	K5C28	Kr 5 entre Cl 24 y 25-Kr 5 entre Cl 28 y 29	358
 110732	40	511049	511050	VBUIRAPI	VBUIDIAN	Via a la Buitrera Rapitienda La Buitrera-Via a la Buitrera Colegio Diana Oese	290
-110733	40	511076	511051	VBUICOLA	VBUIFERR	VÃ­a a la Buitrera Colacteos-Via a la Buitrera FerreterÃ­a el Portento	415
+110733	40	511076	511051	VBUICOLA	VBUIFERR	Vía a la Buitrera Colacteos-Via a la Buitrera Ferretería el Portento	415
 110734	40	511187	511069	K100C11	C13K101A	Kr 100 entre Cl 11 y 12-Cl 13 entre Kr 101A y 102	492
-110735	40	511053	511077	VBUIPIED	VBUIDUQU	Via a la Buitrera Sector Las Piedras Km -VÃ­a a la Buitrera Duquelandia	264
-110736	40	511062	511083	VBUIGOLD	VBUIFATI	Via a la Buitrera Golden Net-VÃ­a a la Buitrera Fatima	403
+110735	40	511053	511077	VBUIPIED	VBUIDUQU	Via a la Buitrera Sector Las Piedras Km -Vía a la Buitrera Duquelandia	264
+110736	40	511062	511083	VBUIGOLD	VBUIFATI	Via a la Buitrera Golden Net-Vía a la Buitrera Fatima	403
 110737	40	511208	511087	C18K142	C18K1414	Cl 8 entre Kr 142 y 141-Cl 18 con Kr 141	260
 110738	40	511099	511089	C42K83E	C42K83A	Cl 42 entre Kr 84 y 83E-Cl 42 entre Kr 83B y 83A	278
 110739	40	511270	511093	C48K80	C48K82	Cl 48 entre Kr 80 y 81-Cl 48 entre Kr 82 y 83Bis	175
@@ -2576,7 +2576,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 110931	40	517130	517164	K76C2C	C3K75	Kr 76 entre Cl 2C y 3-Cl 3 entre Kr 75 y 73	265
 110932	40	517189	517176	K56C5OE	K56C2OE	Kr 56 entre Cl 5 Oe y 3 Oe-Kr 56 entre Cl 2 Oe y 1A Oe	173
 110933	40	517173	517179	K56C8OE	K56C8O1	Kr 56 entre Cl 7 Oe y 8 Oe-Kr 56 entre Cl 7 Oe y 8 Oe Vivero	291
-110934	40	517185	517186	K56BC2	K56BC3	Kr 56 Barrio CaÃ±averal 2-Kr 56 Barrio CaÃ±averal 3	175
+110934	40	517185	517186	K56BC2	K56BC3	Kr 56 Barrio Cañaveral 2-Kr 56 Barrio Cañaveral 3	175
 110935	40	516037	517191	C10K39	K42C10	Cl 10 entre Kr 39 Y 41-Kr 42 entre Cl 10 y 9C	307
 110936	40	517201	517202	K69C21	K68C2C	Kr 69 entre Cl 2 y 2A-Kr 68 entre Cl 2C y 2D	306
 110937	40	517150	517203	D52K54D	D51C13AO	Dg 25 entre Kr 54D y 53-Dg 51 entre Cl 13A Oe y 14 Oe	229
@@ -2742,10 +2742,10 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111096	40	514013	513103	C70K7C	C70K7	Cl 70 entre Kr 7C y 7BBis-Cl 70 entre Kr 7 y 5	395
 111097	40	513106	513104	C70K3	C70K5	Cl 70 entre Kr 3 y 4C-Cl 70 entre Kr 5 y 7	254
 111098	40	513111	513113	C70K1A51	C70K1	Cl 70 entre Kr 1A6 y A5-Cl 70 con Kr 1	521
-111099	40	511081	511059	VBUIK7	VBUITIEN	VÃ­a a la Buitrera Km 7-Via a la Buitrera Tienda Inicio de ruta	61
+111099	40	511081	511059	VBUIK7	VBUITIEN	Vía a la Buitrera Km 7-Via a la Buitrera Tienda Inicio de ruta	61
 111100	40	511354	511072	C4OK92	C4OK94P	Cl 4 Oe con Kr 92-Cl 4 Oe con Kr 94	249
-111101	40	511050	511076	VBUIDIAN	VBUICOLA	Via a la Buitrera Colegio Diana Oese-VÃ­a a la Buitrera Colacteos	458
-111102	40	511061	511082	VBUIFINC	VBUIBAJA	Via a la Buitrera Finca Santa Ana-VÃ­a a la Buitrera Colegio Las Lajas Baja	266
+111101	40	511050	511076	VBUIDIAN	VBUICOLA	Via a la Buitrera Colegio Diana Oese-Vía a la Buitrera Colacteos	458
+111102	40	511061	511082	VBUIFINC	VBUIBAJA	Via a la Buitrera Finca Santa Ana-Vía a la Buitrera Colegio Las Lajas Baja	266
 111103	40	511201	511086	C18K137	C18K1413	Cl 18 entre Kr 137 y 141-Cl 18 con Kr 141	229
 111104	40	511323	511098	C42K92	C42K85E	Cl 42 entre Kr 92 y 91-Cl 42 entre Kr 85E y 85D	391
 111105	40	511225	511100	C45K100	K99C45	Cl 45 entre Kr 100 y 99-Kr 99 entre Cl 45 y 42	292
@@ -2859,7 +2859,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111213	40	511039	511038	K122C61	K122C122	Kr 122 entre Cl 12 y 6-Kr 122 entre Cl 12 y 13	358
 111214	40	511020	511043	C25UAUT	K118C241	Cl 25 entre Kr 114A y 118-Kr 118 entre Cl 25 y 22	385
 111215	40	511195	511045	C18K122	K122C17A	Cl 18 entre Kr 115 y 122-Kr 122 entre Cl 17A y 16	258
-111216	40	511131	511112	MARAÃ‘ON	VIA_PUER	Urb MaraÃ±on-Via_puerto_tejada	1532
+111216	40	511131	511112	MARAÑON	VIA_PUER	Urb Marañon-Via_puerto_tejada	1532
 111217	40	500051	41	T.C-A2	PTP_ENT	T.Canaveralejo A2-Patio Taller Pizamos_Entrada	19362
 111218	40	502000	41	REFUG1	PTP_ENT	Refugio A1-Patio Taller Pizamos_Entrada	19683
 111219	40	502601	41	N.LATIR1	PTP_ENT	Nuevo Latir A1-Patio Taller Pizamos_Entrada	9473
@@ -2929,7 +2929,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111283	40	517043	517156	C2AK65A1	C2K66A	Cl 2A entre Kr 65A y 66-Cl 2 entre Kr 66A y 66B	293
 111284	40	21	517171	PCS-SAL	K39C5Y4	Patio Calima-Sameco Salida-Kr 39 entre Cl 5 y 4	12292
 111285	40	517144	517173	K56C7OE	K56C8OE	Kr 56 entre Cl 7 y 8 Oe-Kr 56 entre Cl 7 Oe y 8 Oe	199
-111286	40	517186	517174	K56BC3	C13OC55A	Kr 56 Barrio CaÃ±averal 3-Cl 13 Oe entre Kr 55A y 56	238
+111286	40	517186	517174	K56BC3	C13OC55A	Kr 56 Barrio Cañaveral 3-Cl 13 Oe entre Kr 55A y 56	238
 111287	40	517221	517183	SIRENA4	K56IDEAS	Via a la Sirena Pte Rojo2-Colegio Ideas Inicio de Ruta	169
 111288	40	517187	517188	K56C8O2	K56C8O3	Kr 56 entre Cl 8 Oe y 7 Oe-Kr 56 entre Cl 8 Oe y 7 Oe	370
 111289	40	517188	517189	K56C8O3	K56C5OE	Kr 56 entre Cl 8 Oe y 7 Oe-Kr 56 entre Cl 5 Oe y 3 Oe	214
@@ -3070,8 +3070,8 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111424	40	513168	513110	C66K1A15	C70K1A14	Cl 66 con Kr 1A15-Cl 70 entre Kr 1A14 y 1B	318
 111425	40	513118	513119	K5C28	K5C32	Kr 5 entre Cl 28 y 29-Kr 5 entre Cl 32 y 33	370
 111426	40	511059	511061	VBUITIEN	VBUIFINC	Via a la Buitrera Tienda Inicio de ruta-Via a la Buitrera Finca Santa Ana	851
-111427	40	511075	511066	VBUICO	VBUIFER	VÃ­a a la Buitrera Colacteos-Via a la Buitrera Ferreteria La Buitrera	405
-111428	40	511064	511084	VBUISECT	VBUISPOR	Via a la Buitrera Sector Girasoles-VÃ­a a la Buitrera Sector El Portento	493
+111427	40	511075	511066	VBUICO	VBUIFER	Vía a la Buitrera Colacteos-Via a la Buitrera Ferreteria La Buitrera	405
+111428	40	511064	511084	VBUISECT	VBUISPOR	Via a la Buitrera Sector Girasoles-Vía a la Buitrera Sector El Portento	493
 111429	40	511089	511090	C42K83A	C42K81A	Cl 42 entre Kr 83B y 83A-Cl 42 entre Kr 81A y 81 Lote	282
 111430	40	511094	511095	C48K83C	C48K85	Cl 48 entre Kr 83C y 83E-Cl 48 entre Kr 85 y 86	318
 111431	40	511098	511099	C42K85E	C42K83E	Cl 42 entre Kr 85E y 85D-Cl 42 entre Kr 84 y 83E	250
@@ -3086,9 +3086,9 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111440	40	514186	514187	K27T1031	K27C110	Kr 27 entre Tr 103 y Cl 104-Kr 27 entre Cl 110 y 111	350
 111441	40	514192	514193	K27C91	K27C81	Kr 27 entre Cl 91 y 88-Kr 27 entre Cl 81 y 80	285
 111442	40	514200	514201	C121K26F	C121K26K	Cl 121 entre Kr 26F y 26F Bis-Cl 121 entre Kr 26K y 26K1	535
-111443	40	511110	511131	HORMI2	MARAÃ‘ON	Hormigero2-Urb MaraÃ±on	1852
+111443	40	511110	511131	HORMI2	MARAÑON	Hormigero2-Urb Marañon	1852
 111444	40	511257	511137	C25K1222	C25K118	Cl 25 entre Kr 122 y 121-Cl 25 entre Kr 122 y 118	209
-111445	40	511156	511157	K118JUV1	K118JAG1	Kr 118 Callejon Jagua Colegio Juvenilia-Kr 118 Callejon Jagua Club CaÃ±asgordas	853
+111445	40	511156	511157	K118JUV1	K118JAG1	Kr 118 Callejon Jagua Colegio Juvenilia-Kr 118 Callejon Jagua Club Cañasgordas	853
 111446	40	511163	511164	K95C4	K95C3	Kr 95 entre Cl 4 y 3D-Kr 95 entre Cl 3 y Kr 95A	208
 111447	40	513136	513134	K2C641	K2C621	Kr 2 entre Cl 64 y 62-Kr 2 entre Cl 62 y 60	228
 111448	40	513135	513137	K2C61A2	K2C64	Kr 2 entre Cl 61A y 62-Kr 2 entre Cl 62 y 65	266
@@ -3264,8 +3264,8 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 111619	40	502000	517121	REFUG1	K66C10	Refugio A1-Kr 66 entre C 9 y 10	309
 111620	40	21	517134	PCS-SAL	C10OEK25	Patio Calima-Sameco Salida-Cl 10 Oe con Kr 25D	10671
 111621	40	516233	517178	K56C7A	K56C6A	Kr 56 entre Cl 7A y 6A-Kr 56 entre Cl 6A y 5	182
-111622	40	517147	517180	C13OEK55	K56BC1	Cl 13OE entre Kr 56 y 55-Kr 56 Barrio CaÃ±averal 1	225
-111623	40	517184	517185	K56EC	K56BC2	Kr 56 Entrada Ppal Cementerio-Kr 56 Barrio CaÃ±averal 2	342
+111622	40	517147	517180	C13OEK55	K56BC1	Cl 13OE entre Kr 56 y 55-Kr 56 Barrio Cañaveral 1	225
+111623	40	517184	517185	K56EC	K56BC2	Kr 56 Entrada Ppal Cementerio-Kr 56 Barrio Cañaveral 2	342
 111624	40	517194	517195	K42C5B	K42C5	Kr 42 entre Cl 5B y 5A-Kr 42 entre Cl 5 y 3A	263
 111625	40	518076	518077	K23C53	K23C49	Kr 23 entre Cl 54 y 53-Kr 23 entre Cl 49 y 48	320
 111626	40	516009	518078	C25K41A2	C25K39	Cl 25 entre Kr 41A y 41-Cl 25 entre Kr 39 y 37	344
@@ -3394,104 +3394,104 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 112142	40	511046	511195	C18CARU1	C18K122	Camino a pie entre Cl 18 entre Kr 122 y 121 y Cl 18 entre Kr 115 y 122	19
 112144	40	511046	512002	C18CARU1	C18ICESI	Camino a pie entre Cl 18 entre Kr 122 y 121 y Cl 18 entre Kr 125 y 122	338
 112145	40	511048	511070	VBUITREY	VBUIPINO	Camino a pie entre Via a la Buitrera La Y y Via a la Buitrera Los Pinos	316
-112148	40	511049	511051	VBUIRAPI	VBUIFERR	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Via a la Buitrera FerreterÃ­a el Portento	843
+112148	40	511049	511051	VBUIRAPI	VBUIFERR	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Via a la Buitrera Ferretería el Portento	843
 112149	40	511049	511066	VBUIRAPI	VBUIFER	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Via a la Buitrera Ferreteria La Buitrera	326
 112150	40	511049	511067	VBUIRAPI	VBUICOLE	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Via a la Buitrera Colegio	19
-112151	40	511049	511073	VBUIRAPI	VBUISENA	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y VÃ­a a la  Buitrera SENA-1	368
-112152	40	511049	511075	VBUIRAPI	VBUICO	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y VÃ­a a la Buitrera Colacteos	740
-112153	40	511049	511084	VBUIRAPI	VBUISPOR	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y VÃ­a a la Buitrera Sector El Portento	820
+112151	40	511049	511073	VBUIRAPI	VBUISENA	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Vía a la  Buitrera SENA-1	368
+112152	40	511049	511075	VBUIRAPI	VBUICO	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Vía a la Buitrera Colacteos	740
+112153	40	511049	511084	VBUIRAPI	VBUISPOR	Camino a pie entre Via a la Buitrera Rapitienda La Buitrera y Vía a la Buitrera Sector El Portento	820
 112154	40	511050	511049	VBUIDIAN	VBUIRAPI	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Via a la Buitrera Rapitienda La Buitrera	258
-112155	40	511050	511051	VBUIDIAN	VBUIFERR	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Via a la Buitrera FerreterÃ­a el Portento	866
+112155	40	511050	511051	VBUIDIAN	VBUIFERR	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Via a la Buitrera Ferretería el Portento	866
 112156	40	511050	511066	VBUIDIAN	VBUIFER	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Via a la Buitrera Ferreteria La Buitrera	69
 112157	40	511050	511067	VBUIDIAN	VBUICOLE	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Via a la Buitrera Colegio	239
-112158	40	511050	511075	VBUIDIAN	VBUICO	Camino a pie entre Via a la Buitrera Colegio Diana Oese y VÃ­a a la Buitrera Colacteos	483
-112159	40	511050	511084	VBUIDIAN	VBUISPOR	Camino a pie entre Via a la Buitrera Colegio Diana Oese y VÃ­a a la Buitrera Sector El Portento	843
-112160	40	511051	511049	VBUIFERR	VBUIRAPI	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y Via a la Buitrera Rapitienda La Buitrera	843
-112161	40	511051	511050	VBUIFERR	VBUIDIAN	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y Via a la Buitrera Colegio Diana Oese	866
-112163	40	511051	511064	VBUIFERR	VBUISECT	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y Via a la Buitrera Sector Girasoles	475
-112164	40	511051	511066	VBUIFERR	VBUIFER	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y Via a la Buitrera Ferreteria La Buitrera	797
-112165	40	511051	511067	VBUIFERR	VBUICOLE	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y Via a la Buitrera Colegio	862
-112166	40	511051	511075	VBUIFERR	VBUICO	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y VÃ­a a la Buitrera Colacteos	383
-112167	40	511051	511084	VBUIFERR	VBUISPOR	Camino a pie entre Via a la Buitrera FerreterÃ­a el Portento y VÃ­a a la Buitrera Sector El Portento	23
-112168	40	511052	511051	VBUIGIRA	VBUIFERR	Camino a pie entre Via a la Buitrera Girasoles Web CafÃ© y Via a la Buitrera FerreterÃ­a el Portento	444
-112170	40	511052	511054	VBUIGIRA	VBUIPIE2	Camino a pie entre Via a la Buitrera Girasoles Web CafÃ© y Via a la Buitrera Las Piedras	498
-112171	40	511052	511064	VBUIGIRA	VBUISECT	Camino a pie entre Via a la Buitrera Girasoles Web CafÃ© y Via a la Buitrera Sector Girasoles	31
-112172	40	511052	511084	VBUIGIRA	VBUISPOR	Camino a pie entre Via a la Buitrera Girasoles Web CafÃ© y VÃ­a a la Buitrera Sector El Portento	466
-112173	40	511053	511052	VBUIPIED	VBUIGIRA	Camino a pie entre Via a la Buitrera Sector Las Piedras Km  y Via a la Buitrera Girasoles Web CafÃ©	507
+112158	40	511050	511075	VBUIDIAN	VBUICO	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Vía a la Buitrera Colacteos	483
+112159	40	511050	511084	VBUIDIAN	VBUISPOR	Camino a pie entre Via a la Buitrera Colegio Diana Oese y Vía a la Buitrera Sector El Portento	843
+112160	40	511051	511049	VBUIFERR	VBUIRAPI	Camino a pie entre Via a la Buitrera Ferretería el Portento y Via a la Buitrera Rapitienda La Buitrera	843
+112161	40	511051	511050	VBUIFERR	VBUIDIAN	Camino a pie entre Via a la Buitrera Ferretería el Portento y Via a la Buitrera Colegio Diana Oese	866
+112163	40	511051	511064	VBUIFERR	VBUISECT	Camino a pie entre Via a la Buitrera Ferretería el Portento y Via a la Buitrera Sector Girasoles	475
+112164	40	511051	511066	VBUIFERR	VBUIFER	Camino a pie entre Via a la Buitrera Ferretería el Portento y Via a la Buitrera Ferreteria La Buitrera	797
+112165	40	511051	511067	VBUIFERR	VBUICOLE	Camino a pie entre Via a la Buitrera Ferretería el Portento y Via a la Buitrera Colegio	862
+112166	40	511051	511075	VBUIFERR	VBUICO	Camino a pie entre Via a la Buitrera Ferretería el Portento y Vía a la Buitrera Colacteos	383
+112167	40	511051	511084	VBUIFERR	VBUISPOR	Camino a pie entre Via a la Buitrera Ferretería el Portento y Vía a la Buitrera Sector El Portento	23
+112168	40	511052	511051	VBUIGIRA	VBUIFERR	Camino a pie entre Via a la Buitrera Girasoles Web Café y Via a la Buitrera Ferretería el Portento	444
+112170	40	511052	511054	VBUIGIRA	VBUIPIE2	Camino a pie entre Via a la Buitrera Girasoles Web Café y Via a la Buitrera Las Piedras	498
+112171	40	511052	511064	VBUIGIRA	VBUISECT	Camino a pie entre Via a la Buitrera Girasoles Web Café y Via a la Buitrera Sector Girasoles	31
+112172	40	511052	511084	VBUIGIRA	VBUISPOR	Camino a pie entre Via a la Buitrera Girasoles Web Café y Vía a la Buitrera Sector El Portento	466
+112173	40	511053	511052	VBUIPIED	VBUIGIRA	Camino a pie entre Via a la Buitrera Sector Las Piedras Km  y Via a la Buitrera Girasoles Web Café	507
 112174	40	511053	511054	VBUIPIED	VBUIPIE2	Camino a pie entre Via a la Buitrera Sector Las Piedras Km  y Via a la Buitrera Las Piedras	10
 112175	40	511053	511062	VBUIPIED	VBUIGOLD	Camino a pie entre Via a la Buitrera Sector Las Piedras Km  y Via a la Buitrera Golden Net	626
 112176	40	511053	511064	VBUIPIED	VBUISECT	Camino a pie entre Via a la Buitrera Sector Las Piedras Km  y Via a la Buitrera Sector Girasoles	476
-112177	40	511054	511052	VBUIPIE2	VBUIGIRA	Camino a pie entre Via a la Buitrera Las Piedras y Via a la Buitrera Girasoles Web CafÃ©	498
+112177	40	511054	511052	VBUIPIE2	VBUIGIRA	Camino a pie entre Via a la Buitrera Las Piedras y Via a la Buitrera Girasoles Web Café	498
 112178	40	511054	511053	VBUIPIE2	VBUIPIED	Camino a pie entre Via a la Buitrera Las Piedras y Via a la Buitrera Sector Las Piedras Km 	10
 112179	40	511054	511062	VBUIPIE2	VBUIGOLD	Camino a pie entre Via a la Buitrera Las Piedras y Via a la Buitrera Golden Net	635
 112181	40	511056	511061	VBUIMACO	VBUIFINC	Camino a pie entre Via a la Buitrera Callejon Macondo y Via a la Buitrera Finca Santa Ana	35
-112182	40	511056	511079	VBUIMACO	VBUILAJA	Camino a pie entre Via a la Buitrera Callejon Macondo y VÃ­a a la Buitrera Colegio Las Lajas	318
-112184	40	511056	511082	VBUIMACO	VBUIBAJA	Camino a pie entre Via a la Buitrera Callejon Macondo y VÃ­a a la Buitrera Colegio Las Lajas Baja	301
-112185	40	511059	511080	VBUITIEN	VBUICAPR	Camino a pie entre Via a la Buitrera Tienda Inicio de ruta y VÃ­a a la Buitrera Capricho Km 6	0
-112186	40	511059	511081	VBUITIEN	VBUIK7	Camino a pie entre Via a la Buitrera Tienda Inicio de ruta y VÃ­a a la Buitrera Km 7	0
+112182	40	511056	511079	VBUIMACO	VBUILAJA	Camino a pie entre Via a la Buitrera Callejon Macondo y Vía a la Buitrera Colegio Las Lajas	318
+112184	40	511056	511082	VBUIMACO	VBUIBAJA	Camino a pie entre Via a la Buitrera Callejon Macondo y Vía a la Buitrera Colegio Las Lajas Baja	301
+112185	40	511059	511080	VBUITIEN	VBUICAPR	Camino a pie entre Via a la Buitrera Tienda Inicio de ruta y Vía a la Buitrera Capricho Km 6	0
+112186	40	511059	511081	VBUITIEN	VBUIK7	Camino a pie entre Via a la Buitrera Tienda Inicio de ruta y Vía a la Buitrera Km 7	0
 112187	40	511061	511056	VBUIFINC	VBUIMACO	Camino a pie entre Via a la Buitrera Finca Santa Ana y Via a la Buitrera Callejon Macondo	35
-112188	40	511061	511078	VBUIFINC	VBUIPANA	Camino a pie entre Via a la Buitrera Finca Santa Ana y VÃ­a a la Buitrera Panaderia Nueva Vida	529
-112189	40	511061	511079	VBUIFINC	VBUILAJA	Camino a pie entre Via a la Buitrera Finca Santa Ana y VÃ­a a la Buitrera Colegio Las Lajas	284
-112190	40	511061	511080	VBUIFINC	VBUICAPR	Camino a pie entre Via a la Buitrera Finca Santa Ana y VÃ­a a la Buitrera Capricho Km 6	425
+112188	40	511061	511078	VBUIFINC	VBUIPANA	Camino a pie entre Via a la Buitrera Finca Santa Ana y Vía a la Buitrera Panaderia Nueva Vida	529
+112189	40	511061	511079	VBUIFINC	VBUILAJA	Camino a pie entre Via a la Buitrera Finca Santa Ana y Vía a la Buitrera Colegio Las Lajas	284
+112190	40	511061	511080	VBUIFINC	VBUICAPR	Camino a pie entre Via a la Buitrera Finca Santa Ana y Vía a la Buitrera Capricho Km 6	425
 112192	40	511062	511053	VBUIGOLD	VBUIPIED	Camino a pie entre Via a la Buitrera Golden Net y Via a la Buitrera Sector Las Piedras Km 	626
 112193	40	511062	511054	VBUIGOLD	VBUIPIE2	Camino a pie entre Via a la Buitrera Golden Net y Via a la Buitrera Las Piedras	635
-112194	40	511062	511078	VBUIGOLD	VBUIPANA	Camino a pie entre Via a la Buitrera Golden Net y VÃ­a a la Buitrera Panaderia Nueva Vida	66
-112195	40	511062	511079	VBUIGOLD	VBUILAJA	Camino a pie entre Via a la Buitrera Golden Net y VÃ­a a la Buitrera Colegio Las Lajas	312
-112196	40	511062	511082	VBUIGOLD	VBUIBAJA	Camino a pie entre Via a la Buitrera Golden Net y VÃ­a a la Buitrera Colegio Las Lajas Baja	330
-112197	40	511064	511051	VBUISECT	VBUIFERR	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera FerreterÃ­a el Portento	475
-112198	40	511064	511052	VBUISECT	VBUIGIRA	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera Girasoles Web CafÃ©	31
+112194	40	511062	511078	VBUIGOLD	VBUIPANA	Camino a pie entre Via a la Buitrera Golden Net y Vía a la Buitrera Panaderia Nueva Vida	66
+112195	40	511062	511079	VBUIGOLD	VBUILAJA	Camino a pie entre Via a la Buitrera Golden Net y Vía a la Buitrera Colegio Las Lajas	312
+112196	40	511062	511082	VBUIGOLD	VBUIBAJA	Camino a pie entre Via a la Buitrera Golden Net y Vía a la Buitrera Colegio Las Lajas Baja	330
+112197	40	511064	511051	VBUISECT	VBUIFERR	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera Ferretería el Portento	475
+112198	40	511064	511052	VBUISECT	VBUIGIRA	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera Girasoles Web Café	31
 112199	40	511064	511053	VBUISECT	VBUIPIED	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera Sector Las Piedras Km 	476
 112200	40	511064	511054	VBUISECT	VBUIPIE2	Camino a pie entre Via a la Buitrera Sector Girasoles y Via a la Buitrera Las Piedras	466
 112202	40	511066	511049	VBUIFER	VBUIRAPI	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Via a la Buitrera Rapitienda La Buitrera	326
 112203	40	511066	511050	VBUIFER	VBUIDIAN	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Via a la Buitrera Colegio Diana Oese	69
-112204	40	511066	511051	VBUIFER	VBUIFERR	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Via a la Buitrera FerreterÃ­a el Portento	797
-112206	40	511066	511075	VBUIFER	VBUICO	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y VÃ­a a la Buitrera Colacteos	414
-112207	40	511066	511084	VBUIFER	VBUISPOR	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y VÃ­a a la Buitrera Sector El Portento	774
+112204	40	511066	511051	VBUIFER	VBUIFERR	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Via a la Buitrera Ferretería el Portento	797
+112206	40	511066	511075	VBUIFER	VBUICO	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Vía a la Buitrera Colacteos	414
+112207	40	511066	511084	VBUIFER	VBUISPOR	Camino a pie entre Via a la Buitrera Ferreteria La Buitrera y Vía a la Buitrera Sector El Portento	774
 112208	40	511067	511049	VBUICOLE	VBUIRAPI	Camino a pie entre Via a la Buitrera Colegio y Via a la Buitrera Rapitienda La Buitrera	19
 112209	40	511067	511050	VBUICOLE	VBUIDIAN	Camino a pie entre Via a la Buitrera Colegio y Via a la Buitrera Colegio Diana Oese	239
-112210	40	511067	511051	VBUICOLE	VBUIFERR	Camino a pie entre Via a la Buitrera Colegio y Via a la Buitrera FerreterÃ­a el Portento	862
+112210	40	511067	511051	VBUICOLE	VBUIFERR	Camino a pie entre Via a la Buitrera Colegio y Via a la Buitrera Ferretería el Portento	862
 112211	40	511067	511066	VBUICOLE	VBUIFER	Camino a pie entre Via a la Buitrera Colegio y Via a la Buitrera Ferreteria La Buitrera	307
-112212	40	511067	511073	VBUICOLE	VBUISENA	Camino a pie entre Via a la Buitrera Colegio y VÃ­a a la  Buitrera SENA-1	387
-112213	40	511067	511075	VBUICOLE	VBUICO	Camino a pie entre Via a la Buitrera Colegio y VÃ­a a la Buitrera Colacteos	721
-112214	40	511067	511084	VBUICOLE	VBUISPOR	Camino a pie entre Via a la Buitrera Colegio y VÃ­a a la Buitrera Sector El Portento	839
+112212	40	511067	511073	VBUICOLE	VBUISENA	Camino a pie entre Via a la Buitrera Colegio y Vía a la  Buitrera SENA-1	387
+112213	40	511067	511075	VBUICOLE	VBUICO	Camino a pie entre Via a la Buitrera Colegio y Vía a la Buitrera Colacteos	721
+112214	40	511067	511084	VBUICOLE	VBUISPOR	Camino a pie entre Via a la Buitrera Colegio y Vía a la Buitrera Sector El Portento	839
 112215	40	511069	502250	C13K101A	UNIVAL1	Camino a pie entre Cl 13 entre Kr 101A y 102 y Univalle A1	466
 112217	40	511069	511187	C13K101A	K100C11	Camino a pie entre Cl 13 entre Kr 101A y 102 y Kr 100 entre Cl 11 y 12	597
 112219	40	511072	511169	C4OK94P	C4OK94B	Camino a pie entre Cl 4 Oe con Kr 94 y Cl 4 Oe entre Kr 94B y 94A	394
 112220	40	511072	511170	C4OK94P	C4OK94A	Camino a pie entre Cl 4 Oe con Kr 94 y Cl 4 Oe entre Kr 94A y 94	108
-112222	40	511073	511048	VBUISENA	VBUITREY	Camino a pie entre VÃ­a a la  Buitrera SENA-1 y Via a la Buitrera La Y	240
-112224	40	511073	511067	VBUISENA	VBUICOLE	Camino a pie entre VÃ­a a la  Buitrera SENA-1 y Via a la Buitrera Colegio	387
-112225	40	511073	511075	VBUISENA	VBUICO	Camino a pie entre VÃ­a a la  Buitrera SENA-1 y VÃ­a a la Buitrera Colacteos	642
-112226	40	511075	511049	VBUICO	VBUIRAPI	Camino a pie entre VÃ­a a la Buitrera Colacteos y Via a la Buitrera Rapitienda La Buitrera	740
-112227	40	511075	511050	VBUICO	VBUIDIAN	Camino a pie entre VÃ­a a la Buitrera Colacteos y Via a la Buitrera Colegio Diana Oese	483
-112228	40	511075	511051	VBUICO	VBUIFERR	Camino a pie entre VÃ­a a la Buitrera Colacteos y Via a la Buitrera FerreterÃ­a el Portento	383
-112230	40	511075	511067	VBUICO	VBUICOLE	Camino a pie entre VÃ­a a la Buitrera Colacteos y Via a la Buitrera Colegio	721
-112231	40	511075	511073	VBUICO	VBUISENA	Camino a pie entre VÃ­a a la Buitrera Colacteos y VÃ­a a la  Buitrera SENA-1	642
-112232	40	511075	511084	VBUICO	VBUISPOR	Camino a pie entre VÃ­a a la Buitrera Colacteos y VÃ­a a la Buitrera Sector El Portento	360
-112233	40	511078	511061	VBUIPANA	VBUIFINC	Camino a pie entre VÃ­a a la Buitrera Panaderia Nueva Vida y Via a la Buitrera Finca Santa Ana	530
-112234	40	511078	511062	VBUIPANA	VBUIGOLD	Camino a pie entre VÃ­a a la Buitrera Panaderia Nueva Vida y Via a la Buitrera Golden Net	66
-112236	40	511078	511082	VBUIPANA	VBUIBAJA	Camino a pie entre VÃ­a a la Buitrera Panaderia Nueva Vida y VÃ­a a la Buitrera Colegio Las Lajas Baja	263
-112238	40	511079	511061	VBUILAJA	VBUIFINC	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas y Via a la Buitrera Finca Santa Ana	284
-112239	40	511079	511062	VBUILAJA	VBUIGOLD	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas y Via a la Buitrera Golden Net	312
-112240	40	511079	511078	VBUILAJA	VBUIPANA	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas y VÃ­a a la Buitrera Panaderia Nueva Vida	246
-112241	40	511079	511082	VBUILAJA	VBUIBAJA	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas y VÃ­a a la Buitrera Colegio Las Lajas Baja	18
-112242	40	511080	511056	VBUICAPR	VBUIMACO	Camino a pie entre VÃ­a a la Buitrera Capricho Km 6 y Via a la Buitrera Callejon Macondo	391
-112243	40	511080	511059	VBUICAPR	VBUITIEN	Camino a pie entre VÃ­a a la Buitrera Capricho Km 6 y Via a la Buitrera Tienda Inicio de ruta	0
-112244	40	511080	511061	VBUICAPR	VBUIFINC	Camino a pie entre VÃ­a a la Buitrera Capricho Km 6 y Via a la Buitrera Finca Santa Ana	425
-112245	40	511080	511081	VBUICAPR	VBUIK7	Camino a pie entre VÃ­a a la Buitrera Capricho Km 6 y VÃ­a a la Buitrera Km 7	0
-112246	40	511081	511059	VBUIK7	VBUITIEN	Camino a pie entre VÃ­a a la Buitrera Km 7 y Via a la Buitrera Tienda Inicio de ruta	0
-112247	40	511081	511080	VBUIK7	VBUICAPR	Camino a pie entre VÃ­a a la Buitrera Km 7 y VÃ­a a la Buitrera Capricho Km 6	0
-112248	40	511082	511056	VBUIBAJA	VBUIMACO	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas Baja y Via a la Buitrera Callejon Macondo	300
-112249	40	511082	511061	VBUIBAJA	VBUIFINC	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas Baja y Via a la Buitrera Finca Santa Ana	266
-112251	40	511082	511078	VBUIBAJA	VBUIPANA	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas Baja y VÃ­a a la Buitrera Panaderia Nueva Vida	263
-112252	40	511082	511079	VBUIBAJA	VBUILAJA	Camino a pie entre VÃ­a a la Buitrera Colegio Las Lajas Baja y VÃ­a a la Buitrera Colegio Las Lajas	18
-112253	40	511084	511049	VBUISPOR	VBUIRAPI	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Rapitienda La Buitrera	820
-112254	40	511084	511050	VBUISPOR	VBUIDIAN	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Colegio Diana Oese	843
-112255	40	511084	511051	VBUISPOR	VBUIFERR	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera FerreterÃ­a el Portento	23
-112256	40	511084	511052	VBUISPOR	VBUIGIRA	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Girasoles Web CafÃ©	466
-112257	40	511084	511064	VBUISPOR	VBUISECT	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Sector Girasoles	498
-112258	40	511084	511066	VBUISPOR	VBUIFER	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Ferreteria La Buitrera	774
-112259	40	511084	511067	VBUISPOR	VBUICOLE	Camino a pie entre VÃ­a a la Buitrera Sector El Portento y Via a la Buitrera Colegio	839
-112261	40	511085	511128	V_CASC10	V_CASCA7	Camino a pie entre VÃ­a Principal Cascajal y Via_cascajal7 col-santa maria pance	291
+112222	40	511073	511048	VBUISENA	VBUITREY	Camino a pie entre Vía a la  Buitrera SENA-1 y Via a la Buitrera La Y	240
+112224	40	511073	511067	VBUISENA	VBUICOLE	Camino a pie entre Vía a la  Buitrera SENA-1 y Via a la Buitrera Colegio	387
+112225	40	511073	511075	VBUISENA	VBUICO	Camino a pie entre Vía a la  Buitrera SENA-1 y Vía a la Buitrera Colacteos	642
+112226	40	511075	511049	VBUICO	VBUIRAPI	Camino a pie entre Vía a la Buitrera Colacteos y Via a la Buitrera Rapitienda La Buitrera	740
+112227	40	511075	511050	VBUICO	VBUIDIAN	Camino a pie entre Vía a la Buitrera Colacteos y Via a la Buitrera Colegio Diana Oese	483
+112228	40	511075	511051	VBUICO	VBUIFERR	Camino a pie entre Vía a la Buitrera Colacteos y Via a la Buitrera Ferretería el Portento	383
+112230	40	511075	511067	VBUICO	VBUICOLE	Camino a pie entre Vía a la Buitrera Colacteos y Via a la Buitrera Colegio	721
+112231	40	511075	511073	VBUICO	VBUISENA	Camino a pie entre Vía a la Buitrera Colacteos y Vía a la  Buitrera SENA-1	642
+112232	40	511075	511084	VBUICO	VBUISPOR	Camino a pie entre Vía a la Buitrera Colacteos y Vía a la Buitrera Sector El Portento	360
+112233	40	511078	511061	VBUIPANA	VBUIFINC	Camino a pie entre Vía a la Buitrera Panaderia Nueva Vida y Via a la Buitrera Finca Santa Ana	530
+112234	40	511078	511062	VBUIPANA	VBUIGOLD	Camino a pie entre Vía a la Buitrera Panaderia Nueva Vida y Via a la Buitrera Golden Net	66
+112236	40	511078	511082	VBUIPANA	VBUIBAJA	Camino a pie entre Vía a la Buitrera Panaderia Nueva Vida y Vía a la Buitrera Colegio Las Lajas Baja	263
+112238	40	511079	511061	VBUILAJA	VBUIFINC	Camino a pie entre Vía a la Buitrera Colegio Las Lajas y Via a la Buitrera Finca Santa Ana	284
+112239	40	511079	511062	VBUILAJA	VBUIGOLD	Camino a pie entre Vía a la Buitrera Colegio Las Lajas y Via a la Buitrera Golden Net	312
+112240	40	511079	511078	VBUILAJA	VBUIPANA	Camino a pie entre Vía a la Buitrera Colegio Las Lajas y Vía a la Buitrera Panaderia Nueva Vida	246
+112241	40	511079	511082	VBUILAJA	VBUIBAJA	Camino a pie entre Vía a la Buitrera Colegio Las Lajas y Vía a la Buitrera Colegio Las Lajas Baja	18
+112242	40	511080	511056	VBUICAPR	VBUIMACO	Camino a pie entre Vía a la Buitrera Capricho Km 6 y Via a la Buitrera Callejon Macondo	391
+112243	40	511080	511059	VBUICAPR	VBUITIEN	Camino a pie entre Vía a la Buitrera Capricho Km 6 y Via a la Buitrera Tienda Inicio de ruta	0
+112244	40	511080	511061	VBUICAPR	VBUIFINC	Camino a pie entre Vía a la Buitrera Capricho Km 6 y Via a la Buitrera Finca Santa Ana	425
+112245	40	511080	511081	VBUICAPR	VBUIK7	Camino a pie entre Vía a la Buitrera Capricho Km 6 y Vía a la Buitrera Km 7	0
+112246	40	511081	511059	VBUIK7	VBUITIEN	Camino a pie entre Vía a la Buitrera Km 7 y Via a la Buitrera Tienda Inicio de ruta	0
+112247	40	511081	511080	VBUIK7	VBUICAPR	Camino a pie entre Vía a la Buitrera Km 7 y Vía a la Buitrera Capricho Km 6	0
+112248	40	511082	511056	VBUIBAJA	VBUIMACO	Camino a pie entre Vía a la Buitrera Colegio Las Lajas Baja y Via a la Buitrera Callejon Macondo	300
+112249	40	511082	511061	VBUIBAJA	VBUIFINC	Camino a pie entre Vía a la Buitrera Colegio Las Lajas Baja y Via a la Buitrera Finca Santa Ana	266
+112251	40	511082	511078	VBUIBAJA	VBUIPANA	Camino a pie entre Vía a la Buitrera Colegio Las Lajas Baja y Vía a la Buitrera Panaderia Nueva Vida	263
+112252	40	511082	511079	VBUIBAJA	VBUILAJA	Camino a pie entre Vía a la Buitrera Colegio Las Lajas Baja y Vía a la Buitrera Colegio Las Lajas	18
+112253	40	511084	511049	VBUISPOR	VBUIRAPI	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Rapitienda La Buitrera	820
+112254	40	511084	511050	VBUISPOR	VBUIDIAN	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Colegio Diana Oese	843
+112255	40	511084	511051	VBUISPOR	VBUIFERR	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Ferretería el Portento	23
+112256	40	511084	511052	VBUISPOR	VBUIGIRA	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Girasoles Web Café	466
+112257	40	511084	511064	VBUISPOR	VBUISECT	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Sector Girasoles	498
+112258	40	511084	511066	VBUISPOR	VBUIFER	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Ferreteria La Buitrera	774
+112259	40	511084	511067	VBUISPOR	VBUICOLE	Camino a pie entre Vía a la Buitrera Sector El Portento y Via a la Buitrera Colegio	839
+112261	40	511085	511128	V_CASC10	V_CASCA7	Camino a pie entre Vía Principal Cascajal y Via_cascajal7 col-santa maria pance	291
 112264	40	511086	511208	C18K1413	C18K142	Camino a pie entre Cl 18 con Kr 141 y Cl 8 entre Kr 142 y 141	323
 112265	40	511089	511019	C42K83A	C42K84	Camino a pie entre Cl 42 entre Kr 83B y 83A y Cl 42 entre Kr 84 y 85	228
 112267	40	511089	511093	C42K83A	C48K82	Camino a pie entre Cl 42 entre Kr 83B y 83A y Cl 48 entre Kr 82 y 83Bis	1077
@@ -3625,14 +3625,14 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 112418	40	511123	511113	V_CASCA2	COL_FRAY	Camino a pie entre via_cascajal2 y Cali_puerto-col-fray damian	439
 112419	40	511123	511114	V_CASCA2	CASCAJAL	Camino a pie entre via_cascajal2 y Puerto_cascajal	34
 112422	40	511128	511127	V_CASCA7	V_CASCA6	Camino a pie entre Via_cascajal7 col-santa maria pance y Via_cascajal6 equilar C099	117
-112423	40	511129	511085	V_CASCA8	V_CASC10	Camino a pie entre Via_cascajal8 Conchita y VÃ­a Principal Cascajal	238
+112423	40	511129	511085	V_CASCA8	V_CASC10	Camino a pie entre Via_cascajal8 Conchita y Vía Principal Cascajal	238
 112425	40	511129	511248	V_CASCA8	AUT-JAM1	Camino a pie entre Via_cascajal8 Conchita y Autopista Cali - Jamundi - Sede Club Ame	446
 112426	40	511130	511129	V_CASCA9	V_CASCA8	Camino a pie entre Via_cascajal9 Presentacion y Via_cascajal8 Conchita	351
 112427	40	511130	511248	V_CASCA9	AUT-JAM1	Camino a pie entre Via_cascajal9 Presentacion y Autopista Cali - Jamundi - Sede Club Ame	95
 112428	40	511132	511136	C36K128	C36K134	Camino a pie entre Cl 36 entre Kr 128 y 129 y Cl 36 entre Kr 134 y 128	13
 112429	40	511132	511334	C36K128	C25K127	Camino a pie entre Cl 36 entre Kr 128 y 129 y Cl 25 entre Kr 127 y 128	782
 112430	40	511132	511344	C36K128	PTROBRAS	Camino a pie entre Cl 36 entre Kr 128 y 129 y E Servicio Petrobras	793
-112432	40	511134	511341	C36K146	UANARIÃ‘O	Camino a pie entre Cl 36 entre Kr 146 y 148 y Univ Antonio NariÃ±o	11
+112432	40	511134	511341	C36K146	UANARIÑO	Camino a pie entre Cl 36 entre Kr 146 y 148 y Univ Antonio Nariño	11
 112433	40	511135	511221	C36K170	K168C36	Camino a pie entre Cl 36 entre Kr 170 y 168 y Kr 168 con Cl 36	136
 112434	40	511136	511132	C36K134	C36K128	Camino a pie entre Cl 36 entre Kr 134 y 128 y Cl 36 entre Kr 128 y 129	13
 112435	40	511136	511334	C36K134	C25K127	Camino a pie entre Cl 36 entre Kr 134 y 128 y Cl 25 entre Kr 127 y 128	794
@@ -4451,9 +4451,9 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 113366	40	511334	511344	C25K127	PTROBRAS	Camino a pie entre Cl 25 entre Kr 127 y 128 y E Servicio Petrobras	11
 113367	40	511335	511343	LAB ESTE	L ESTELA	Camino a pie entre Aut Cali Jamun-Lab estelar y Lab Estelar - Jamun Cali	34
 113368	40	511337	511134	C METROP	C36K146	Camino a pie entre Cementerio Metropolitano y Cl 36 entre Kr 146 y 148	11
-113369	40	511337	511341	C METROP	UANARIÃ‘O	Camino a pie entre Cementerio Metropolitano y Univ Antonio NariÃ±o	0
-113370	40	511341	511134	UANARIÃ‘O	C36K146	Camino a pie entre Univ Antonio NariÃ±o y Cl 36 entre Kr 146 y 148	11
-113371	40	511341	511337	UANARIÃ‘O	C METROP	Camino a pie entre Univ Antonio NariÃ±o y Cementerio Metropolitano	0
+113369	40	511337	511341	C METROP	UANARIÑO	Camino a pie entre Cementerio Metropolitano y Univ Antonio Nariño	0
+113370	40	511341	511134	UANARIÑO	C36K146	Camino a pie entre Univ Antonio Nariño y Cl 36 entre Kr 146 y 148	11
+113371	40	511341	511337	UANARIÑO	C METROP	Camino a pie entre Univ Antonio Nariño y Cementerio Metropolitano	0
 113372	40	511343	511335	L ESTELA	LAB ESTE	Camino a pie entre Lab Estelar - Jamun Cali y Aut Cali Jamun-Lab estelar	34
 113373	40	511344	511132	PTROBRAS	C36K128	Camino a pie entre E Servicio Petrobras y Cl 36 entre Kr 128 y 129	793
 113374	40	511344	511136	PTROBRAS	C36K134	Camino a pie entre E Servicio Petrobras y Cl 36 entre Kr 134 y 128	805
@@ -13850,7 +13850,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 124542	40	517174	517147	C13OC55A	C13OEK55	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Cl 13OE entre Kr 56 y 55	65
 124543	40	517174	517173	C13OC55A	K56C8OE	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Kr 56 entre Cl 7 Oe y 8 Oe	537
 124544	40	517174	517179	C13OC55A	K56C8O1	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	246
-124545	40	517174	517180	C13OC55A	K56BC1	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Kr 56 Barrio CaÃ±averal 1	285
+124545	40	517174	517180	C13OC55A	K56BC1	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Kr 56 Barrio Cañaveral 1	285
 124547	40	517174	517203	C13OC55A	D51C13AO	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Dg 51 entre Cl 13A Oe y 14 Oe	836
 124548	40	517174	517204	C13OC55A	D51C14O	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Dg 51 entre Cl 14 Oe y 13A Oe	748
 124549	40	517174	517224	C13OC55A	D51C14OE	Camino a pie entre Cl 13 Oe entre Kr 55A y 56 y Dg 51 con Cl 14 Oe Cementerio Jardines d	455
@@ -13884,32 +13884,32 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 124579	40	517179	517144	K56C8O1	K56C7OE	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Kr 56 entre Cl 7 y 8 Oe	496
 124581	40	517179	517173	K56C8O1	K56C8OE	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Kr 56 entre Cl 7 Oe y 8 Oe	291
 124582	40	517179	517174	K56C8O1	C13OC55A	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Cl 13 Oe entre Kr 55A y 56	246
-124583	40	517179	517180	K56C8O1	K56BC1	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Kr 56 Barrio CaÃ±averal 1	529
+124583	40	517179	517180	K56C8O1	K56BC1	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Kr 56 Barrio Cañaveral 1	529
 124584	40	517179	517187	K56C8O1	K56C8O2	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Kr 56 entre Cl 8 Oe y 7 Oe	27
 124585	40	517179	517203	K56C8O1	D51C13AO	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Dg 51 entre Cl 13A Oe y 14 Oe	1079
 124586	40	517179	517204	K56C8O1	D51C14O	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Dg 51 entre Cl 14 Oe y 13A Oe	991
 124587	40	517179	517224	K56C8O1	D51C14OE	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Dg 51 con Cl 14 Oe Cementerio Jardines d	698
 124588	40	517179	517225	K56C8O1	D51C14E	Camino a pie entre Kr 56 entre Cl 7 Oe y 8 Oe Vivero y Dg 51 con Cl 14 Oe Escuela de Carabinero	703
-124589	40	517180	517147	K56BC1	C13OEK55	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Cl 13OE entre Kr 56 y 55	220
-124590	40	517180	517174	K56BC1	C13OC55A	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Cl 13 Oe entre Kr 55A y 56	285
-124591	40	517180	517179	K56BC1	K56C8O1	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	530
-124592	40	517180	517184	K56BC1	K56EC	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Kr 56 Entrada Ppal Cementerio	472
-124593	40	517180	517187	K56BC1	K56C8O2	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Kr 56 entre Cl 8 Oe y 7 Oe	558
-124595	40	517180	517224	K56BC1	D51C14OE	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Dg 51 con Cl 14 Oe Cementerio Jardines d	445
+124589	40	517180	517147	K56BC1	C13OEK55	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Cl 13OE entre Kr 56 y 55	220
+124590	40	517180	517174	K56BC1	C13OC55A	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Cl 13 Oe entre Kr 55A y 56	285
+124591	40	517180	517179	K56BC1	K56C8O1	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	530
+124592	40	517180	517184	K56BC1	K56EC	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Kr 56 Entrada Ppal Cementerio	472
+124593	40	517180	517187	K56BC1	K56C8O2	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Kr 56 entre Cl 8 Oe y 7 Oe	558
+124595	40	517180	517224	K56BC1	D51C14OE	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Dg 51 con Cl 14 Oe Cementerio Jardines d	445
 124654	40	517192	517115	K42C9	C6K42	Camino a pie entre Kr 42 entre Cl 9 y 7 y Cl 6 entre Kr 42 y 43	327
-124596	40	517180	517225	K56BC1	D51C14E	Camino a pie entre Kr 56 Barrio CaÃ±averal 1 y Dg 51 con Cl 14 Oe Escuela de Carabinero	450
+124596	40	517180	517225	K56BC1	D51C14E	Camino a pie entre Kr 56 Barrio Cañaveral 1 y Dg 51 con Cl 14 Oe Escuela de Carabinero	450
 124597	40	517183	517217	K56IDEAS	K56IDEA1	Camino a pie entre Colegio Ideas Inicio de Ruta y Colegio Ideas 1	9
 124598	40	517183	517218	K56IDEAS	SIRENA1	Camino a pie entre Colegio Ideas Inicio de Ruta y Via a la Sirena Pte Rojo1	118
 124599	40	517183	517219	K56IDEAS	SIRENA2	Camino a pie entre Colegio Ideas Inicio de Ruta y La Sirena 2	511
 124600	40	517183	517220	K56IDEAS	SIRENA3	Camino a pie entre Colegio Ideas Inicio de Ruta y La Sirena Inicio Ruta	505
-124601	40	517184	517180	K56EC	K56BC1	Camino a pie entre Kr 56 Entrada Ppal Cementerio y Kr 56 Barrio CaÃ±averal 1	472
+124601	40	517184	517180	K56EC	K56BC1	Camino a pie entre Kr 56 Entrada Ppal Cementerio y Kr 56 Barrio Cañaveral 1	472
 124602	40	517184	517216	K56EC	C13OECJR	Camino a pie entre Kr 56 Entrada Ppal Cementerio y Cl 13 Oe Cementerio Jardines del Recuerd	29
 124603	40	517187	517144	K56C8O2	K56C7OE	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Kr 56 entre Cl 7 y 8 Oe	469
 124604	40	517187	517147	K56C8O2	C13OEK55	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Cl 13OE entre Kr 56 y 55	338
 124605	40	517187	517173	K56C8O2	K56C8OE	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Kr 56 entre Cl 7 Oe y 8 Oe	264
 124606	40	517187	517174	K56C8O2	C13OC55A	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Cl 13 Oe entre Kr 55A y 56	273
 124607	40	517187	517179	K56C8O2	K56C8O1	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	27
-124608	40	517187	517180	K56C8O2	K56BC1	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Kr 56 Barrio CaÃ±averal 1	557
+124608	40	517187	517180	K56C8O2	K56BC1	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Kr 56 Barrio Cañaveral 1	557
 124609	40	517187	517203	K56C8O2	D51C13AO	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Dg 51 entre Cl 13A Oe y 14 Oe	1107
 124610	40	517187	517204	K56C8O2	D51C14O	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Dg 51 entre Cl 14 Oe y 13A Oe	1019
 124611	40	517187	517224	K56C8O2	D51C14OE	Camino a pie entre Kr 56 entre Cl 8 Oe y 7 Oe y Dg 51 con Cl 14 Oe Cementerio Jardines d	726
@@ -14174,7 +14174,7 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 124895	40	517215	517209	C6K44	K50C5	Camino a pie entre Cl 6 entre Kr 44 y 44A y Kr 50 entre Cl 5 y 6	454
 124896	40	517215	517210	C6K44	K50C53	Camino a pie entre Cl 6 entre Kr 44 y 44A y Kr 50 entre Cl 53 y 53A	629
 124897	40	517215	517211	C6K44	C6K39T5	Camino a pie entre Cl 6 entre Kr 44 y 44A y Cl 6 entre Kr 39 y Tr 5	488
-124898	40	517216	517180	C13OECJR	K56BC1	Camino a pie entre Cl 13 Oe Cementerio Jardines del Recuerd y Kr 56 Barrio CaÃ±averal 1	501
+124898	40	517216	517180	C13OECJR	K56BC1	Camino a pie entre Cl 13 Oe Cementerio Jardines del Recuerd y Kr 56 Barrio Cañaveral 1	501
 124899	40	517216	517184	C13OECJR	K56EC	Camino a pie entre Cl 13 Oe Cementerio Jardines del Recuerd y Kr 56 Entrada Ppal Cementerio	29
 124900	40	517217	517183	K56IDEA1	K56IDEAS	Camino a pie entre Colegio Ideas 1 y Colegio Ideas Inicio de Ruta	9
 124902	40	517217	517219	K56IDEA1	SIRENA2	Camino a pie entre Colegio Ideas 1 y La Sirena 2	520
@@ -14207,14 +14207,14 @@ ARCID	PLANVERSIONID	STOPS_STOPID_START	STOPS_STOPID_END	STARTPOINT	ENDPOINT	DESC
 124933	40	517224	517147	D51C14OE	C13OEK55	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Cl 13OE entre Kr 56 y 55	389
 124934	40	517224	517174	D51C14OE	C13OC55A	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Cl 13 Oe entre Kr 55A y 56	455
 124935	40	517224	517179	D51C14OE	K56C8O1	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	699
-124936	40	517224	517180	D51C14OE	K56BC1	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Kr 56 Barrio CaÃ±averal 1	445
+124936	40	517224	517180	D51C14OE	K56BC1	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Kr 56 Barrio Cañaveral 1	445
 124937	40	517224	517187	D51C14OE	K56C8O2	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Kr 56 entre Cl 8 Oe y 7 Oe	727
 124938	40	517224	517203	D51C14OE	D51C13AO	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Dg 51 entre Cl 13A Oe y 14 Oe	380
 124939	40	517224	517204	D51C14OE	D51C14O	Camino a pie entre Dg 51 con Cl 14 Oe Cementerio Jardines d y Dg 51 entre Cl 14 Oe y 13A Oe	293
 124941	40	517225	517147	D51C14E	C13OEK55	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Cl 13OE entre Kr 56 y 55	394
 124942	40	517225	517174	D51C14E	C13OC55A	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Cl 13 Oe entre Kr 55A y 56	460
 124943	40	517225	517179	D51C14E	K56C8O1	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Kr 56 entre Cl 7 Oe y 8 Oe Vivero	704
-124944	40	517225	517180	D51C14E	K56BC1	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Kr 56 Barrio CaÃ±averal 1	450
+124944	40	517225	517180	D51C14E	K56BC1	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Kr 56 Barrio Cañaveral 1	450
 124945	40	517225	517187	D51C14E	K56C8O2	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Kr 56 entre Cl 8 Oe y 7 Oe	732
 124946	40	517225	517203	D51C14E	D51C13AO	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Dg 51 entre Cl 13A Oe y 14 Oe	376
 124948	40	517225	517224	D51C14E	D51C14OE	Camino a pie entre Dg 51 con Cl 14 Oe Escuela de Carabinero y Dg 51 con Cl 14 Oe Cementerio Jardines d	5

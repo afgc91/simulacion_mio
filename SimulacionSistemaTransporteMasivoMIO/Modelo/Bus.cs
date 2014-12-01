@@ -14,7 +14,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// Identificador del bus.
         /// </summary>
         private int Id;
-        
+
         /// <summary>
         /// Tipo del bus:
         /// 1. Articulado
@@ -23,14 +23,14 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private int TipoBus;
 
-        private  int VELOCIDAD_VALLE = 40;
+        private int VELOCIDAD_VALLE = 40;
 
-        private  int VELOCIDAD_PICO = 20;
+        private int VELOCIDAD_PICO = 20;
 
         /// <summary>
         /// Capacidad de un bus articulado.
         /// </summary>
-        private static int CAPACIDAD_ARTICULADO=160;
+        private static int CAPACIDAD_ARTICULADO = 160;
 
         /// <summary>
         /// Capacidad de un bus pre troncal.
@@ -77,12 +77,30 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private Simulacion sim;
 
-        public Bus(int id, int tipoBus, Ruta ruta, double siguienteInteraccion, Simulacion sim) {
+        /// <summary>
+        /// Estado actual del bus
+        /// false- No esta en una estación
+        /// true- Esta en una estación
+        /// </summary>
+        private bool Estado;
+        private bool TerminoRecorrido = false;
+
+
+        private string[] datos;
+
+        public bool Eliminar()
+        {
+            return TerminoRecorrido;
+        }
+
+        public Bus(int id, int tipoBus, Ruta ruta, double siguienteInteraccion, Simulacion sim)
+        {
             this.sim = sim;
             Id = id;
             TipoBus = tipoBus;
             this.ruta = ruta;
-            switch (tipoBus) { 
+            switch (tipoBus)
+            {
                 case 1:
                     Capacidad = CAPACIDAD_ARTICULADO;
                     break;
@@ -93,12 +111,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                     Capacidad = CAPACIDAD_ALIMENTADOR;
                     break;
             }
+            EstacionActual = 0;
             Pasajeros = new Pasajero[Capacidad];
             CapacidadActual = 0;
             this.siguienteInteraccion = normalizarATiempoSimulacion(siguienteInteraccion);
+            datos = new string[1100];
         }
-         
-        public void setVelocidadValleYPico(int valle, int pico){
+
+        public void setVelocidadValleYPico(int valle, int pico)
+        {
 
             VELOCIDAD_PICO = pico;
             VELOCIDAD_VALLE = valle;
@@ -107,7 +128,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
         public override string ToString()
         {
-            return siguienteInteraccion + " " + Id + " " + TipoBus;
+            return siguienteInteraccion + " " + Id+ " " + ruta.GetSentido() + " " + TipoBus;
         }
 
         /// <summary>
@@ -121,58 +142,94 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             if (tiempo == siguienteInteraccion)
             {
                 Estacion[] estaciones = grafo.DarVertices();
+                    
+                
+
                 int EstacionActualRuta = ruta.DarParadas()[EstacionActual][0];
                 int NumParada = ruta.DarParadas()[EstacionActual][1];
                 int NumCola = ruta.DarParadas()[EstacionActual][2];
-                for (int i = 0; i < Pasajeros.Length; i++)
+
+                if (ruta.DarParadas().Count <= EstacionActual + 1)
                 {
-                    if (Pasajeros[i] != null)
-                    {
-                        if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 4)
-                        {
-                            Pasajeros[i] = null;
-                            CapacidadActual--;
-                        }
-                        else if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 1)
-                        {
-
-                            estaciones[EstacionActual].agregarPasajeros(Pasajeros[i]);
-                            Pasajeros[i] = null;
-                            CapacidadActual--;
-
-                        }
-                    }
+                    TerminoRecorrido = true;
                 }
-
                 Estacion estacion = estaciones[EstacionActualRuta];
                 Parada parada = estacion.DarParadas()[NumParada];
-                if (!parada.Estado)
+                if (!parada.Estado && !Estado)
                 {
                     parada.Estado = true;
+                    this.Estado = true;
+                    for (int i = 0; i < Pasajeros.Length; i++)
+                    {
+                        if (Pasajeros[i] != null)
+                        {
+                            if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 4)
+                            {
+                                Pasajeros[i] = null;
+                                CapacidadActual--;
+                            }
+                            else if (Pasajeros[i].EsMiEstacion(EstacionActual, this, grafo) == 1)
+                            {
+
+                                estaciones[EstacionActual].agregarPasajeros(Pasajeros[i]);
+                                estaciones[EstacionActual].AumentarCantidadPasajeros();
+                                Pasajeros[i] = null;
+                                CapacidadActual--;
+
+                            }
+                        }
+                    }
+
+                   
                     ArregloCola<Pasajero> pasajeros = parada.ColasPasajeros;
+
                     while (!pasajeros.ColaVacia(NumCola) && CapacidadActual < Capacidad)
                     {
                         agregarPasajero(pasajeros.ObtenerElemento(NumCola));
                         pasajeros.EliminarElemento(NumCola);
                         CapacidadActual++;
                     }
+
+                    siguienteInteraccion++;
+                    datos[tiempo] = "Nombre estación: " + grafo.DarVertices()[EstacionActualRuta].GetNombre() + " Siguiente interacción: " + siguienteInteraccion + " Cantidad pasajeros: " + CapacidadActual +" Tiempo Actual: " + tiempo + " Numero parada: " + NumParada + " Cola: " + NumCola;
+                   
+                }
+                else if (Estado)
+                {
+                    datos[tiempo] = "Atiende";
+                    parada.Estado = false;
+                    this.Estado = false;
                     EstacionActual++;
                     if ((tiempo > 120 && tiempo < 240) || (tiempo > 780 && tiempo < 900))
                     {
-                        siguienteInteraccion = (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_PICO);
+                        siguienteInteraccion += (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_PICO);
 
                     }
                     else
                     {
-                        siguienteInteraccion = (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_VALLE);
+                        //Console.WriteLine(ruta.DarParadas()[EstacionActual][0]);
+                        //Console.WriteLine(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]]);
+                        siguienteInteraccion += (int)(grafo.DarMatriz()[EstacionActualRuta, ruta.DarParadas()[EstacionActual][0]] / VELOCIDAD_VALLE);
+
                     }
-                    parada.Estado = false;
+
+                    
                 }
                 else
                 {
+                    datos[tiempo] = "Espera Atención";
                     siguienteInteraccion++;
                 }
+
+                
+                
+                
             }
+            else
+            {
+                datos[tiempo] = "Espera";
+            }
+            Utilidades.ExportarInfo(datos, @"Informacion\bus" + this.ruta.GetNombre()+" ", this.GetHashCode());
 
 
         }
@@ -196,7 +253,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                 tOrigen = 22;
             }
             int ent = (int)tOrigen;
-            int dec= (int)((tOrigen - ent)*60);
+            int dec = (int)((tOrigen - ent) * 60);
 
             if (ent == 5)
             {
@@ -205,29 +262,31 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             if (ent > 5)
             {
                 int dif = ent - 5;
-                tNor += dif*(60);
+                tNor += dif * (60);
             }
 
             tNor = tNor + dec;
             return tNor;
         }
 
-        //public void Run(int duracion,int tiempo, GrafoMatriz<Estacion> estaciones)
-        //{
-        //    while (tiempo != duracion)
-        //    {
-        //        AtiendeBus(tiempo, estaciones);
-        //    }
-        //}
+        public void Run(int duracion, int tiempo, GrafoMatriz<Estacion> estaciones)
+        {
+            while (tiempo != duracion)
+            {
+                AtiendeBus(tiempo, estaciones);
+            }
+        }
+
         public void Run()
         {
-             int tiempo = sim.Timer;
-             int duracion = Simulacion.SIM_TIME_WEEK;
+            int tiempo = sim.Timer;
+            int duracion = Simulacion.SIM_TIME_WEEK;
             while (tiempo < duracion)
             {
+                tiempo = sim.Timer;
                 AtiendeBus(tiempo, sim.Estaciones);
             }
-
+            Console.WriteLine("Finalizo Bus");
         }
         public void agregarPasajero(Pasajero p)
         {
@@ -242,15 +301,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             }
         }
 
-        public int GetId() {
+        public int GetId()
+        {
             return Id;
         }
 
-        public int GetTipoBus() {
+        public int GetTipoBus()
+        {
             return TipoBus;
         }
 
-        public int GetCapacidad() {
+        public int GetCapacidad()
+        {
             return Capacidad;
         }
 

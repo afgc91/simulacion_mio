@@ -51,6 +51,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         public ArregloCola<Pasajero> ColasPasajeros;
 
+        public String[] rutas;
+
         public Parada(int id, String nombre, double latitud, double longitud) {
             Id = id;
             Nombre = nombre;
@@ -58,7 +60,21 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Longitud = longitud;
             Estado = false;
             IdUltimoBus = 0;
-            ColasPasajeros = new ArregloCola<Pasajero>(6);
+            ColasPasajeros = new ArregloCola<Pasajero>(15);
+            rutas = new string[6];
+        }
+
+        public int calcularCantidadPersonas()
+        {
+            int respuesta = 0;
+            for (int i = 0; i < ColasPasajeros.DarTamano(); i++)
+            {
+                if (ColasPasajeros.colaEnUso(i))
+                {
+                    respuesta += ColasPasajeros.TamanoCola(i);
+                }
+            }
+            return respuesta;
         }
 
         public bool Ocupada()

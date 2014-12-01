@@ -293,7 +293,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                return vertices1;
         }
 
-        private void floydWarshall()
+        public void floydWarshall()
         {
             ClonarMatriz();
 
@@ -305,13 +305,11 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                     {
                         for (int k = 1; k < CANTIDAD_VERTICES; k++)
                         {
-                            if (j != k && k != i
-                                    && matrizFloy[i, k] != double.MaxValue)
+                            if (j != k && k != i && matrizFloy[i, k] != double.MaxValue)
                             {
                                 double pos1 = matrizFloy[j,i];
                                 double pos2 = matrizFloy[i,k];
-                                if (pos1 != double.MaxValue
-                                        && pos2 != double.MaxValue)
+                                if (pos1 != double.MaxValue && pos2 != double.MaxValue)
                                 {
                                     if (pos1 + pos2 < matrizFloy[j, k])
                                         matrizFloy[j, k] = pos1 + pos2;
@@ -321,8 +319,28 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                     }
                 }
             }
-            
         }
+
+        private void GuardarInfoMatriz() {
+            String[] array = new String[2000];
+            for (int a = 0; a < array.Length; a++) {
+                string cadena = "";
+                for (int b = 0; b < array.Length; b++) {
+                    if (matrizFloy[a, b] == double.MaxValue)
+                    {
+                        cadena += "[" + "]";
+                    }
+                    else
+                    {
+                        cadena += "[" + matrizFloy[a, b] + "]";
+                    }
+                }
+                array[a] = cadena;
+            }
+
+            System.IO.File.WriteAllLines(@"..\\..\\Almacenamiento\Informacion\matrizFloyd.txt", array);
+        }
+
         private void ClonarMatriz()
         {
             matrizFloy = new double[CANTIDAD_VERTICES, CANTIDAD_VERTICES];
@@ -331,6 +349,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.TAD_s
                 for (int j = 0; j < CANTIDAD_VERTICES; j++)
                 {
                     matrizFloy[i, j] = matriz[i, j];
+
                 }
             }
         }

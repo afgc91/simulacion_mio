@@ -23,13 +23,13 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         public CargadoraInformacion c;
         public Simulacion sim;
-       
+
         public VentanaMIO(CargadoraInformacion ci, Simulacion simu)
         {
             c = ci;
             sim = simu;
             InitializeComponent();
-            
+
         }
 
         private void VentanaMIO_Load(object sender, EventArgs e)
@@ -39,18 +39,18 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
             gMapMIO.Position = new GMap.NET.PointLatLng( ﻿3.41000, -76.53333);
 
-            
-           //GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
 
-          
-           
-           // GMapMarkerGoogleGreen marker = new GMapMarkerGoogleGreen(new PointLatLng(﻿3.41000, -76.53333));
-           // GMapMarkerGoogleGreen marker2 = new GMapMarkerGoogleGreen(new PointLatLng(﻿3.42000, -76.53333));
-           // markersOverlay.Markers.Add(marker);
-           // markersOverlay.Markers.Add(marker2);
-           // gMapMIO.Overlays.Add(markersOverlay);
+            //GMapOverlay markersOverlay = new GMapOverlay(gMapMIO, "markers");
 
-         
+
+
+            // GMapMarkerGoogleGreen marker = new GMapMarkerGoogleGreen(new PointLatLng(﻿3.41000, -76.53333));
+            // GMapMarkerGoogleGreen marker2 = new GMapMarkerGoogleGreen(new PointLatLng(﻿3.42000, -76.53333));
+            // markersOverlay.Markers.Add(marker);
+            // markersOverlay.Markers.Add(marker2);
+            // gMapMIO.Overlays.Add(markersOverlay);
+
+
             cargarInfo();
 
             Console.WriteLine("estoy en ventana");
@@ -73,17 +73,21 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
                 GMapMarkerEstacion marker = new GMapMarkerEstacion(new PointLatLng(﻿a[i].GetLatitud(), a[i].GetLongitud()), new Bitmap(@"..\\..\\Almacenamiento\Imagenes\estacion.png"));
                 markersOverlay.Markers.Add(marker);
                 gMapMIO.Overlays.Add(markersOverlay);
-                marker.ToolTipText = "Nombre Estación: " + a[i].GetNombre() +" \n   Cantidad pasajeros: ";
+                marker.ToolTipText = "Nombre Estación: " + a[i].GetNombre() + " \n   Cantidad pasajeros: " + a[i].cantidadPasajerosEstacion();
             }
-           
+
 
         }
         private void refrescar()
         {
-            labCantColaps.Text = 0+"";
-            labNumPasMov.Text = sim.totalPasajeros()+"";
-            labTiempTransInfo.Text = sim.UnidadReloj+"";
+
+            labNumPasMov.Text = sim.totalPasajeros() + "";
+            
         }
+
+        public delegate void ControlStringConsumer(Control control, string text);  // defines a delegate type
+
+
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -107,20 +111,20 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
 
         private void butSim_Click(object sender, EventArgs e)
         {
-            
+
             //System.Threading.Thread hilo1 = new System.Threading.Thread(new System.Threading.ThreadStart(sim.StartSim));
             //hilo1.Start();
 
-            //System.Threading.Thread hilo2 = new System.Threading.Thread(new System.Threading.ThreadStart(Run));
-            //hilo2.Start();
-
-            sim.StartSim();
+            System.Threading.Thread hiloSim = new System.Threading.Thread(new System.Threading.ThreadStart(sim.StartSim));
+            hiloSim.Start();
         }
 
         private void Run()
         {
             while (true)
             {
+                System.Threading.Thread.Sleep(3000);
+
                 refrescar();
             }
         }

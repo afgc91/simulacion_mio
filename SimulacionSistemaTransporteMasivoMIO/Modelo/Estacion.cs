@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimulacionSistemaTransporteMasivoMIO.TAD_s;
+using SimulacionSistemaTransporteMasivoMIO.TAD_s.ArregloColas;
 
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
@@ -61,6 +62,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// </summary>
         private int CantidadPasajeros;
 
+        private string[] datos;
+
         public Estacion(int id, String nombre, double latitud, double longitud, int capacidad, Simulacion sim)
 
         {
@@ -73,6 +76,12 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Paradas = new List<Parada>();
             Pasajeros = new List<Pasajero>();
             RutasPosibles = new List<Ruta>();
+            CantidadPasajeros = 0;
+            datos = new string[1100];
+        }
+
+        public void AumentarCantidadPasajeros(){
+            CantidadPasajeros++;
         }
 
         public void agregarPasajeros(Pasajero p) {
@@ -96,6 +105,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             return -1;
         }
 
+        public int cantidadPasajerosEstacion()
+        {
+            int respuesta = 0;
+            for (int i = 0; i < Paradas.Count; i++)
+            {
+                respuesta += Paradas[i].calcularCantidadPersonas();
+            }
+            return respuesta;
+        }
 
 
         public  void AsignarRutasPosibles(Ruta ruta)
@@ -134,26 +152,15 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <returns></returns>
         public void AtiendeEstacion(int tiempo, GrafoMatriz<Estacion> grafo)
         {
-            System.IO.StringReader lector = new System.IO.StringReader(@"..\\..\\Almacenamiento\Pasajeros\estacion" + Id + ".txt");
-            String linea = lector.ReadLine();
-            string[] datosUno = linea.Split(' ');
-            String comp = datosUno[0];
-            while (comp.Equals(tiempo + ""))
-            {
-                Pasajero pas = new Pasajero(Int32.Parse(datosUno[1]), Int32.Parse(datosUno[2]), Int32.Parse(datosUno[3]), Int32.Parse(datosUno[0]));
-                Pasajeros.Add(pas);
-                linea = lector.ReadLine();
-                datosUno = linea.Split(' ');
-                comp = datosUno[0];
-                CantidadPasajeros++;
-            }
 
+            LeerPasajeros(tiempo);
 
             for (int i = 0; i < Pasajeros.Count; i++)
             {
                 int dest = Pasajeros[i].GetEstacionDestinoId();
-                bool encontro = true;
-                for (int j = 0; j < RutasPosibles.Count && encontro; j++)
+                //bool encontro = true;
+              Queue<Pasajero>  posible = null;
+                for (int j = 0; j < RutasPosibles.Count; j++)
                 {
                     for (int k = 0; k < RutasPosibles[j].DarParadas().Count ; k++)
                     {
@@ -161,17 +168,76 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
                         {
                             if (grafo.DarMatriz()[k, dest] > grafo.DarMatriz()[k + 1, dest])
                             {
-                                Paradas[RutasPosibles[j].DarParadas()[k][1]].ColasPasajeros.AgregarElemento(Pasajeros[i], RutasPosibles[j].DarParadas()[k][2]);
-                                encontro = false;
+                                //Paradas[RutasPosibles[j].DarParadas()[k][1]].ColasPasajeros.AgregarElemento(Pasajeros[i], RutasPosibles[j].DarParadas()[k][2]);
+                                //Pasajeros.RemoveAt(i);
+                                if (posible == null)
+                                {
+                                    posible = Paradas[RutasPosibles[j].DarParadas()[k][1]].ColasPasajeros.ObtenerCola(RutasPosibles[j].DarParadas()[k][2]);
+                                }else
+                                if (Paradas[RutasPosibles[j].DarParadas()[k][1]].ColasPasajeros.TamanoCola(RutasPosibles[j].DarParadas()[k][2]) < posible.Count)
+                                {
+                                    posible = Paradas[RutasPosibles[j].DarParadas()[k][1]].ColasPasajeros.ObtenerCola(RutasPosibles[j].DarParadas()[k][2]);
+                                }
+                                //encontro = false;
                                 
-                            }
+                            } 
                         }
                     }
                 }
-                Pasajeros.Clear();
+                if (posible != null)
+                {
+                    posible.Enqueue(Pasajeros[i]);
+                    Pasajeros.RemoveAt(i);
+                }
             }
-        }
 
+
+            string cadena = "";
+            for (int i = 0; i < Paradas.Count; i++)
+            {
+                cadena += "Parada numero: " + i + " ";
+                for (int j = 0; j < Paradas[i].ColasPasajeros.DarTamano(); j++)
+                {
+                    if (Paradas[i].ColasPasajeros.colaEnUso(j))
+                    {
+                        cadena += "Cantidad cola " + j + ": " + Paradas[i].ColasPasajeros.TamanoCola(j) + " ";
+                    }
+                }
+                cadena += "|| ";
+            }
+            cadena += "Cantidad pasajeros Historico : " + CantidadPasajeros +" Cantidad pasajeros Actual " + cantidadPasajerosEstacion() + " Cantidad pasajeros lista: " + Pasajeros.Count;
+
+            //cadena = this.Nombre;
+            //for (int i = 0; i < RutasPosibles.Count; i++)
+            //{
+            //   cadena +=  RutasPosibles[i].GetNombre();
+            //}
+            datos[tiempo] = cadena;
+
+                Utilidades.ExportarInfo(datos, @"InformacionEst\" +this.Nombre, Id);
+        }
+        public void LeerPasajeros(int tiempo)
+        {
+            System.IO.StreamReader lector = new System.IO.StreamReader(@"..\\..\\Almacenamiento\Pasajeros\estacion" + Id + ".txt");
+            String linea = lector.ReadLine();
+            string[] datosUno = linea.Split(' ');
+            String comp = datosUno[0];
+            int comp1 = Int32.Parse(comp);
+            while (comp1<=tiempo)
+            {
+                if (comp1 == tiempo)
+                {
+                    Pasajero pas = new Pasajero(Int32.Parse(datosUno[1]), Int32.Parse(datosUno[2]), Int32.Parse(datosUno[3]), Int32.Parse(datosUno[0]));
+                    Pasajeros.Add(pas);
+                }
+                linea = lector.ReadLine();
+                datosUno = linea.Split(' ');
+                comp = datosUno[0];
+                comp1 = Int32.Parse(comp);
+                CantidadPasajeros++;
+            }
+
+        }
 
         public void Run()
         {

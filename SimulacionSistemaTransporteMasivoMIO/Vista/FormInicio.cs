@@ -35,10 +35,9 @@ namespace SimulacionSistemaTransporteMasivoMIO.Vista
         {
             sim.setCantidadBuses(Int32.Parse(textCantBus.Text));
             sim.setHoraPicoYValle(Int32.Parse(textHoraValle.Text), Int32.Parse(textHoraPico.Text));
-            Console.WriteLine("inicio hilo");
             //System.Threading.Thread hilo1 = new System.Threading.Thread(new System.Threading.ThreadStart(sim.Run));
             //hilo1.Start();
-            Console.WriteLine("inicia ventana");
+         
             VentanaMIO ventanaMIO = new VentanaMIO(c,sim);
             ventanaMIO.ShowDialog();
         }

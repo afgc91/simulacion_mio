@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimulacionSistemaTransporteMasivoMIO.Almacenamiento;
-using Troschuetz.Random;
 using SimulacionSistemaTransporteMasivoMIO.TAD_s;
 
 namespace SimulacionSistemaTransporteMasivoMIO.Modelo
@@ -72,7 +71,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
 
             for (int i = 0; i < paradas.Count; i++)
             {
-                if (!IsInList(paradas[i].ShortName, nomTroncales))
+                if (!IsInList(paradas[i].LongName, nomTroncales))
                 {
                     temp = new Estacion(cont, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude, 0, sim);
                     Parada p = new Parada(paradas[i].StopId, paradas[i].LongName, paradas[i].DecimalLatitude, paradas[i].DecimalLongitude);
@@ -127,6 +126,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
         /// <returns name="respuesta"></returns>
         public static bool GenerarPasajeros(int cantidad, int duracion, Estacion[] estaciones, int idEstIn)
         {
+            //Console.WriteLine("entro");
             bool respuesta = true;
             List<Pasajero> pasajeros = new List<Pasajero>();
             Random a = new Random();
@@ -176,6 +176,26 @@ namespace SimulacionSistemaTransporteMasivoMIO.Modelo
             Estacion[] esta = est.DarVertices();
 
             return rutas;
+        }
+
+        public static void ExportarInfo(string[] texto, string path, int id)
+        {
+
+            System.IO.File.WriteAllLines(@"..\\..\\Almacenamiento\" + path + id + ".txt", texto);
+
+        }
+
+        public static int BuscarIndiceEstacion(Estacion[] estaciones, int id)
+        {
+            for (int a = 0; a < estaciones.Length; a++)
+            {
+                if (estaciones[a].ContieneParada(id))
+                {
+                    return a;
+                }
+            }
+
+            return -1;
         }
 
 

@@ -165,10 +165,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     String desc = atributes[6];
                     int lenght = Int32.Parse(atributes[7]);
                     a = new Arc(id, planVersionId, start, end, startPoint, endPoint, desc, lenght);
-                    if(ArcoContieneEstTroncales(a)){
-                        ARCS.Add(a);
-                    }
-                    //ARCS.Add(a);
+
+                    ARCS.Add(a);
                 }
                 Console.WriteLine("Cantidad Arcs: " + ARCS.Count);
             }
@@ -191,6 +189,8 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
             }
             else if (Instance.Equals("LINES.txt"))
             {
+                
+                
                 int cont = 1;
                 Line l = null;
                 String[] atributes = null;
@@ -205,6 +205,7 @@ namespace SimulacionSistemaTransporteMasivoMIO.Almacenamiento
                     LINES.Add(l);
                 }
                 Console.WriteLine("Cantidad Lines: " + LINES.Count);
+                
             }
             else if (Instance.Equals("LINESARCS.txt"))
             {
